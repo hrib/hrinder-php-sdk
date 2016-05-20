@@ -6,7 +6,7 @@ $token = getenv('FB_INDER_TOKEN');
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 
 //var_dump($tinder->getUser());
-$userId = '55501fb55d0076b064ed5b6fzzz';
+$userId = '55501fb55d0076b064ed5b6f';
 $message = 'Plans for tonight?';
 $tinder->sendMessage($userId, $message);
 
