@@ -1,4 +1,4 @@
-# tinder-php-sdk
+# hrinder-php-sdk
 Easy to use PHP SDK for accessing Tinder data.
 
 ## Installation
