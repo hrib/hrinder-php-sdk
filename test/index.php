@@ -15,15 +15,19 @@ echo '<br>meio<br>';
 
 $response = $tinder->updates();
 //var_dump($response->matches);
-$item1 = $response->matches;
+$matches = $response->matches;
 echo '<br>';
 
 echo '<table border="1" style="font-family:arial; font-size:7px;">';
-foreach($item1 as $match){
+foreach($matches as $match){
+      foreach($match->messages as $mensagens)
       echo '<br>';
       echo '<tr>';
       echo '<td>' . $match->_id . '</td>';
+      echo '<td>' . $mensagens->message . '</td>';
+      echo '<td>' . $mensagens->sent_date . '</td>';
       echo '<td>';
+      }
 } 
 echo '</table>'
 
