@@ -10,7 +10,7 @@ $userId = '55501fb55d0076b064ed5b6fzzz';
 $message = 'Plans for tonight?';
 $tinder->sendMessage($userId, $message);
 
-//var_dump($tinder->updates());
+var_dump($tinder->sendMessage($userId, $message));
 echo '<br>';
 echo '<br>';
 echo '<br>';
