@@ -1,6 +1,8 @@
 <?php
 require '../vendor/autoload.php';
 
-$tinder = new \Pecee\Http\Service\Tinder('654639692', 'CAAGm0PX4ZCpsBABa2ANVTLhXrpDjzbxxu8zGyanB8pLZBiPNSDRxFIQDKhLcC8DxTfoZCtZAI0I9XzIVBs51hywNwikZCNHkrrtDcq9rZCiiSBCsdshv6ISr0HkY3vQeu43D3CY1YZBauFeptZClaUElwUMl2OqPsiXgAKAmS1G04ChZBSQ7F2IC6EnWvkw8jS3H3gQib3ZAlOm6PJIeZBOWA0H');
+$tinder = new \Pecee\Http\Service\Tinder('1562221677425845', 'EAAGm0PX4ZCpsBAEWbJHNtOWYHHooTO12vp0ZBpbEUUGoeN3i4T4lueOsuzRF0UZCDPqzneH0t6rYZC7PLYFZB9chuh4QIsX7GzjjQZCz7tEcVWnOq833wPqScPHLLMR7vxDXOjGjFhMZBJguH89lUpL4PqbbtYwtEyBZBoaiMgjdxQZDZD');
 
 var_dump($tinder->getUser());
+
+?>
