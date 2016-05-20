@@ -10,9 +10,14 @@ $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 //var_dump($tinder->updates());
 echo '<br>';
 
-echo '<table border="1" style="font-family:arial; font-size:7px;">';
 $response = $tinder->updates();
-foreach($response->matches as $match){
+var_dump($response->matches);
+$item1 = $response->matches;
+echo '<br>';
+
+echo '<table border="1" style="font-family:arial; font-size:7px;">';
+foreach($item1 as $match){
+      echo '<br>';
       var_dump($match);
       echo '<tr>';
       echo '<td>' . $match['_id'] . '</td>';
