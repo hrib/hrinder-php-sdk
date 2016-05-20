@@ -27,7 +27,7 @@ foreach($matches as $match){
             echo '<td>' . $mensagens->message . '</td>';
             echo '<td>' . $mensagens->sent_date . '</td>';
             echo '</tr>';
-            $tinder->sendMessage($match->_id, 'Hi! Text me on instagram: @london_for_her')
+            var_dump($tinder->sendMessage($match->_id, 'Hi! Text me on instagram: @london_for_her'));
       }
 } 
 echo '</table>'
