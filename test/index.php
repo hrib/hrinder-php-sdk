@@ -22,7 +22,7 @@ echo '<table border="1" style="font-family:arial; font-size:7px;">';
 foreach($item1 as $match){
       echo '<br>';
       echo '<tr>';
-      echo '<td>' . $match['_id'] . '</td>';
+      echo '<td>' . $match->_id . '</td>';
       echo '<td>';
 } 
 echo '</table>'
