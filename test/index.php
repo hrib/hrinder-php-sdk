@@ -7,7 +7,7 @@ $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 
 //var_dump($tinder->getUser());
 $userId = '55501fb55d0076b064ed5b6f56c2eb45fdb7886152031092';
-$texto = 'You should try my sensual massage!';
+$texto = 'check it out on my instagram or facebook: Xmassage UK';
 //var_dump($tinder->sendMessage($userId, $message));
 echo '<br>';
 echo '<br>';
@@ -28,7 +28,7 @@ foreach($matches as $match){
             echo '<td>' . $mensagens->message . '</td>';
             echo '<td>' . $mensagens->sent_date . '</td>';
             echo '</tr>';
-            if (strpos($mensagens->message, 'a') !== false) {
+            if (strpos($mensagens->message, 'zazazazaa') !== false) {
                   $mandou = 1;
             }
       }
