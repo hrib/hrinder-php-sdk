@@ -21,16 +21,22 @@ echo '<br>';
 
 echo '<table border="1" style="font-family:arial; font-size:7px;">';
 foreach($matches as $match){
+      $mandou = 0;
       foreach($match->messages as $mensagens){
             echo '<tr>';
             echo '<td>' . $match->_id . '</td>';
             echo '<td>' . $mensagens->message . '</td>';
             echo '<td>' . $mensagens->sent_date . '</td>';
             echo '</tr>';
+            if (strpos($mensagens->message, 'instagram') !== false) {
+                  $mandou = 1;
+            }
       }
-      //set_time_limit(10); 
-      //sleep(5);
-      //var_dump($tinder->sendMessage($match->_id, 'Hi! Text me on instagram: @london_for_her'));
+      if($mandou == 0){
+            set_time_limit(10); 
+            sleep(5);
+            var_dump($tinder->sendMessage($match->_id, 'Hi! Text me on instagram: @london_for_her'));
+      }
 } 
 echo '</table>'
 
