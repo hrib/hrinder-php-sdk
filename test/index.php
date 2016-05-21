@@ -7,7 +7,7 @@ $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 
 //var_dump($tinder->getUser());
 $userId = '55501fb55d0076b064ed5b6f56c2eb45fdb7886152031092';
-$message = 'Plans for tonight?';
+$texto = 'Plans for tonight?';
 //var_dump($tinder->sendMessage($userId, $message));
 echo '<br>';
 echo '<br>';
@@ -28,14 +28,14 @@ foreach($matches as $match){
             echo '<td>' . $mensagens->message . '</td>';
             echo '<td>' . $mensagens->sent_date . '</td>';
             echo '</tr>';
-            if (strpos($mensagens->message, 'zzzzinstagram') !== false) {
+            if (strpos($mensagens->message, 'i') !== false) {
                   $mandou = 1;
             }
       }
       if($mandou == 0){
             set_time_limit(10); 
             sleep(1);
-            var_dump($tinder->sendMessage($match->_id, 'For women who want to enjoy the firm yet the tender touch of a man without the need to perform or give back sexually. Instagram: @london_for_her'));
+            var_dump($tinder->sendMessage($match->_id, $texto));
       }
 } 
 echo '</table>'
