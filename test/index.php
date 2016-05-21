@@ -34,7 +34,7 @@ foreach($matches as $match){
       }
       if($mandou == 0){
             set_time_limit(10); 
-            sleep(5);
+            sleep(1);
             var_dump($tinder->sendMessage($match->_id, 'Hi! Text me on instagram: @london_for_her'));
       }
 } 
