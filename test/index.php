@@ -28,14 +28,14 @@ foreach($matches as $match){
             echo '<td>' . $mensagens->message . '</td>';
             echo '<td>' . $mensagens->sent_date . '</td>';
             echo '</tr>';
-            if (strpos($mensagens->message, 'instagram') !== false) {
+            if (strpos($mensagens->message, 'zzzzinstagram') !== false) {
                   $mandou = 1;
             }
       }
       if($mandou == 0){
             set_time_limit(10); 
             sleep(1);
-            var_dump($tinder->sendMessage($match->_id, 'Hi! Text me on instagram: @london_for_her'));
+            var_dump($tinder->sendMessage($match->_id, 'For women who want to enjoy the firm yet the tender touch of a man without the need to perform or give back sexually. Instagram: @london_for_her'));
       }
 } 
 echo '</table>'
