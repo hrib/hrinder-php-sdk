@@ -28,7 +28,7 @@ foreach($matches as $match){
             echo '<td>' . $mensagens->message . '</td>';
             echo '<td>' . $mensagens->sent_date . '</td>';
             echo '</tr>';
-            if (strpos($mensagens->message, 'izzzzzzzzzzzzzzz') !== false) {
+            if (strpos($mensagens->message, 'i') !== false) {
                   $mandou = 1;
             }
       }
