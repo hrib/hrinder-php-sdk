@@ -1,19 +1,11 @@
 <?php
 require '../vendor/autoload.php';
 
+$token_instagram = getenv('INS_APP_TOKEN'); //token burp para acesso ao instagram
+
 $fb_id = getenv('FB_ID');
 $token = getenv('FB_INDER_TOKEN');
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
-
-//var_dump($tinder->getUser());
-$myId = '56c2eb45fdb7886152031092';
-//$texto = 'You should try my sensual massage: 1 hour relaxing massage with music, oil and candles... It might include sensual stimulation with you feel comfortable with. Contact me on instagram (@london_for_her) or facebook: Xmassage UK. :)';
-$texto = 'The therapy will take you into the heart and bloom of the flower of your femininity. An orgasm is not the goal, but rather sexual healing in whatever form it is expressed. The therapy is an opportunity to receive without any expectations. It is the absolute opportunity to experience the beauty and pleasure of sensual touch from another - totally as the receiver. Orgasmic delight is often experienced and has been described as ‘riding the wave’. Contacts: @london_for_her (instagram) or facebook.com/XmassageUK ';
-//var_dump($tinder->sendMessage($userId, $message));
-echo '<br>';
-echo '<br>';
-echo '<br>';
-echo '<br>meio<br>';
 
 $response = $tinder->recommendations();
 //var_dump($response);
@@ -23,6 +15,7 @@ echo '<br>';
 echo '<table border="1" style="font-family:arial; font-size:7px;">';
       foreach($candidatos as $candidato){
                   $tinder->like($candidato->_id);
+                  PegaUserID($candidato->_id, $token_instagram)
                   echo '<tr>';
                   echo '<td>' . $candidato->_id . '</td>';
                   echo '<td>' . $candidato->name . '</td>';
@@ -30,5 +23,17 @@ echo '<table border="1" style="font-family:arial; font-size:7px;">';
                   echo '</tr>';
       }
 echo '</table>'
+
+function PegaUserID($username, $token){
+    $url = 'https://api.instagram.com/v1/users/search?q='.$username.'&access_token='.$token;
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    $response = curl_exec($ch);
+    curl_close($ch);
+    $resjson = json_decode($response);
+    var_dump($resjson);
+}
 
 ?>
