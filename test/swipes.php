@@ -15,12 +15,15 @@ echo '<br>';
 echo '<table border="1" style="font-family:arial; font-size:7px;">';
       foreach($candidatos as $candidato){
                   $tinder->like($candidato->_id);
-                  PegaUserID($candidato->_id, $token_instagram);
-                  //modificaRelacao($userID, $token, $action);
+                  $instagram_id = PegaUserID($candidato->_id, $token_instagram);
+                  //modificaRelacao($instagram_id, $token_instagram, 'follow');
+                  set_time_limit(10);
+                  sleep(1);
                   echo '<tr>';
                   echo '<td>' . $candidato->_id . '</td>';
                   echo '<td>' . $candidato->name . '</td>';
                   echo '<td>' . $candidato->instagram->username . '</td>';
+                  echo '<td>' . $instagram_id . '</td>';
                   echo '</tr>';
       }
 echo '</table>';
