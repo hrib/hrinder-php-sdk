@@ -1,13 +1,13 @@
 <?php
-//require '../vendor/autoload.php';
-require '../src/Pecee/Http/Service/Tinder.php';
+require '../vendor/autoload.php';
+//require '../src/Pecee/Http/Service/Tinder.php';
 
 $token_instagram = getenv('INS_APP_TOKEN'); //token burp para acesso ao instagram
 
 $fb_id = getenv('FB_ID');
 $token = getenv('FB_INDER_TOKEN');
-//$tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
-$tinder = new Tinder($fb_id, $token);
+$tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
+//$tinder = new Tinder($fb_id, $token);
 
 
 $response = $tinder->recommendations();
