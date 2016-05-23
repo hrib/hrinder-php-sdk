@@ -6,7 +6,9 @@ $token_instagram = getenv('INS_APP_TOKEN'); //token burp para acesso ao instagra
 
 $fb_id = getenv('FB_ID');
 $token = getenv('FB_INDER_TOKEN');
-$tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
+//$tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
+$tinder = new Tinder($fb_id, $token);
+
 
 $response = $tinder->recommendations();
 //var_dump($response);
