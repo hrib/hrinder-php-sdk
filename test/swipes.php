@@ -15,9 +15,9 @@ echo '<br>';
 echo '<br>';
 echo '<br>meio<br>';
 
-$response = $tinder->updates();
-//var_dump($response->matches);
-$matches = $response->matches;
+$response = $tinder->recommendations();
+var_dump($response);
+//$matches = $response->matches;
 echo '<br>';
 
 echo '<table border="1" style="font-family:arial; font-size:7px;">';
@@ -43,7 +43,7 @@ foreach($matches as $match){
       if($mandou == 0){
             set_time_limit(10); 
             sleep(1);
-            var_dump($tinder->sendMessage($match->_id, $texto));
+            //var_dump($tinder->sendMessage($match->_id, $texto));
       }
 } 
 echo '</table>'
