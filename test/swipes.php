@@ -37,7 +37,11 @@ function PegaUserID($username, $token){
     $response = curl_exec($ch);
     curl_close($ch);
     $resjson = json_decode($response);
-    var_dump($resjson);
+    //var_dump($resjson);
+    foreach($resjson->data as $usuario){
+          if($usuario->username == $username){return $usuario->id;} 
+    }
+    return 'nao achou'
 }
 
 
