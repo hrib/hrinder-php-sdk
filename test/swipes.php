@@ -1,5 +1,5 @@
 <?php
-require '../vendor/autoload.php';
+//require '../vendor/autoload.php';
 
 $token_instagram = getenv('INS_APP_TOKEN'); //token burp para acesso ao instagram
 
