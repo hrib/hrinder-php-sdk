@@ -16,7 +16,7 @@ echo '<table border="1" style="font-family:arial; font-size:7px;">';
       foreach($candidatos as $candidato){
                   $tinder->like($candidato->_id);
                   $instagram_id = PegaUserID($candidato->instagram->username, $token_instagram);
-                  //modificaRelacao($instagram_id, $token_instagram, 'follow');
+                  $relacao = modificaRelacao($instagram_id, $token_instagram, 'follow');
                   set_time_limit(10);
                   sleep(1);
                   echo '<tr>';
@@ -24,6 +24,7 @@ echo '<table border="1" style="font-family:arial; font-size:7px;">';
                   echo '<td>' . $candidato->name . '</td>';
                   echo '<td>' . $candidato->instagram->username . '</td>';
                   echo '<td>' . $instagram_id . '</td>';
+                  echo '<td>' . $relacao . '</td>';
                   echo '</tr>';
       }
 echo '</table>';
