@@ -3,7 +3,8 @@
 
 //use Pecee\Http\Rest\RestBase;
 
-class Tinder extends RestBase {
+//class Tinder extends RestBase {
+class Tinder {
 
     protected $serviceUrl = 'https://api.gotinder.com/';
 
