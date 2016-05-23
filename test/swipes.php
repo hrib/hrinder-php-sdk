@@ -16,7 +16,10 @@ echo '<table border="1" style="font-family:arial; font-size:7px;">';
       foreach($candidatos as $candidato){
                   
                   $tinder->like($candidato->_id);
-                  $instagram_id = PegaUserID($candidato->instagram->username, $token_instagram);
+                  $instagram_id = 'nao achou';
+                  if($candidato->instagram->username !== ''){
+                        $instagram_id = PegaUserID($candidato->instagram->username, $token_instagram);
+                  }
                   $relacao = 'nao achou';
                   if($instagram_id !== 'nao achou'){
                         $relacao = modificaRelacao($instagram_id, $token_instagram, 'follow');
