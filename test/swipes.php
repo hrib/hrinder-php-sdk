@@ -16,36 +16,18 @@ echo '<br>';
 echo '<br>meio<br>';
 
 $response = $tinder->recommendations();
-var_dump($response);
-//$matches = $response->matches;
+//var_dump($response);
+$candidatos = $response->results;
 echo '<br>';
 
 echo '<table border="1" style="font-family:arial; font-size:7px;">';
-foreach($matches as $match){
-      $mandou = 0;
-      foreach($match->messages as $mensagens){
-            
-            if($myId == $mensagens->from){$amigo = $mensagens->to; $esquerda = "";  $direita = $mensagens->message;}
-            if($myId == $mensagens->to){$amigo = $mensagens->from; $esquerda = $mensagens->message; $direita = "";}
-            
-            echo '<tr>';
-            echo '<td>' . $match->_id . '</td>';
-            echo '<td>' . $mensagens->sent_date . '</td>';
-            echo '<td>' . $amigo . '</td>';
-            echo '<td>' . $esquerda . '</td>';
-            echo '<td>' . $direita . '</td>';
-            echo '<td>' . $myId . '</td>';
-            echo '</tr>';
-            if (strpos($mensagens->message, 'zazaza') !== false) {
-                  $mandou = 1;
-            }
+      foreach($candidatos as $candidato){
+                  echo '<tr>';
+                  echo '<td>' . $candidato->_id . '</td>';
+                  echo '<td>' . $candidato->name . '</td>';
+                  echo '<td>' . $candidato->instagram->username . '</td>';
+                  echo '</tr>';
       }
-      if($mandou == 0){
-            set_time_limit(10); 
-            sleep(1);
-            //var_dump($tinder->sendMessage($match->_id, $texto));
-      }
-} 
 echo '</table>'
 
 ?>
