@@ -41,7 +41,7 @@ function PegaUserID($username, $token){
     foreach($resjson->data as $usuario){
           if($usuario->username == $username){return $usuario->id;} 
     }
-    return 'nao achou'
+    return 'nao achou';
 }
 
 
