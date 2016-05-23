@@ -1,5 +1,5 @@
 <?php
-require '../vendor/autoload.php';
+require __DIR__ .'/../vendor/autoload.php';
 
 $fb_id = getenv('FB_ID');
 $token = getenv('FB_INDER_TOKEN');
