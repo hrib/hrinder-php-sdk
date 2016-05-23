@@ -17,7 +17,7 @@ echo '<table border="1" style="font-family:arial; font-size:7px;">';
                   
                   $tinder->like($candidato->_id);
                   $instagram_id = 'nao achou';
-                  if($candidato->instagram->username !== ''){
+                  if(!empty($candidato->instagram->username)){
                         echo 'aqui'.$candidato->instagram->username.'fim';
                         $instagram_id = PegaUserID($candidato->instagram->username, $token_instagram);
                   }
