@@ -1,5 +1,5 @@
 <?php
-require '../vendor/autoload.php';
+require __DIR__ .'/../vendor/autoload.php';
 //require '../src/Pecee/Http/Service/Tinder.php';
 
 $token_instagram = getenv('INS_APP_TOKEN'); //token burp para acesso ao instagram
