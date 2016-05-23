@@ -1,10 +1,9 @@
 <?php
-//namespace Pecee\Http\Service;
+namespace Pecee\Http\Service;
 
-//use Pecee\Http\Rest\RestBase;
+use Pecee\Http\Rest\RestBase;
 
-//class Tinder extends RestBase {
-class Tinder {
+class Tinder extends RestBase {
 
     protected $serviceUrl = 'https://api.gotinder.com/';
 
