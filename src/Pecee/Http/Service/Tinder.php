@@ -1,7 +1,7 @@
 <?php
-namespace Pecee\Http\Service;
+//namespace Pecee\Http\Service;
 
-use Pecee\Http\Rest\RestBase;
+//use Pecee\Http\Rest\RestBase;
 
 class Tinder extends RestBase {
 
