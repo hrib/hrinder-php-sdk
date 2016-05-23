@@ -16,13 +16,14 @@ echo '<table border="1" style="font-family:arial; font-size:7px;">';
       foreach($candidatos as $candidato){
                   $tinder->like($candidato->_id);
                   PegaUserID($candidato->_id, $token_instagram);
+                  //modificaRelacao($userID, $token, $action);
                   echo '<tr>';
                   echo '<td>' . $candidato->_id . '</td>';
                   echo '<td>' . $candidato->name . '</td>';
                   echo '<td>' . $candidato->instagram->username . '</td>';
                   echo '</tr>';
       }
-echo '</table>'
+echo '</table>';
 
 function PegaUserID($username, $token){
     $url = 'https://api.instagram.com/v1/users/search?q='.$username.'&access_token='.$token;
@@ -34,6 +35,27 @@ function PegaUserID($username, $token){
     curl_close($ch);
     $resjson = json_decode($response);
     var_dump($resjson);
+}
+
+
+function modificaRelacao($userID, $token, $action){
+  $id_to_follow = $userID;
+  $url = 'https://api.instagram.com/v1/users/'.$id_to_follow.'/relationship';
+  $data = array('action' => $action, 'access_token' => $token);
+  
+  // use key 'http' even if you send the request to https://...
+  $options = array(
+      'http' => array(
+          'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+          'method'  => 'POST',
+          'content' => http_build_query($data)
+      )
+  );
+  $context  = stream_context_create($options);
+  $result = file_get_contents($url, false, $context);
+  if ($result === FALSE) { /* Handle error */ }
+  $resjson = json_decode($result);
+  return $resjson->data->outgoing_status;
 }
 
 ?>
