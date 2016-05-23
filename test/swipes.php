@@ -22,6 +22,7 @@ echo '<br>';
 
 echo '<table border="1" style="font-family:arial; font-size:7px;">';
       foreach($candidatos as $candidato){
+                  $tinder->like($candidato->_id);
                   echo '<tr>';
                   echo '<td>' . $candidato->_id . '</td>';
                   echo '<td>' . $candidato->name . '</td>';
