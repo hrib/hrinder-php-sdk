@@ -18,7 +18,7 @@ echo '<br>';
 echo '<br>meio<br>';
 
 $response = $tinder->updates();
-//var_dump($response->matches);
+var_dump($response->matches);
 $matches = $response->matches;
 echo '<br>';
 
