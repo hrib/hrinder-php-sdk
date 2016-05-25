@@ -20,7 +20,7 @@ echo '<br>';
 echo '<table border="1" style="font-family:arial; font-size:7px;">';
       foreach($candidatos as $candidato){
                   
-                  //$tinder->like($candidato->_id);
+                  $tinder->like($candidato->_id);
                   $instagram_id = 'nao achou';
                   if(!empty($candidato->instagram->username)){
                         $instagram_id = PegaUserID($candidato->instagram->username, $token_instagram);
