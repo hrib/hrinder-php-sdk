@@ -22,7 +22,7 @@ echo '<br>';
 
 echo '<table border="1" style="font-family:arial; font-size:7px;">';
 foreach($matches as $match){
-      $mandou = 0;
+      $mandou = 1;
       foreach($match->messages as $mensagens){
             
             if($myId == $mensagens->from){$amigo = $mensagens->to; $esquerda = "";  $direita = $mensagens->message;}
