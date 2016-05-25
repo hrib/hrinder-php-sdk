@@ -7,8 +7,8 @@ $fb_id = getenv('FB_ID_MassTherr');
 $token = getenv('FB_INDER_TOKEN_MassTherr');
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 
-//var_dump($tinder->getUser());
-$myId = '56c2eb45fdb7886152031092';
+var_dump($tinder->getUser());
+$myId = '57443822d531d95a13b018df';
 //$texto = 'You should try my sensual massage: 1 hour relaxing massage with music, oil and candles... It might include sensual stimulation with you feel comfortable with. Contact me on instagram (@london_for_her) or facebook: Xmassage UK. :)';
 $texto = 'The therapy will take you into the heart and bloom of the flower of your femininity. An orgasm is not the goal, but rather sexual healing in whatever form it is expressed. The therapy is an opportunity to receive without any expectations. It is the absolute opportunity to experience the beauty and pleasure of sensual touch from another - totally as the receiver. Orgasmic delight is often experienced and has been described as ‘riding the wave’.';
 //var_dump($tinder->sendMessage($userId, $message));
@@ -18,7 +18,7 @@ echo '<br>';
 echo '<br>meio<br>';
 
 $response = $tinder->updates();
-var_dump($response->matches);
+//var_dump($response->matches);
 $matches = $response->matches;
 echo '<br>';
 
