@@ -41,7 +41,7 @@ foreach($matches as $match){
             echo '<td>' . $direita . '</td>';
             echo '<td>' . $myId . '</td>';
             echo '</tr>';
-            if (strpos($mensagens->message, 'femininity') !== false) {
+            if (strpos($mensagens->message, 'azazazazazaz') !== false) {
                   $mandou = 1;
             }
       }
