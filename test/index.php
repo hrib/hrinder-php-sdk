@@ -1,10 +1,10 @@
 <?php
 require __DIR__ .'/../vendor/autoload.php';
 
-$fb_id = getenv('FB_ID');
-$token = getenv('FB_INDER_TOKEN');
-$fb_id = getenv('FB_ID_MassTherr');
-$token = getenv('FB_INDER_TOKEN_MassTherr');
+//$fb_id = getenv('FB_ID');
+//$token = getenv('FB_INDER_TOKEN');
+$fb_id = getenv('FB_ID_MassTherr3');
+$token = getenv('FB_INDER_TOKEN_MassTherr3');
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 
 //var_dump($tinder->getUser());
@@ -15,6 +15,8 @@ $myId = $user_dados->_id;
 //$texto = 'The therapy will take you into the heart and bloom of the flower of your femininity. An orgasm is not the goal, but rather sexual healing in whatever form it is expressed. The therapy is an opportunity to receive without any expectations. It is the absolute opportunity to experience the beauty and pleasure of sensual touch from another - totally as the receiver. Orgasmic delight is often experienced and has been described as ‘riding the wave’.';
 //$texto = 'When in doubt. Do it. - Oliver Wendell Holmes';
 $texto = 'To keep the body in good health is a duty, otherwise we shall not be able to keep our mind strong and clear. ~Buddha ';
+$texto = 'Of course it hurts, it’s a spanking. How else would it work? ― Breanna Hayse, Time Out London'; 
+
 //var_dump($tinder->sendMessage($userId, $message));
 echo '<br>';
 echo '<br>';
