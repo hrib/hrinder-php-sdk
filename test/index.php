@@ -3,8 +3,8 @@ require __DIR__ .'/../vendor/autoload.php';
 
 //$fb_id = getenv('FB_ID');
 //$token = getenv('FB_INDER_TOKEN');
-$fb_id = getenv('FB_ID_MassTherr3');
-$token = getenv('FB_INDER_TOKEN_MassTherr3');
+$fb_id = getenv('FB_ID_MassTherr2');
+$token = getenv('FB_INDER_TOKEN_MassTherr2');
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 
 //var_dump($tinder->getUser());
@@ -16,7 +16,7 @@ $myId = $user_dados->_id;
 //$texto = 'When in doubt. Do it. - Oliver Wendell Holmes';
 $texto = 'To keep the body in good health is a duty, otherwise we shall not be able to keep our mind strong and clear. ~Buddha ';
 $texto = 'Of course it hurts, it’s a spanking. How else would it work? ― Breanna Hayse, Time Out London'; 
-
+$texto = 'For women who want to enjoy the firm yet the tender touch of a man without the need to perform or give back sexually. Book your sensual massage. :)'; 
 //var_dump($tinder->sendMessage($userId, $message));
 echo '<br>';
 echo '<br>';
