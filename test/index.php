@@ -3,8 +3,8 @@ require __DIR__ .'/../vendor/autoload.php';
 
 //$fb_id = getenv('FB_ID');
 //$token = getenv('FB_INDER_TOKEN');
-$fb_id = getenv('FB_ID_MassTherr2');
-$token = getenv('FB_INDER_TOKEN_MassTherr2');
+$fb_id = getenv('FB_ID_MassTherr5');
+$token = getenv('FB_INDER_TOKEN_MassTherr5');
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 
 //var_dump($tinder->getUser());
