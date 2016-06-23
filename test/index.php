@@ -3,8 +3,8 @@ require __DIR__ .'/../vendor/autoload.php';
 
 //$fb_id = getenv('FB_ID');
 //$token = getenv('FB_INDER_TOKEN');
-$fb_id = getenv('FB_ID_MassTherr2');
-$token = getenv('FB_INDER_TOKEN_MassTherr2');
+$fb_id = getenv('FB_ID_MassTherr3');
+$token = getenv('FB_INDER_TOKEN_MassTherr3');
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 
 //var_dump($tinder->getUser());
@@ -20,6 +20,8 @@ $texto = 'For women who want to enjoy the firm yet the tender touch of a man wit
 $texto = 'Before leaving her home every day, she must be wearing an item of ownership (necklace, bracelet, anklet, choker, or ring) that reminds her constantly of Master. The item must be worn in plain sight in public for other to see.';
 $texto = 'Before leaving for work in the morning, she must text me a photo of her outfit. This is not to control her wardrobe in anyway but to be able to compliment her on how sexy and beautiful she looks at the beginning of her day.';
 $texto = 'Sensual Massage is a wonderful way in which therapeutic Massage is blended with eroticism and allows ladies to release daily stresses, emotional and physical tensions away.';
+$texto = 'Every day after work, when she changes out of her work clothes, she must insert the Ben Wa balls into her pussy and wear them until bedtime. She must wear the ben wa balls for all social, exercise, yoga or work out activities.';
+
 //var_dump($tinder->sendMessage($userId, $message));
 echo '<br>';
 echo '<br>';
