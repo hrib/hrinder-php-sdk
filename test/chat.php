@@ -40,7 +40,7 @@ foreach($matches as $match){
       }
       echo '</table>';
       echo '<form action="envia.php">';
-      echo '<input type="text" name="userid" value='$match->_id'>';
+      echo '<input type="text" name="userid" value=' . $match->_id . '>';
       echo '<input type="text" name="message" >';
       echo '<input type="submit" value="Submit">';
       echo '</form>'; 
