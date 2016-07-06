@@ -7,6 +7,10 @@ curl_setopt($ch, CURLOPT_HEADER, true);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // Must be set to true so that PHP follows any "Location:" header
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
+$ua = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.16 (KHTML, like Gecko) \ Chrome/24.0.1304.0 Safari/537.16'
+curl_setopt($ch, CURLOPT_USERAGENT, $ua);
+
+
 $a = curl_exec($ch); // $a will contain all headers
 
 $url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL); // This is what you need, it will return you the last effective URL
