@@ -23,12 +23,12 @@ foreach($matches as $match){
             if($myId == $mensagens->to){$amigo = $mensagens->from; $esquerda = $mensagens->message; $direita = "";}
             
             echo '<tr>';
-            echo '<td>' . $match->_id . '</td>';
+            //echo '<td>' . $match->_id . '</td>';
             echo '<td>' . $mensagens->sent_date . '</td>';
-            echo '<td>' . $amigo . '</td>';
+            //echo '<td>' . $amigo . '</td>';
             echo '<td>' . $esquerda . '</td>';
             echo '<td>' . $direita . '</td>';
-            echo '<td>' . $myId . '</td>';
+            //echo '<td>' . $myId . '</td>';
             echo '</tr>';
       }
       echo '<tr>';
