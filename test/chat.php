@@ -11,12 +11,13 @@ $myId = $user_dados->_id;
 echo '<br>Inico<br>';
 
 $response = $tinder->updates();
-var_dump($response->matches);
+//var_dump($response->matches);
 $matches = $response->matches;
 echo '<br>';
 
 //echo '<table border="1" style="font-family:arial; font-size:7px;">';
 foreach($matches as $match){
+      var_dump($match->person->name);
       echo '<table border="1" style="font-family:arial; font-size:7px;">';
       foreach($match->messages as $mensagens){
             
