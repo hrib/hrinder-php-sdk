@@ -18,10 +18,11 @@ echo '<br>';
 //echo '<table border="1" style="font-family:arial; font-size:7px;">';
 foreach($matches as $match){
       echo $match->person->name;
-      echo '<img src='. $match->person->photos[0]->url .' style="width:30px;height:30px;">';
-      //foreach($match->person->photos as $foto){
-      //      echo '<img src='. $foto->url .' style="width:30px;height:30px;">';
-      //}    
+      //echo $match->person->photos->processedFiles->url;
+      //var_dump($match->person->photos[0]->url);
+      foreach($match->person->photos as $foto){
+            echo '<img src='. $foto->url .' style="width:30px;height:30px;">';
+      }    
       echo '<table border="1" style="font-family:arial; font-size:7px;">';
       foreach($match->messages as $mensagens){
             
@@ -39,7 +40,7 @@ foreach($matches as $match){
       }
       echo '</table>';
       echo '<form action="envia.php">';
-      echo '>>>>';
+      echo '<input type="text" name="userid" value='$match->_id'>';
       echo '<input type="text" name="message" >';
       echo '<input type="submit" value="Submit">';
       echo '</form>'; 
