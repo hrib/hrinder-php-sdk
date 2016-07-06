@@ -1,9 +1,13 @@
 <?php
-session_start();
-require __DIR__ .'/../vendor/autoload.php';
-$tinder = $_SESSION["hrinder"];
+//session_start();
+//require __DIR__ .'/../vendor/autoload.php';
+//$tinder = $_SESSION["hrinder"];
 //require __DIR__ .'/../vendor/autoload.php';
 
+require __DIR__ .'/../vendor/autoload.php';
+$fb_id = getenv('FB_ID_MassTherr6');
+$token = getenv('FB_INDER_TOKEN_MassTherr6');
+$tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 
 
 echo $_GET["userid"]; 
