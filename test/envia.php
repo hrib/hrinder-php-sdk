@@ -1,5 +1,10 @@
 <?php
-require __DIR__ .'/../vendor/autoload.php';
+session_start();
+$tinder = $_SESSION["hrinder"];
+//require __DIR__ .'/../vendor/autoload.php';
+
+
+
 echo $_GET["userid"]; 
 echo '<br>';
 echo $_GET["message"]; 
