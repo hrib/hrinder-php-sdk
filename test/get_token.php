@@ -1,6 +1,6 @@
 <?php 
 
-$url="http://libero-news.it.feedsportal.com/c/34068/f/618095/s/2e34796f/l/0L0Sliberoquotidiano0Bit0Cnews0C12735670CI0Esaggi0Eper0Ele0Eriforme0Ecostituzionali0EChiaccherano0Ee0Eascoltano0Bhtml/story01.htm";
+$url="https://www.facebook.com/dialog/oauth?client_id=464891386855067&redirect_uri=https://www.facebook.com/connect/login_success.html&scope=basic_info,email,public_profile,user_about_me,user_activities,user_birthday,user_education_history,user_friends,user_interests,user_likes,user_location,user_photos,user_relationship_details&response_type=token";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_HEADER, true);
