@@ -11,6 +11,7 @@ $myId = $user_dados->_id;
 echo '<br>Inico<br>';
 
 $response = $tinder->updates();
+var_dump($response->matches);
 $matches = $response->matches;
 echo '<br>';
 
