@@ -18,5 +18,10 @@ echo '<br>';
 var_dump($tinder->sendMessage($_GET["userid"], $_GET["message"]));
 echo '<br>';
 echo '<br>';
-echo 'fim';
+echo 'fim1';
+echo '<br>';
+header("Location: chat.php"); 
+exit;
+echo '<br>';
+echo 'fim2';
 ?>
