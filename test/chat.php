@@ -17,7 +17,9 @@ echo '<br>';
 
 //echo '<table border="1" style="font-family:arial; font-size:7px;">';
 foreach($matches as $match){
-      var_dump($match->person->name);
+      echo $match->person->name;
+      //echo $match->person->photos->processedFiles->url;
+      var_dump($match->person->photos->processedFiles);
       echo '<table border="1" style="font-family:arial; font-size:7px;">';
       foreach($match->messages as $mensagens){
             
