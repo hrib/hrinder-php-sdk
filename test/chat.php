@@ -32,16 +32,12 @@ foreach($matches as $match){
             echo '<td>' . $direita . '</td>';
             echo '<td>' . $myId . '</td>';
             echo '</tr>';
-            if (strpos($mensagens->message, '9999999999') !== false) {
-                  $mandou = 1;
-            }
       }
-      if($mandou == 0){
-            set_time_limit(10); 
-            sleep(1);
-            var_dump($tinder->sendMessage($match->_id, $texto));
-      }
-} 
+}
+       
 echo '</table>'
+
+// var_dump($tinder->sendMessage($match->_id, $texto));
+
 
 ?>
