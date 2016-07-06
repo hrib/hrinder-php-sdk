@@ -8,17 +8,15 @@ $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 $user_dados = $tinder->getUser();
 $myId = $user_dados->_id;
 
-
-echo '<br>';
-echo '<br>meio<br>';
+echo '<br>Inico<br>';
 
 $response = $tinder->updates();
 $matches = $response->matches;
 echo '<br>';
 
-echo '<table border="1" style="font-family:arial; font-size:7px;">';
+//echo '<table border="1" style="font-family:arial; font-size:7px;">';
 foreach($matches as $match){
-      $mandou = 0;
+      echo '<table border="1" style="font-family:arial; font-size:7px;">';
       foreach($match->messages as $mensagens){
             
             if($myId == $mensagens->from){$amigo = $mensagens->to; $esquerda = "";  $direita = $mensagens->message;}
@@ -33,9 +31,13 @@ foreach($matches as $match){
             echo '<td>' . $myId . '</td>';
             echo '</tr>';
       }
+      echo '</table><br>';
+
 }
        
-echo '</table>'
+//echo '</table>';
+
+echo '<br>Fim<br>';
 
 // var_dump($tinder->sendMessage($match->_id, $texto));
 
