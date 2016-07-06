@@ -19,7 +19,7 @@ echo '<br>';
 foreach($matches as $match){
       echo $match->person->name;
       //echo $match->person->photos->processedFiles->url;
-      var_dump($match->person->photos);
+      var_dump($match->person->photos->url);
       echo '<table border="1" style="font-family:arial; font-size:7px;">';
       foreach($match->messages as $mensagens){
             
