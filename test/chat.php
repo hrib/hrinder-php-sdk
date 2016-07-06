@@ -31,6 +31,11 @@ foreach($matches as $match){
             echo '<td>' . $myId . '</td>';
             echo '</tr>';
       }
+      echo '<form action="envia.php">';
+      echo '>>>>';
+      echo '<input type="text" name="message" >';
+      echo '<input type="submit" value="Submit">';
+      echo '</form>'; 
       echo '</table><br>';
 
 }
