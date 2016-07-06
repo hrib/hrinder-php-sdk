@@ -1,12 +1,12 @@
 <?php
-session_start();
+//session_start();
 
 require __DIR__ .'/../vendor/autoload.php';
 
 $fb_id = getenv('FB_ID_MassTherr6');
 $token = getenv('FB_INDER_TOKEN_MassTherr6');
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
-$_SESSION["hrinder"] = $tinder;
+//$_SESSION["hrinder"] = $tinder;
 
 $user_dados = $tinder->getUser();
 $myId = $user_dados->_id;
