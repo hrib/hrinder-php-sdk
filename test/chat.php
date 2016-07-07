@@ -19,12 +19,14 @@ $matches = $response->matches;
 echo '<br>';
 
 //echo '<table border="1" style="font-family:arial; font-size:7px;">';
+$num = 10000;
 foreach($matches as $match){
       
       //foreach($match->person->photos as $foto){
       //      echo '<img src='. $foto->url .' style="width:30px;height:30px;">';
       //}  
-      echo '<div id =' . $match->_id . ' class="test" data-percentage=' . $match->_id . ' style="width:702px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;">';
+      $num =  $num - 1;
+      echo '<div id =' . $match->_id . ' class="test" data-percentage=' . $num . ' style="width:702px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;">';
       echo '<img src='. $match->person->photos[0]->url .' style="width:30px;height:30px;">';
       echo  '<font style="font-family:arial; font-size:9px;"> ' . $match->person->name . '</font>';
       echo '<div id =' . $match->_id . 'table style="height:150px;width:700px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">';
