@@ -25,7 +25,7 @@ foreach($matches as $match){
       //      echo '<img src='. $foto->url .' style="width:30px;height:30px;">';
       //}  
       echo '<div id =' . $match->_id . ' style="width:702px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;">';
-      echo $match->person->name;
+      echo  '<font style="font-family:arial; font-size:7px;">' . $match->person->name . '</font>';
       echo '<img src='. $match->person->photos[0]->url .' style="width:30px;height:30px;">';
       echo '<div id =' . $match->_id . 'table style="height:150px;width:700px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">';
       echo '<table border="0" style="font-family:arial; font-size:7px;">';
