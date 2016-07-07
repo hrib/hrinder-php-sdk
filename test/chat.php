@@ -72,13 +72,17 @@ echo '</div>';
 
 echo '<br>Fim<br>';
 
-echo '<script type="text/javascript">';
-echo '  alert("oi");';
-echo '  console.log("oi");';
-echo '</script>';
+
 
 // var_dump($tinder->sendMessage($match->_id, $texto));
 
 
 ?>
+<script type="text/javascript">
+      var $wrapper = $('.testWrapper');
+      $wrapper.find('.test').sort(function (a, b) {
+          return +a.dataset.percentage - +b.dataset.percentage;
+      })
+      .appendTo( $wrapper );
+</script>
 
