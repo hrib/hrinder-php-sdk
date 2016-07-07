@@ -13,7 +13,7 @@ $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 $user_dados = $tinder->getUser();
 $myId = $user_dados->_id;
 
-echo '<br>Inico<br>';
+echo '<br>Inicio<br>';
 
 $response = $tinder->updates();
 //var_dump($response->matches);
