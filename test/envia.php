@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require __DIR__ .'/../vendor/autoload.php';
 //$fb_id = getenv('FB_ID_MassTherr6');
 //$token = getenv('FB_INDER_TOKEN_MassTherr6');
