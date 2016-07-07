@@ -2,7 +2,10 @@
 $email = getenv("email"); 
 $password = getenv("passw");
 
-FacebookLogin($email, $password);
+$z = FacebookLogin($email, $password);
+echo $z;
+echo '<br>';
+
 $retorno = FacebookToken();
 echo $retorno;
 
@@ -13,8 +16,8 @@ function FacebookLogin($email, $password) {
     $data = array('charset_test' => htmlspecialchars("&euro;,&acute;,â‚¬,Â´,æ°´,Ð”,Ð„"),
             	'lsd' => 'OsC-Z',
             	'locale' => 'en_US',
-            	'email' => $this->email,
-            	'pass' => $this->pass,
+            	'email' => $email,
+            	'pass' => $password,
             	'persistent' => 1,
             	'default_persistent'=> 0); 
 	$post = http_build_query($data);
