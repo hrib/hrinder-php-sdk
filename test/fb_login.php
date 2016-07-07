@@ -44,7 +44,7 @@ $url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL); // This is what you need, it w
 //print_r($a);
 //echo"<br>";
 //echo "</pre>";
-echo $url; // Voila
+//echo $url; // Voila
 //echo"<br>";
 
 $pos1 = strpos($a, "access_token=") + 13;
