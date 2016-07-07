@@ -3,7 +3,7 @@ $email = getenv("email");
 $password = getenv("passw");
 
 FacebookLogin($email, $password);
-retorno = FacebookToken();
+$retorno = FacebookToken();
 echo $retorno;
 
 function FacebookLogin($email, $password) {  
