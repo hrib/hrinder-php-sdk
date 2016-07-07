@@ -21,9 +21,6 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windo`enter code here`ws; U; Windows NT 5.1; en-US; rv:1.8.1.3) Gecko/20070309 Firefox/2.0.0.3");
 curl_setopt($ch, CURLOPT_REFERER, "http://m.facebook.com");
 $fbMain = curl_exec($ch) or die(curl_error($ch));
-//Blocking Direct Access to file
-if (eregi("fb.php", $_SERVER['PHP_SELF'])) {
-    die("<p><h2>Access Denied!</h2><h4>You don't have right permission to access this file directly.<br/>Contact MiraZ Mac for more information.</h4></p>");
-}
+vardump($fbMain);
 
 ?>
