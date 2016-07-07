@@ -79,10 +79,10 @@ echo '<br>Fim<br>';
 
 ?>
 <script type="text/javascript">
-      var $wrapper = $('.testWrapper');
-      $wrapper.find('.test').sort(function (a, b) {
-          return +a.dataset.percentage - +b.dataset.percentage;
-      })
-      .appendTo( $wrapper );
+      //var $wrapper = $('.testWrapper');
+      //$wrapper.find('.test').sort(function (a, b) {
+      //    return +a.dataset.percentage - +b.dataset.percentage;
+      //})
+      //.appendTo( $wrapper );
 </script>
 
