@@ -1,10 +1,3 @@
-
-<script src="https://code.jquery.com/jquery-1.10.2.js">
-
-$(window).load(function(){
-  alert("oi");
-});
-</script>
 <?php
 //session_start();
 
@@ -76,6 +69,12 @@ echo '</div>';
 //echo '</table>';
 
 echo '<br>Fim<br>';
+
+echo '<script src="https://code.jquery.com/jquery-1.10.2.js">';
+echo '$(window).load(function(){';
+echo '  alert("oi");';
+echo '});';
+echo '</script>';
 
 // var_dump($tinder->sendMessage($match->_id, $texto));
 
