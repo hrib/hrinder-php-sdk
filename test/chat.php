@@ -24,7 +24,7 @@ foreach($matches as $match){
       //foreach($match->person->photos as $foto){
       //      echo '<img src='. $foto->url .' style="width:30px;height:30px;">';
       //}  
-      echo '<div id =' . $match->_id . ' style="height:200px;width:750px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;">';
+      echo '<div id =' . $match->_id . ' style="height:250px;width:700px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;">';
       echo $match->person->name;
       echo '<img src='. $match->person->photos[0]->url .' style="width:30px;height:30px;">';
       echo '<div id =' . $match->_id . 'table style="height:150px;width:700px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">';
@@ -50,12 +50,12 @@ foreach($matches as $match){
       }
       echo '</table>';
       echo '</div>';
-      echo '</div>';
       echo '<form action="envia.php">';
       echo '<input type="hidden" name="userid" value=' . $match->_id . '>';
       echo '<input type="text" name="message" >';
       echo '<input type="submit" value="Submit">';
       echo '</form>'; 
+      echo '</div>';
       echo '<script>';
       //echo 'var objDiv = document.getElementById("' . $match->_id . '");';
       echo 'var objDiv = document.getElementById("' . $match->_id . 'table");';
