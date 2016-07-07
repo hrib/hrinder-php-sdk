@@ -74,13 +74,15 @@ echo '<br>Fim<br>';
 
 
 ?>
+
 <script src="https://code.jquery.com/jquery-1.10.2.js">
-$(document).load(function () {
-   var $wrapper = $('.testWrapper');
+window.onload = codeAddress;
+function codeAddress() {
+      var $wrapper = $('.testWrapper');
       alert("oi");
       $wrapper.find('.test').sort(function (a, b) {
           return +a.dataset.percentage - +b.dataset.percentage;
       })
       .appendTo( $wrapper );
-});
+};
 </script>
