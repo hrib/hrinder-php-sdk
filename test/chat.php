@@ -51,7 +51,8 @@ foreach($matches as $match){
       echo '<input type="submit" value="Submit">';
       echo '</form>'; 
       echo '<script>';
-      echo '$("#' . $match->_id . '").scrollTop($("#' . $match->_id . '")[0].scrollHeight);';
+      echo 'var objDiv = document.getElementById("' . $match->_id . '");';
+      echo 'objDiv.scrollTop = objDiv.scrollHeight;';
       echo '</script>';
 }
        
