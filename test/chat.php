@@ -52,7 +52,7 @@ foreach($matches as $match){
       echo '</div>';
       echo '<form action="envia.php">';
       echo '<input type="hidden" name="userid" value=' . $match->_id . '>';
-      echo '<input type="text" name="message" size="200">';
+      echo '<input type="text" name="message" width="600" style="font-family:arial; font-size:7px;">';
       echo '<input type="submit" value="Submit">';
       echo '</form>'; 
       echo '</div>';
