@@ -27,7 +27,7 @@ foreach($matches as $match){
       //foreach($match->person->photos as $foto){
       //      echo '<img src='. $foto->url .' style="width:30px;height:30px;">';
       //}  
-      echo '<div style="height:120px;width:700px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">';
+      echo '<div id =' . $match->_id . ' style="height:120px;width:700px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">';
       echo '<table border="1" style="font-family:arial; font-size:7px;">';
       foreach($match->messages as $mensagens){
             
@@ -50,6 +50,9 @@ foreach($matches as $match){
       echo '<input type="text" name="message" >';
       echo '<input type="submit" value="Submit">';
       echo '</form>'; 
+      echo '<script>';
+      echo '$("#' . $match->_id . '").scrollTop($("#' . $match->_id . '")[0].scrollHeight);';
+      echo '</script>';
 }
        
 //echo '</table>';
