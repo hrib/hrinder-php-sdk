@@ -11,7 +11,7 @@ echo $_GET["message"];
 echo '<br>';
 var_dump($tinder->sendMessage($_GET["userid"], $_GET["message"]));
 echo '<br>';
-header("Location: chat.php#'.$_GET["userid"].'"); 
+header('Location: chat.php#' . $_GET["userid"]); 
 exit;
 
 ?>
