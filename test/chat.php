@@ -71,9 +71,8 @@ echo '</div>';
 echo '<br>Fim<br>';
 
 echo '<script src="https://code.jquery.com/jquery-1.10.2.js">';
-echo '$(window).load(function(){';
 echo '  alert("oi");';
-echo '});';
+echo '  console.log("oi");';
 echo '</script>';
 
 // var_dump($tinder->sendMessage($match->_id, $texto));
