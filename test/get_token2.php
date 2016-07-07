@@ -1,3 +1,11 @@
+<?php
+$email = getenv("email"); 
+$password = getenv("passw");
+
+FacebookLogin($email, $password);
+retorno = FacebookToken();
+echo $retorno;
+
 function FacebookLogin($email, $password) {  
     $cookies= 'cookie_file.txt';
     $user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36';
@@ -34,7 +42,7 @@ function FacebookLogin($email, $password) {
 
 // Grab the access token from the FB API
 function FacebookToken() {
-	$cookies= 'cookie_file.txt';
+    $cookies= 'cookie_file.txt';
     $user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36'; 
 	
     // You need to sniff out the client ID below with Charles and switch it for the app that you're targetting
@@ -76,3 +84,5 @@ function FacebookToken() {
 			
 	return $token;  
 } 
+
+?>
