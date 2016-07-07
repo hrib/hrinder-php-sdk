@@ -17,7 +17,7 @@ $response = $tinder->updates();
 //var_dump($response->matches);
 $matches = $response->matches;
 echo '<br>';
-
+echo '<div class="testWrapper">';
 //echo '<table border="1" style="font-family:arial; font-size:7px;">';
 $num = 10000;
 foreach($matches as $match){
@@ -65,7 +65,7 @@ foreach($matches as $match){
       echo 'objDiv.scrollTop = objDiv.scrollHeight;';
       echo '</script>';
 }
-       
+echo '</div>';       
 //echo '</table>';
 
 echo '<br>Fim<br>';
