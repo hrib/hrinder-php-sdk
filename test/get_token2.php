@@ -10,6 +10,8 @@ $retorno = FacebookToken();
 echo $retorno;
 
 function FacebookLogin($email, $password) {  
+	echo $email;
+	echo $password;
     $cookies= 'cookie_file.txt';
     $user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36';
     
