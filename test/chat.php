@@ -59,8 +59,8 @@ foreach($matches as $match){
       echo '<input type="text" name="message" style="font-family:arial; font-size:7px; width: 600px; margin-left: 10px; margin-top: 10px;">';
       echo '<input type="submit" value="Send" style="font-family:arial; font-size:7px; margin-left: 10px; margin-top: 10px;">';
       echo '</form>'; 
-      echo '</div>';
       echo '<br><br>';
+      echo '</div>';
       echo '<script>';
       //echo 'var objDiv = document.getElementById("' . $match->_id . '");';
       echo 'var objDiv = document.getElementById("' . $match->_id . 'table");';
