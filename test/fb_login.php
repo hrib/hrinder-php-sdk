@@ -42,9 +42,17 @@ $a = curl_exec($ch); // $a will contain all headers
 $url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL); // This is what you need, it will return you the last effective URL
 
 echo "<pre>";
-print_r($a);echo"<br>";
+print_r($a);
+echo"<br>";
 echo "</pre>";
 echo $url; // Voila
+echo"<br>";
+
+$pos1 = strpos($a, "access_token=") + 13;
+$pos2 = strpos($a, "&expires_in");
+$token = substr($a,$pos1,$pos2 - $pos1);
+echo $token;
+
 }
 
 
