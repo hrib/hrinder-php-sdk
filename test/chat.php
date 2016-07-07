@@ -26,7 +26,8 @@ foreach($matches as $match){
       echo '<img src='. $match->person->photos[0]->url .' style="width:30px;height:30px;">';
       //foreach($match->person->photos as $foto){
       //      echo '<img src='. $foto->url .' style="width:30px;height:30px;">';
-      //}    
+      //}  
+      echo '<div style="height:120px;width:700px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">';
       echo '<table border="1" style="font-family:arial; font-size:7px;">';
       foreach($match->messages as $mensagens){
             
@@ -43,6 +44,7 @@ foreach($matches as $match){
             echo '</tr>';
       }
       echo '</table>';
+      echo '</div>';
       echo '<form action="envia.php">';
       echo '<input type="text" name="userid" value=' . $match->_id . '>';
       echo '<input type="text" name="message" >';
