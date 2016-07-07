@@ -1,8 +1,9 @@
 <?php
 
 require __DIR__ .'/../vendor/autoload.php';
-$fb_id = getenv('FB_ID_MassTherr6');
-$token = getenv('FB_INDER_TOKEN_MassTherr6');
+//$fb_id = getenv('FB_ID_MassTherr6');
+//$token = getenv('FB_INDER_TOKEN_MassTherr6');
+$token = $_SESSION["token"];
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 
 echo $_GET["userid"]; 
