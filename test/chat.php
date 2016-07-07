@@ -74,9 +74,8 @@ echo '<br>Fim<br>';
 
 
 ?>
-<script>
+<script src="https://code.jquery.com/jquery-1.10.2.js">
 var $wrapper = $('.testWrapper');
-
 $wrapper.find('.test').sort(function (a, b) {
     return +a.dataset.percentage - +b.dataset.percentage;
 })
