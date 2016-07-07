@@ -2,8 +2,8 @@
 
 $token = login();
 echo $token;
-//header('Location: chat.php?tk=' . $token); 
-//exit;
+header('Location: chat.php?tk=' . $token); 
+exit;
 
 function login(){
 $login_email = getenv("email");
