@@ -1,3 +1,5 @@
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
 <?php
 //session_start();
 
@@ -70,7 +72,7 @@ echo '</div>';
 
 echo '<br>Fim<br>';
 
-echo '<script>';
+echo '<script type="text/javascript">';
 echo '  alert("oi");';
 echo '  console.log("oi");';
 echo '</script>';
