@@ -2,7 +2,7 @@
 
 $token = login();
 echo $token;
-header('Location: chat.php?tk=' $token); 
+header('Location: chat.php?tk=' . $token); 
 exit;
 
 function login(){
