@@ -61,11 +61,11 @@ foreach($matches as $match){
       echo '</form>'; 
       echo '<br><br>';
       echo '</div>';
-      echo '<script>';
+      //echo '<script>';
       //echo 'var objDiv = document.getElementById("' . $match->_id . '");';
-      echo 'var objDiv = document.getElementById("table");';
-      echo 'objDiv.scrollTop = objDiv.scrollHeight;';
-      echo '</script>';
+      //echo 'var objDiv = document.getElementById("table");';
+      //echo 'objDiv.scrollTop = objDiv.scrollHeight;';
+      //echo '</script>';
 }
 echo '</div>';       
 //echo '</table>';
@@ -79,10 +79,14 @@ echo '<br>Fim<br>';
 
 ?>
 <script type="text/javascript">
-      //var $wrapper = $('.testWrapper');
-      //$wrapper.find('.test').sort(function (a, b) {
-      //    return +a.dataset.percentage - +b.dataset.percentage;
-      //})
-      //.appendTo( $wrapper );
+      var $wrapper = $('.testWrapper');
+      $wrapper.find('.test').sort(function (a, b) {
+          return +a.dataset.percentage - +b.dataset.percentage;
+      })
+      .appendTo( $wrapper );
+      
+      var inputs = document.getElementsByName("table"); for(var i=0; i<inputs.length;i++) { inputs[i].scrollTop = inputs[i].scrollHeight }; 
+      //console.log(inputs.length);
+
 </script>
 
