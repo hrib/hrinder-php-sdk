@@ -1,7 +1,7 @@
 <?php
 
-$login_email = 'your email';
-$login_pass = 'your password';
+$login_email = getenv("email");
+$login_pass = getenv("passw");
 
 //Simple cURL
 $ch = curl_init();
