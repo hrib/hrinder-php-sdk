@@ -34,7 +34,7 @@ foreach($matches as $match){
       $timestamp = -strtotime($match->messages[$max]->sent_date);
       if($max == -1){$timestamp = 0;}
       echo '<div id =' . $match->_id . ' class="test" data-percentage=' . $timestamp . ' style="width:702px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;">';
-      echo $timestamp . ':' . $max;
+      //echo $timestamp . ':' . $max;
       echo '<img src='. $match->person->photos[0]->url .' style="width:30px;height:30px;">';
       echo  '<font style="font-family:arial; font-size:9px;"> ' . $match->person->name . '</font>';
       echo '<div name =table style="height:150px;width:700px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">';
