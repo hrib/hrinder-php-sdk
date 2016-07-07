@@ -76,8 +76,8 @@ echo '<br>Fim<br>';
 ?>
 
 <script src="https://code.jquery.com/jquery-1.10.2.js">
-window.onload = codeAddress;
-function codeAddress() {
+
+$(window).load(function(){
   alert("oi");
-};
+});
 </script>
