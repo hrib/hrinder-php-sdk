@@ -1,3 +1,10 @@
+
+<script src="https://code.jquery.com/jquery-1.10.2.js">
+
+$(window).load(function(){
+  alert("oi");
+});
+</script>
 <?php
 //session_start();
 
@@ -75,9 +82,3 @@ echo '<br>Fim<br>';
 
 ?>
 
-<script src="https://code.jquery.com/jquery-1.10.2.js">
-
-$(window).load(function(){
-  alert("oi");
-});
-</script>
