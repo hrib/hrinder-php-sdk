@@ -52,8 +52,8 @@ foreach($matches as $match){
       echo '</div>';
       echo '<form action="envia.php">';
       echo '<input type="hidden" name="userid" value=' . $match->_id . '>';
-      echo '<input type="text" name="message" style="font-family:arial; font-size:7px; width: 600px; margin-left: 10px">';
-      echo '<input type="submit" value="Submit" style="font-family:arial; font-size:7px; margin-left: 10px">';
+      echo '<input type="text" name="message" style="font-family:arial; font-size:7px; width: 600px; margin-left: 10px; margin-top: 10px;">';
+      echo '<input type="submit" value="Send" style="font-family:arial; font-size:7px; margin-left: 10px; margin-top: 10px;">';
       echo '</form>'; 
       echo '</div>';
       echo '<br><br>';
