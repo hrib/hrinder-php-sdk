@@ -1,8 +1,10 @@
 <?php
-
+session_start();
 $token = login();
 echo $token;
-header('Location: chat.php?tk=' . $token); 
+$_SESSION["token"] = $token;
+header('Location: chat.php'); 
+//header('Location: chat.php?tk=' . $token); 
 exit;
 
 function login(){
