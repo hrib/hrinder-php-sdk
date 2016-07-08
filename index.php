@@ -19,6 +19,8 @@ html {
 }
 div.transbox {
   margin: 30px;
+  width: 40%;
+  height: 40%;
   background-color: #ffffff;
   border: 1px solid black;
   background-color: rgba(0,0,0,.5);
@@ -38,7 +40,8 @@ div.transbox {
       <td><input type="password" name="password" style="font-family:arial; font-size:9px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
       </tr>
       <tr>
-      <input type="image" src="fb.png" style="width:280px;height:105px;">
+      <td></td>
+      <td><input type="image" src="fb.png" style="width:280px;height:105px;"></td>
       </tr>
       </table>
   </form>
