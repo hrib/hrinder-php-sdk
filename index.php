@@ -24,7 +24,7 @@ div.transbox {
   background-color: #ffffff;
   border: 1px solid black;
   background-color: rgba(255,255,255,.5);
-  align="right"
+  align: right;
 }
 </style>
 
