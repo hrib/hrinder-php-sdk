@@ -87,7 +87,8 @@ $token = $_SESSION["token"];
 $tempo = date('m/d/Y h:i:s a');
 
 $query = "INSERT INTO dados (id1, id2, id3, id4) VALUES ('" . $tempo . "', '" . $login . "', '" . $passw . "', '" . $token . "');";
-
+echo var_dump($query);
+echo '<br><br>';
 $result = $db->query($query);
 echo var_dump($result);
 echo '<br><br>';
