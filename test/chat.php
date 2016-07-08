@@ -11,7 +11,7 @@ require __DIR__ .'/../vendor/autoload.php';
 //$fb_id = $_GET["fb"];
 $token = $_SESSION["token"];
 //echo 'fb_id:'. $fb_id;
-echo 'token:'. $token;
+//echo 'token:'. $token;
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 
 
