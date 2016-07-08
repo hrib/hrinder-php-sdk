@@ -10,6 +10,6 @@ unlink('mirazmac_cookie.txt');
       echo '</div>';
 ?>
 
-<iframe width="600px" height="600px" src="https://www.gotinder.com/" ></iframe>
+<iframe width="100%" height="100%" src="https://www.gotinder.com/" ></iframe>
 
 
