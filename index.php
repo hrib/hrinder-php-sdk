@@ -10,6 +10,6 @@ unlink('mirazmac_cookie.txt');
       echo '</div>';
 ?>
 
-<iframe width="100%" height="100%" src="https://www.globo.com/" ></iframe>
+<iframe width="100%" height="100%" src="http://www.cnn.com/" ></iframe>
 
 
