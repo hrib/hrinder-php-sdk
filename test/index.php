@@ -22,8 +22,8 @@ $texto = 'Before leaving for work in the morning, she must text me a photo of he
 $texto = 'Sensual Massage is a wonderful way in which therapeutic Massage is blended with eroticism and allows ladies to release daily stresses, emotional and physical tensions away. Book your sensual massage. :)';
 //$texto = 'I want you to taste me.';
 //$texto = 'how are you doing today my sweetie babygirl?';
-$texto = 'yeeaahhh!!! You matched me back!!! :) :D';
-//$texto = 'Good morning!!! Football tonight, tomorrow... and then it is Friday!!!';
+//$texto = 'yeeaahhh!!! You matched me back!!! :) :D';
+$texto = 'and Friday is here!!!!!! :)';
 
 //$texto = 'Every day after work, when she changes out of her work clothes, she must insert the Ben Wa balls into her pussy and wear them until bedtime. She must wear the ben wa balls for all social, exercise, yoga or work out activities.';
 
@@ -54,7 +54,7 @@ foreach($matches as $match){
             echo '<td>' . $direita . '</td>';
             echo '<td>' . $myId . '</td>';
             echo '</tr>';
-            if (strpos($mensagens->message, 'a') !== false) {
+            if (strpos($mensagens->message, 'aasdfsdfsadf') !== false) {
                   $mandou = 1;
             }
       }
