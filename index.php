@@ -40,9 +40,9 @@ div.transbox {
       <td><font style="font-family:arial; font-size:9px;"><b>Password </b></font></td>
       <td><input type="password" name="password" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
       </tr>
-      <tr valign="bottom" valign="left">
+      <tr valign="bottom">
       <td></td>
-      <td><input type="image" src="fb.png" style="width:200px;height:75px;"></td>
+      <td align="left"><input type="image" src="fb.png" style="width:200px;height:75px;"></td>
       </tr>
       </table>
   </form>
