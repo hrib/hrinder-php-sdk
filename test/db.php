@@ -39,8 +39,8 @@ echo '<br><br>';
 */
 $query = "SELECT id1, id2, id3, id4 FROM dados";
 $result = $db->query($query);
-echo var_dump($result);
-echo '<br><br>';
+//echo var_dump($result);
+//echo '<br><br>';
 
 echo '<table border="1" style="font-family:arial; font-size:7px;">';
 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
