@@ -27,7 +27,7 @@ div.transbox {
   left: 65%;
 }
 div.dentro {
-  margin: 50px;
+  margin-left: 50px;
 }
 </style>
 
