@@ -44,11 +44,9 @@ div.dentro {
       <td><font style="font-family:arial; font-size:10px;"><b>Password </b></font></td>
       <td align="left"><input type="password" name="password" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 0px;"></td>
       </tr>
-      <tr valign="bottom">
-      <td></td>
-      <td align="left"><input type="image" src="fb.png" style="width:185px;height:70px;"></td>
-      </tr>
       </table>
+      <input type="image" src="fb.png" style="width:280px;height:105px;"></td>
+
   </form>
 </div>
 </div>
