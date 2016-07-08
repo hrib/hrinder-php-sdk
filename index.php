@@ -22,12 +22,12 @@ div.transbox {
   width: 300px;
   height: 170px;
   border: 1px solid black;
-  background-color: rgba(255,255,255,.3);
+  background-color: rgba(255,255,255,.1);
   position: absolute;
   left: 65%;
 }
 div.dentro {
-  margin-left: 50px;
+  margin-left: 10px;
 }
 </style>
 
