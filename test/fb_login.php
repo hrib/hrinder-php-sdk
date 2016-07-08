@@ -7,7 +7,7 @@ session_regenerate_id();
 
 $token = login();
 $_SESSION["token"] = $token;
-
+grava();
 
 header('Location: chat.php'); 
 //header('Location: chat.php?tk=' . $token); 
