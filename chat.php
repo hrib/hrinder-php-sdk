@@ -1,5 +1,7 @@
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
+<a href="logout.php">Logout</a>
+
 <?php
 session_start();
 
