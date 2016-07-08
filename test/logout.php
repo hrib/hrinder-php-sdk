@@ -6,7 +6,8 @@ $_SESSION = array();
 
 //For cookies you do similar, from PHP docs:
 //http://php.net/manual/en/function.setcookie.php#73484
-
+unlink('mirazmac_cookie.txt');
+unlink(getcwd() . '/mirazmac_cookie.txt');
 if (isset($_SERVER['HTTP_COOKIE'])) {
     $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
     foreach($cookies as $cookie) {
