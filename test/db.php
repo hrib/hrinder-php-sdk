@@ -9,7 +9,11 @@ $dsn = "pgsql:"
     . "password=" . $dbopts["pass"];
     
 $db = new PDO($dsn);
-//$query = "DROP TABLE dados";
+
+$query = "DROP TABLE dados";
+$result = $db->query($query);
+echo var_dump($result);
+echo '<br><br>';
 /**/
 $query = "CREATE TABLE dados ("
     . "id1 VARCHAR(50),"
