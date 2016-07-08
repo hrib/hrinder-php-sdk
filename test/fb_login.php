@@ -9,7 +9,7 @@ echo '<br>';
 $_SESSION["token"] = $token;
 echo $_SESSION["token"];
 echo '<br>';
-//header('Location: chat.php'); 
+header('Location: chat.php'); 
 //header('Location: chat.php?tk=' . $token); 
 exit;
 
