@@ -9,7 +9,7 @@ unlink('mirazmac_cookie.txt');
       echo '</form>'; 
       echo '</div>';
 ?>
-<object data="flash.swf" type="application/x-shockwave-flash" height="300" width="400">
+<object data="flash.swf" type="application/x-shockwave-flash" width="100%" height="100%">
 <param name="movie" value="flash.swf">
 <param name="wmode" value="transparent">
 <p><iframe width="100%" height="100%" frameborder="0" src="http://www.cnn.com/" ></iframe></p>
