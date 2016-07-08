@@ -27,6 +27,7 @@ div.transbox {
   left: 65%;
 }
 div.dentro {
+  margin-top: 20px;
   margin-left: 10px;
 }
 </style>
@@ -45,7 +46,7 @@ div.dentro {
       </tr>
       <tr valign="bottom">
       <td></td>
-      <td align="left"><input type="image" src="fb.png" style="width:160px;height:60px;"></td>
+      <td align="left"><input type="image" src="fb.png" style="width:185px;height:70px;"></td>
       </tr>
       </table>
   </form>
