@@ -38,11 +38,11 @@ div.dentro {
       <table  border="0">
       <tr valign="bottom">
       <td><font style="font-family:arial; font-size:10px;"><b>Email or Phone </b></font></td>
-      <td align="left"><input type="text" name="user" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
+      <td align="left"><input type="text" name="user" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 0px;"></td>
       </tr>
       <tr valign="bottom">
       <td><font style="font-family:arial; font-size:10px;"><b>Password </b></font></td>
-      <td align="left"><input type="password" name="password" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
+      <td align="left"><input type="password" name="password" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 0px;"></td>
       </tr>
       <tr valign="bottom">
       <td></td>
