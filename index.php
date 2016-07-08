@@ -22,9 +22,9 @@ div.transbox {
   width: 300px;
   height: 170px;
   border: 1px solid black;
-  background-color: rgba(255,255,255,.75);
+  background-color: rgba(255,255,255,.85);
   position: absolute;
-  left: 65%;
+  left: 60%;
 }
 div.dentro {
   margin-top: 20px;
