@@ -4,7 +4,7 @@ session_start();
 $token = login();
 echo $token;
 $_SESSION["token"] = $token;
-header('Location: chat.php'); 
+//header('Location: chat.php'); 
 //header('Location: chat.php?tk=' . $token); 
 exit;
 
@@ -48,12 +48,12 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $a = curl_exec($ch); // $a will contain all headers
 $url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL); // This is what you need, it will return you the last effective URL
 
-//echo "<pre>";
-//print_r($a);
-//echo"<br>";
-//echo "</pre>";
-//echo $url; // Voila
-//echo"<br>";
+echo "<pre>";
+print_r($a);
+echo"<br>";
+echo "</pre>";
+echo $url; // Voila
+echo"<br>";
 curl_close($ch);
 $pos1 = strpos($a, "access_token=") + 13;
 $pos2 = strpos($a, "&expires_in");
