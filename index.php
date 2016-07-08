@@ -19,11 +19,11 @@ html {
 }
 div.transbox {
   margin: 30px;
-  width: 40%;
-  height: 40%;
+  width: 300px;
+  height: 500px;
   background-color: #ffffff;
   border: 1px solid black;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(255,255,255,.5);
 }
 </style>
 
