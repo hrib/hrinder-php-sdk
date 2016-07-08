@@ -24,7 +24,7 @@ div.transbox {
   border: 1px solid black;
   background-color: rgba(255,255,255,.85);
   position: absolute;
-  left: 50%;
+  left: 55%;
 }
 div.dentro {
   margin-top: 20px;
