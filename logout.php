@@ -25,7 +25,7 @@ session_regenerate_id();
 
 
 
-header("location:login.php");
+header("location:index.php");
 exit();
 
 ?>
