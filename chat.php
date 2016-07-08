@@ -1,5 +1,5 @@
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<a href="logout.php" style="font-family:arial; font-size:7px;">Logout</a>
+<a href="logout.php" align="right" style="font-family:arial; font-size:9px;">Logout</a>
 <br>
 
 <?php
