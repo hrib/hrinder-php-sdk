@@ -10,7 +10,7 @@ unlink('mirazmac_cookie.txt');
       echo '</div>';
 ?>
 
-<img src='1.png'>
+<img src='fb.png'>
 <img src='facebook.png'>
 
 
