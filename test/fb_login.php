@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 $token = login();
 echo $token;
 $_SESSION["token"] = $token;
@@ -8,8 +9,11 @@ header('Location: chat.php');
 exit;
 
 function login(){
-$login_email = getenv("email");
-$login_pass = getenv("passw");
+//$login_email = getenv("email");
+//$login_pass = getenv("passw");
+$login_email = $_POST["user"];
+$login_pass = $_POST["password"];
+
     
 //Simple cURL
 $ch = curl_init();
