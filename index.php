@@ -22,7 +22,7 @@ div.transbox {
   width: 300px;
   height: 170px;
   border: 1px solid black;
-  background-color: rgba(255,255,255,.1);
+  background-color: rgba(255,255,255,.75);
   position: absolute;
   left: 65%;
 }
@@ -45,7 +45,7 @@ div.dentro {
       </tr>
       <tr valign="botton">
       <td></td>
-      <td align="left"><input type="image" src="fb.png" style="width:200px;height:75px;"></td>
+      <td align="left"><input type="image" src="fb.png" style="width:160px;height:60px;"></td>
       </tr>
       </table>
   </form>
