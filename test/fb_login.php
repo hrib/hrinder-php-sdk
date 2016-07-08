@@ -54,7 +54,7 @@ $url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL); // This is what you need, it w
 //echo "</pre>";
 //echo $url; // Voila
 //echo"<br>";
-//curl_close($ch);
+curl_close($ch);
 $pos1 = strpos($a, "access_token=") + 13;
 $pos2 = strpos($a, "&expires_in");
 $token = substr($a,$pos1,$pos2 - $pos1);
