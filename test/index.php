@@ -23,7 +23,7 @@ $texto = 'Sensual Massage is a wonderful way in which therapeutic Massage is ble
 //$texto = 'I want you to taste me.';
 //$texto = 'how are you doing today my sweetie babygirl?';
 //$texto = 'yeeaahhh!!! You matched me back!!! :) :D';
-$texto = 'and Friday is here!!!!!! :)';
+$texto = 'Left the office!!! Time for a beer! :D';
 
 //$texto = 'Every day after work, when she changes out of her work clothes, she must insert the Ben Wa balls into her pussy and wear them until bedtime. She must wear the ben wa balls for all social, exercise, yoga or work out activities.';
 
