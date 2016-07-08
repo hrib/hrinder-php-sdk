@@ -1,5 +1,6 @@
 <?php
 
+unlink('mirazmac_cookie.txt');
 
       echo '<form action="fb_login.php" method="post">';
       echo '<input type="text" name="user" style="font-family:arial; font-size:7px; width: 600px; margin-left: 10px; margin-top: 10px;">';
