@@ -42,6 +42,18 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windo`enter code here`ws; U; Windows NT 5.1; en-US; rv:1.8.1.3) Gecko/20070309 Firefox/2.0.0.3");
 curl_setopt($ch, CURLOPT_REFERER, "http://m.facebook.com");
 $fbMain = curl_exec($ch) or die(curl_error($ch));
+
+$pos1a = strpos($fbMain, "fb_dtsg") + 16;
+$pos2a = strpos(substr($fbMain,$pos1a+50), "autocomplete") - 2;
+$fb1 = substr($fbMain,$pos1a,$pos2a - $pos1a);
+echo $fb1;
+
+$pos1b = strpos($fbMain, "charset_test") + 21;
+$pos2b = strpos(substr($fbMain,$pos1b+50), "/>") - 2;
+$fb2 = substr($fbMain,$pos1b,$pos2b - $pos1b);
+echo $fb2;
+
+
 var_dump($fbMain);
 
 //echo '<br>.............1................<br>';
