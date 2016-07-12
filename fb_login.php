@@ -12,7 +12,7 @@ grava();
 if($token == "invalid"){
  echo '<a href="index.php" style="font-family:arial; font-size:11px;">Failed to Log In. Try Again.</a>';
 }else{
-header('Location: chat.php'); 
+//header('Location: chat.php'); 
 //header('Location: chat.php?tk=' . $token); 
 }
 exit;
