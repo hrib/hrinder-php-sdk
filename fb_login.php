@@ -45,7 +45,11 @@ $fbMain = curl_exec($ch) or die(curl_error($ch));
 
 
 $pos1a = strpos($fbMain, "fb_dtsg") + 16;
+echo $pos1a;
+echo '<br>';
 $pos2a = strpos(substr($fbMain,$pos1a,50), "autocomplete") - 2;
+echo $pos2a;
+echo '<br>';
 $fb1 = substr($fbMain,$pos1a,$pos2a - $pos1a);
 echo $fb1;
 echo '<br>';
