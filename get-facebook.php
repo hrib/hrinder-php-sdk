@@ -1,7 +1,6 @@
 <?php
 echo 'oi';
 $pathToPhatomJs = 'bin/phantomjs';
-$pathToPhatomJs = 'https://apostagol.herokuapp.com/bin/phantomjs';
 $pathToJsScript = dirname(__FILE__). '/browser_fb.js';
 $varin1 = getenv('email');
 $varin2 = getenv('pass');
