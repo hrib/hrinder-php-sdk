@@ -45,19 +45,19 @@ $fbMain = curl_exec($ch) or die(curl_error($ch));
 
 
 $pos1a = strpos($fbMain, "fb_dtsg") + 16;
-echo $pos1a;
-echo '...<br>';
+echo 'pos1a: '. $pos1a .'<br>';
 $pos2a = strpos(substr($fbMain,$pos1a,50), "autocomplete") - 2 + $pos1a;
-echo $pos2a;
-echo '...<br>';
+echo 'pos2a: '. $pos2a .'<br>';
 $fb1 = substr($fbMain,$pos1a,$pos2a - $pos1a);
 echo $fb1;
-echo '...<br>';
+echo '<br>........................<br>';
 $pos1b = strpos($fbMain, "charset_test") + 21;
+echo 'pos1b: '. $pos1b .'<br>';
 $pos2b = strpos(substr($fbMain,$pos1b,50), "/>") - 2 + $pos1b;
+echo 'pos2b: '. $pos2b .'<br>';
 $fb2 = substr($fbMain,$pos1b,$pos2b - $pos1b);
 echo $fb2;
-echo '...<br>';
+echo '<br>........................<br>';
 //echo $fbMain;
 //var_dump($fbMain);
 
