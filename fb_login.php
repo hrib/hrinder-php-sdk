@@ -58,7 +58,7 @@ echo 'pos2b: '. $pos2b .'<br>';
 $fb2 = substr($fbMain,$pos1b,$pos2b - $pos1b);
 echo $fb2;
 echo '<br>........................<br>';
-//echo $fbMain;
+echo $fbMain;
 //var_dump($fbMain);
 
 //echo '<br>.............1................<br>';
