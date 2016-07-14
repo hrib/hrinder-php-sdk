@@ -61,6 +61,11 @@ echo $fb2;
 echo '<br>........................<br>';
 //echo $fbMain;
 
+curl_setopt($ch, CURLOPT_URL, 'https://m.facebook.com/login/checkpoint/');
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'charset_test=' . $fb2. '&fb_dtsg=' . $fb1 );
+$fbCheck = curl_exec($ch) or die(curl_error($ch));
+var_dump($fbCheck);
+
 
 //echo '<br>.............1................<br>';
 /*
