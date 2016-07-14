@@ -52,7 +52,6 @@ div.dentro {
 </div>
 
 
-<a href='java.php'>Java</a>
 
 
 
