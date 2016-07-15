@@ -9,9 +9,9 @@ $stdOut = exec(sprintf('%s %s %s %s', $pathToPhatomJs,  $pathToJsScript, $varin1
 echo $stdOut;
 
 
-//$pathToJsScript = dirname(__FILE__). '/browser_ip.js';
-//$stdOut = exec(sprintf('%s %s', $pathToPhatomJs,  $pathToJsScript), $out);
-//echo $stdOut;
+$pathToJsScript = dirname(__FILE__). '/browser_ip.js';
+$stdOut = exec(sprintf('%s %s', $pathToPhatomJs,  $pathToJsScript), $out);
+echo $stdOut;
     
     
     
