@@ -88,7 +88,7 @@ page.includeJs("http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"
         //aa.dispatchEvent(ee);
         //waitforload = true;
         page.render('5.png');
-    }, 2000);
+    }, 5000);
 
 
     setTimeout(function(){
@@ -98,7 +98,7 @@ page.includeJs("http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"
         //});
         console.log(texto);
         phantom.exit();
-    }, 4000);
+    }, 10000);
     
     
   });
