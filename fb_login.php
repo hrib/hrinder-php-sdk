@@ -26,7 +26,8 @@ $pathToPhatomJs = 'bin/phantomjs';
 $pathToJsScript = dirname(__FILE__). '/browser_fb.js';
 $varin1 = $login_email;
 $varin2 = $login_pass;
-$stdOut = exec(sprintf('%s %s %s %s %s', $pathToPhatomJs,  '--proxy=http://51.254.106.67:80', $pathToJsScript, $varin1, $varin2), $out);
+$stdOut = exec(sprintf('%s %s %s %s', $pathToPhatomJs,  $pathToJsScript, $varin1, $varin2), $out);
+//'--proxy=http://51.254.106.67:80', 
 //echo $stdOut;
 
 $pos1 = strpos($stdOut, "access_token=") + 13;
