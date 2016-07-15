@@ -52,7 +52,7 @@ echo 'pos2a: '. $pos2a .'<br>';
 $fb1 = substr($fbMain,$pos1a,$pos2a - $pos1a);
 echo $fb1;
 echo '<br>........................<br>';
-$pos1b = strpos($fbMain, "charset_test") + 21;
+$pos1b = strpos($fbMain, 'name="nh"') + 17;
 echo 'pos1b: '. $pos1b .'<br>';
 $pos2b = strpos(substr($fbMain,$pos1b,100), "/>") - 2 + $pos1b;
 echo 'pos2b: '. $pos2b .'<br>';
@@ -61,11 +61,23 @@ echo $fb2;
 echo '<br>........................<br>';
 //echo $fbMain;
 
-curl_setopt($ch, CURLOPT_URL, 'https://m.facebook.com/login/checkpoint/');
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'charset_test=' . $fb2. '&fb_dtsg=' . $fb1 );
+curl_setopt($ch, CURLOPT_URL, 'https://m.facebook.com/checkpoint/?next=https://m.facebook.com/');
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'fb_dtsg=' . urlencode($fb1) . '&nh=' . urlencode($fb2) . '&submit[Continue]=Continue');
 $fbCheck = curl_exec($ch) or die(curl_error($ch));
 var_dump($fbCheck);
 
+//fb_dtsg=d1R6sXcOEAI%3D&nh=4f58232f5c61b93a586164b86e072af00319bece&submit[Continue]=Continue&__user=0&__a=1&__dyn=7xeU6CQ3S3mbx676-C1swgE98nwgU6C7UW3e3eaxe1qwh8eU88lwm82yxG48hw&__req=9&__be=-1&__pc=PHASED%3ADEFAULT&ttstamp=210049825411588997969657361&__rev=2447731
+
+
+//fb_dtsg=d1R6sXcOEAI%3D&nh=4f58232f5c61b93a586164b86e072af00319bece&verification_method=3&submit[Continue]=Continue&__user=0&__a=1&__dyn=7xeU6CQ3S3mbx676-C1swgE98nwgU6C7UW3e3eaxe1qwh8eU88lwm82yxG48hw&__req=c&__be=-1&__pc=PHASED%3ADEFAULT&ttstamp=210049825411588997969657361&__rev=2447731
+
+
+
+//fb_dtsg=d1R6sXcOEAI%3D&nh=4f58232f5c61b93a586164b86e072af00319bece&submit[Continue]=Continue&__user=0&__a=1&__dyn=7xeU6CQ3S3mbx676-C1swgE98nwgU6C7UW3e3eaxe1qwh8eU88lwm82yxG48hw&__req=e&__be=-1&__pc=PHASED%3ADEFAULT&ttstamp=210049825411588997969657361&__rev=2447731
+
+//fb_dtsg=d1R6sXcOEAI%3D&nh=4f58232f5c61b93a586164b86e072af00319bece&answer_choices=0&submit[Continue]=Continue&__user=0&__a=1&__dyn=7xeU6CQ3S3mbx676-C1swgE98nwgU6C7UW3e3eaxe1qwh8eU88lwm82yxG48hw&__req=h&__be=-1&__pc=PHASED%3ADEFAULT&ttstamp=210049825411588997969657361&__rev=2447731
+//fb_dtsg=d1R6sXcOEAI%3D&nh=4f58232f5c61b93a586164b86e072af00319bece&answer_choices=1&submit[Continue]=Continue&__user=0&__a=1&__dyn=7xeU6CQ3S3mbx676-C1swgE98nwgU6C7UW3e3eaxe1qwh8eU88lwm82yxG48hw&__req=l&__be=-1&__pc=PHASED%3ADEFAULT&ttstamp=210049825411588997969657361&__rev=2447731
+//fb_dtsg=d1R6sXcOEAI%3D&nh=4f58232f5c61b93a586164b86e072af00319bece&answer_choices=0&submit[Continue]=Continue&__user=0&__a=1&__dyn=7xeU6CQ3S3mbx676-C1swgE98nwgU6C7UW3e3eaxe1qwh8eU88lwm82yxG48hw&__req=o&__be=-1&__pc=PHASED%3ADEFAULT&ttstamp=210049825411588997969657361&__rev=2447731
 
 //echo '<br>.............1................<br>';
 /*
