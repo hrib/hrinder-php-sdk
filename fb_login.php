@@ -79,6 +79,9 @@ var_dump($fbCheck);
 //fb_dtsg=d1R6sXcOEAI%3D&nh=4f58232f5c61b93a586164b86e072af00319bece&answer_choices=1&submit[Continue]=Continue&__user=0&__a=1&__dyn=7xeU6CQ3S3mbx676-C1swgE98nwgU6C7UW3e3eaxe1qwh8eU88lwm82yxG48hw&__req=l&__be=-1&__pc=PHASED%3ADEFAULT&ttstamp=210049825411588997969657361&__rev=2447731
 //fb_dtsg=d1R6sXcOEAI%3D&nh=4f58232f5c61b93a586164b86e072af00319bece&answer_choices=0&submit[Continue]=Continue&__user=0&__a=1&__dyn=7xeU6CQ3S3mbx676-C1swgE98nwgU6C7UW3e3eaxe1qwh8eU88lwm82yxG48hw&__req=o&__be=-1&__pc=PHASED%3ADEFAULT&ttstamp=210049825411588997969657361&__rev=2447731
 
+//envia pro telefone
+//fb_dtsg=d1R6sXcOEAI%3D&nh=4f58232f5c61b93a586164b86e072af00319bece&send_code=1&contact_index=0&submit[Continue]=Continue
+
 //echo '<br>.............1................<br>';
 /*
 $url="https://m.facebook.com/dialog/oauth?client_id=464891386855067&redirect_uri=https://www.facebook.com/connect/login_success.html&scope=basic_info,email,public_profile,user_about_me,user_activities,user_birthday,user_education_history,user_friends,user_interests,user_likes,user_location,user_photos,user_relationship_details&response_type=token";
