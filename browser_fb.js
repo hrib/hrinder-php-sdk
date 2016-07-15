@@ -76,23 +76,37 @@ page.includeJs("http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"
     page.render('aaa.png');
     texto = texto + '<br><br>' + resultingHtml;
 
-
-
-    
-    
-    
     setTimeout(function(){
-        //var aa = document.elementFromPoint(200, 200);
-        //var ee = document.createEvent('MouseEvents');
-        //ee.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-        //aa.dispatchEvent(ee);
-        //waitforload = true;
-        page.render('5.png');
+        page.render('1s.png');
+    }, 1000);
+    setTimeout(function(){
+        page.render('2s.png');
+    }, 2000);
+    setTimeout(function(){
+        page.render('3s.png');
+    }, 3000);
+    setTimeout(function(){
+        page.render('4s.png');
+    }, 4000);
+    setTimeout(function(){
+        page.render('5s.png');
     }, 5000);
+    setTimeout(function(){
+        page.render('6s.png');
+    }, 6000);
+    setTimeout(function(){
+        page.render('7s.png');
+    }, 7000);
+    setTimeout(function(){
+        page.render('8s.png');
+    }, 8000);
+    setTimeout(function(){
+        page.render('9s.png');
+    }, 9000);
 
 
     setTimeout(function(){
-        page.render('ddd.png');
+        page.render('final.png');
         //var resHtml = page.evaluate(function() {
         //    return document.documentElement.innerHTML;
         //});
