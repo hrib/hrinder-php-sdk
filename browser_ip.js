@@ -7,16 +7,16 @@ page.includeJs("http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"
     
 
     
-    var resultingHtml = page.evaluate(function() {
-        return document.title;
-    });
+    //var resultingHtml = page.evaluate(function() {
+    //    return document.title;
+    //});
     page.render('aaa.png');
-    console.log(resultingHtml);
+    //console.log(resultingHtml);
 
     
     setTimeout(function(){
         page.render('1.png');
-        console.log('print');
+        //console.log('print');
     }, 5000);
 
 
