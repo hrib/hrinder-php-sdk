@@ -10,8 +10,8 @@ $pathToJsScript = dirname(__FILE__). '/browser_fb.js';
 
 
 $pathToJsScript = dirname(__FILE__). '/browser_ip.js';
-//$stdOut = exec(sprintf('%s %s %s', $pathToPhatomJs, '--proxy=157.7.152.61:3128', $pathToJsScript), $out);
-$stdOut = exec(sprintf('%s %s ', $pathToPhatomJs, $pathToJsScript), $out);
+$stdOut = exec(sprintf('%s %s %s', $pathToPhatomJs, '--proxy=157.7.152.61:3128', $pathToJsScript), $out);
+//$stdOut = exec(sprintf('%s %s ', $pathToPhatomJs, $pathToJsScript), $out);
 
 echo $stdOut; 
     
