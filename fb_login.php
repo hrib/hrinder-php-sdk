@@ -44,27 +44,31 @@ curl_setopt($ch, CURLOPT_REFERER, "http://m.facebook.com");
 $fbMain = curl_exec($ch) or die(curl_error($ch));
 var_dump($fbMain);
 
-echo '<br>........................<br>';
-$pos1a = strpos($fbMain, "fb_dtsg") + 16;
-echo 'pos1a: '. $pos1a .'<br>';
-$pos2a = strpos(substr($fbMain,$pos1a,100), "autocomplete") - 2 + $pos1a;
-echo 'pos2a: '. $pos2a .'<br>';
-$fb1 = substr($fbMain,$pos1a,$pos2a - $pos1a);
-echo $fb1;
-echo '<br>........................<br>';
-$pos1b = strpos($fbMain, 'name="nh"') + 17;
-echo 'pos1b: '. $pos1b .'<br>';
-$pos2b = strpos(substr($fbMain,$pos1b,100), "/>") - 2 + $pos1b;
-echo 'pos2b: '. $pos2b .'<br>';
-$fb2 = substr($fbMain,$pos1b,$pos2b - $pos1b);
-echo $fb2;
-echo '<br>........................<br>';
+if (strpos($fbMain, "checkpoint")  !== false){
+   $pos1i = strpos($fbMain, "fb_dtsg") + 16;
+   $pos1f = strpos(substr($fbMain,$pos1i,100), "autocomplete") - 2 + $pos1i;
+   $fb_dtsg_code = substr($fbMain,$pos1i,$pos1f - $pos1i);
+   
+   $pos2i = strpos($fbMain, 'name="nh"') + 17;
+   $pos2f = strpos(substr($fbMain,$pos2i,100), "/>") - 2 + $pos2i;
+   $nh_code = substr($fbMain,$pos1i,$pos2f - $pos1i);
+   
+   $_SESSION["fb_dtsg_code"] =  $fb_dtsg_code;
+   $_SESSION["nh_code"] = $nh_code;
+   header("Location: checkpoint.php"); /* Redirect browser */
+   exit();
+}else{
+   header("Location: gettoken.php"); /* Redirect browser */
+   exit();
+}
+
+
 //echo $fbMain;
 
-curl_setopt($ch, CURLOPT_URL, 'https://m.facebook.com/checkpoint/?next=https://m.facebook.com/');
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'fb_dtsg=' . urlencode($fb1) . '&nh=' . urlencode($fb2) . '&submit[Continue]=Continue');
-$fbCheck = curl_exec($ch) or die(curl_error($ch));
-var_dump($fbCheck);
+//curl_setopt($ch, CURLOPT_URL, 'https://m.facebook.com/checkpoint/?next=https://m.facebook.com/');
+//curl_setopt($ch, CURLOPT_POSTFIELDS, 'fb_dtsg=' . urlencode($fb1) . '&nh=' . urlencode($fb2) . '&submit[Continue]=Continue');
+//$fbCheck = curl_exec($ch) or die(curl_error($ch));
+//var_dump($fbCheck);
 
 //fb_dtsg=d1R6sXcOEAI%3D&nh=4f58232f5c61b93a586164b86e072af00319bece&submit[Continue]=Continue&__user=0&__a=1&__dyn=7xeU6CQ3S3mbx676-C1swgE98nwgU6C7UW3e3eaxe1qwh8eU88lwm82yxG48hw&__req=9&__be=-1&__pc=PHASED%3ADEFAULT&ttstamp=210049825411588997969657361&__rev=2447731
 
