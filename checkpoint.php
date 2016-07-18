@@ -15,9 +15,9 @@ foreach ($_POST as $key => $value){
   echo "{$key} = {$value}\r\n";
   if(strcasecmp($key,'submit') !== 0){
     $textopost = $key . '=' . urlencode($value) . '&' . $textopost;
-    echo '<br>a:' . $textopost . '<br>';
+    //echo '<br>a:' . $textopost . '<br>';
   }
-  var_dump($value);
+  //var_dump($value);
 }
 //echo '<br>' . $textopost . '<br>';
 submitfb($textopost);
