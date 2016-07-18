@@ -55,11 +55,14 @@ if (strpos($fbMain, "checkpoint")  !== false){
    //$pos2f = strpos(substr($fbMain,$pos2i,100), "/>") - 2 + $pos2i;
    //$nh_code = substr($fbMain,$pos1i,$pos2f - $pos1i);
    
-   $_SESSION["checkpoint"] = $fbMain;
+   str_replace('action="/login/checkpoint/"','action="checkpoint.php"',$fbMain);
+   echo $fbMain;
+   
+   //$_SESSION["checkpoint"] = $fbMain;
    //$_SESSION["fb_dtsg_code"] =  $fb_dtsg_code;
    //$_SESSION["nh_code"] = $nh_code;
-   header("Location: checkpoint.php"); /* Redirect browser */
-   exit();
+   //header("Location: checkpoint.php"); /* Redirect browser */
+   //exit();
 }else{
    header("Location: gettoken.php"); /* Redirect browser */
    exit();
