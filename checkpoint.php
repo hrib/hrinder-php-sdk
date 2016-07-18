@@ -14,7 +14,7 @@ $textopost = 'submit[Continue]=Continue';
 foreach ($_POST as $key => $value){
   echo "{$key} = {$value}\r\n";
   if(strcasecmp($key,'submit') !== 0){
-    $textopost = $key + '=' + $value + '&' + $textopost;
+    $textopost = $key . '=' . $value . '&' . $textopost;
     echo '<br>a:' . $textopost . '<br>';
   }
   //var_dump($value);
