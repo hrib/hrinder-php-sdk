@@ -12,7 +12,7 @@ echo $_SESSION["checkpoint"];
 
 foreach ($_POST as $key => $value){
   echo "{$key} = {$value}\r\n";
-  var_dump $value;
+  var_dump($value);
 }
 
 submitfb();
