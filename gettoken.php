@@ -8,8 +8,8 @@ grava();
 if($token == "invalid"){
  echo '<a href="index.php" style="font-family:arial; font-size:11px;">Failed to Log In. Try Again.</a>';
 }else{
-echo 'chat';
-//header('Location: chat.php'); 
+//echo 'chat';
+header('Location: chat.php'); 
 }
 exit;
 
