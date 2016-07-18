@@ -44,7 +44,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windo`enter code here`ws; U; Windows NT 5.1; en-US; rv:1.8.1.3) Gecko/20070309 Firefox/2.0.0.3");
 curl_setopt($ch, CURLOPT_REFERER, "http://m.facebook.com");
 $fbMain = curl_exec($ch) or die(curl_error($ch));
-var_dump($fbMain);
+//var_dump($fbMain);
 
 if (strpos($fbMain, "checkpoint")  !== false){
    $pos1i = strpos($fbMain, "fb_dtsg") + 16;
