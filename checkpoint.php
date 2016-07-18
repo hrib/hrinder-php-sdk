@@ -17,10 +17,11 @@ foreach ($_POST as $key => $value){
   echo "{$key} = {$value}\r\n";
   if(strcasecmp($key,'submit') !== 0){
     $textopost = $key . '=' . urlencode($value) . '&' . $textopost;
-    echo '<br>a:' . $textopost . '<br>';
+    //echo '<br>a:' . $textopost . '<br>';
   }else{
     var_dump($key);
-    $textopost = $key . '=' . urlencode($key[0]) . '&' . $textopost;
+    var_dump($value);
+    $textopost = $key . '=' . urlencode($value[0]) . '&' . $textopost;
     echo '<br>submete: ' . $textopost . '<br>';
   }
   //var_dump($value);
