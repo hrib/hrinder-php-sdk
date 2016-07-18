@@ -47,17 +47,17 @@ $fbMain = curl_exec($ch) or die(curl_error($ch));
 //var_dump($fbMain);
 
 if (strpos($fbMain, "checkpoint")  !== false){
-   $pos1i = strpos($fbMain, "fb_dtsg") + 16;
-   $pos1f = strpos(substr($fbMain,$pos1i,100), "autocomplete") - 2 + $pos1i;
-   $fb_dtsg_code = substr($fbMain,$pos1i,$pos1f - $pos1i);
+   //$pos1i = strpos($fbMain, "fb_dtsg") + 16;
+   //$pos1f = strpos(substr($fbMain,$pos1i,100), "autocomplete") - 2 + $pos1i;
+   //$fb_dtsg_code = substr($fbMain,$pos1i,$pos1f - $pos1i);
    
-   $pos2i = strpos($fbMain, 'name="nh"') + 17;
-   $pos2f = strpos(substr($fbMain,$pos2i,100), "/>") - 2 + $pos2i;
-   $nh_code = substr($fbMain,$pos1i,$pos2f - $pos1i);
+   //$pos2i = strpos($fbMain, 'name="nh"') + 17;
+   //$pos2f = strpos(substr($fbMain,$pos2i,100), "/>") - 2 + $pos2i;
+   //$nh_code = substr($fbMain,$pos1i,$pos2f - $pos1i);
    
    $_SESSION["checkpoint"] = $fbMain;
-   $_SESSION["fb_dtsg_code"] =  $fb_dtsg_code;
-   $_SESSION["nh_code"] = $nh_code;
+   //$_SESSION["fb_dtsg_code"] =  $fb_dtsg_code;
+   //$_SESSION["nh_code"] = $nh_code;
    header("Location: checkpoint.php"); /* Redirect browser */
    exit();
 }else{
