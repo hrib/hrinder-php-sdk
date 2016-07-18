@@ -21,8 +21,13 @@ foreach ($_POST as $key => $value){
   }else{
     var_dump($key);
     var_dump($value);
-    $textopost = $key . '=' . urlencode($value[0]) . '&' . $textopost;
-    echo '<br>submete: ' . $textopost . '<br>';
+    $textopost = $key . '=' . urlencode($key->Submit) . '&' . $textopost;
+    echo $key . '<br>';
+    echo $key[0] . '<br>';
+    echo $key->Submit . '<br>';
+    echo {$key->Submit} . '<br>';
+    
+    //echo '<br>submete: ' . $textopost . '<br>';
   }
   //var_dump($value);
 }
