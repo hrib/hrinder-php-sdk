@@ -10,8 +10,8 @@ echo $_POST["nh"] .'<br>';
 echo '<br>..........................<br>';
 echo $_SESSION["checkpoint"];
 
-//$textopost = 'submit[Continue]=Continue';
-$textopost = '';
+$textopost = 'submit[Continue]=Continue';
+//$textopost = '';
 
 foreach ($_POST as $key => $value){
   echo "{$key} = {$value}\r\n";
@@ -20,7 +20,7 @@ foreach ($_POST as $key => $value){
     echo '<br>a:' . $textopost . '<br>';
   }else{
     var_dump($key);
-    $textopost = $key . '=' . urlencode($value[0]) . '&' . $textopost;
+    $textopost = $key . '=' . urlencode($key[0]) . '&' . $textopost;
     echo '<br>submete: ' . $textopost . '<br>';
   }
   //var_dump($value);
