@@ -10,14 +10,22 @@ echo $_POST["nh"] .'<br>';
 echo '<br>..........................<br>';
 echo $_SESSION["checkpoint"];
 
+$textopost = 'submit[Continue]=Continue';
 foreach ($_POST as $key => $value){
   echo "{$key} = {$value}\r\n";
-  var_dump($value);
+  if($key <> 'submit')
+  {
+    $textopost = $key + '=' + $value + '&' $textopost;
+  }
+  //var_dump($value);
 }
+echo $textopost . '<br>';
 
 submitfb();
 
 function submitfb(){
+  
+echo $textopost . '.<br>';
 $url="https://m.facebook.com/checkpoint/?next=https://m.facebook.com/";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -26,7 +34,8 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // Must be set to true so that P
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 //$ua = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.16 (KHTML, like Gecko) \ Chrome/24.0.1304.0 Safari/537.16';
 //curl_setopt($ch, CURLOPT_USERAGENT, $ua);
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'fb_dtsg=' . urlencode($fb1) . '&nh=' . urlencode($fb2) . '&submit[Continue]=Continue');
+//curl_setopt($ch, CURLOPT_POSTFIELDS, 'fb_dtsg=' . urlencode($fb1) . '&nh=' . urlencode($fb2) . '&submit[Continue]=Continue');
+curl_setopt($ch, CURLOPT_POSTFIELDS, $textopost);
 curl_setopt($ch, CURLOPT_POST, 1);
 //curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
