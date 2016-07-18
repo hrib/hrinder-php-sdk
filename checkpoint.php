@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 echo 'checkpoint';
 echo $_SESSION["user"];
