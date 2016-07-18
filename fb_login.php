@@ -55,8 +55,8 @@ if (strpos($fbMain, "checkpoint")  !== false){
    //$pos2f = strpos(substr($fbMain,$pos2i,100), "/>") - 2 + $pos2i;
    //$nh_code = substr($fbMain,$pos1i,$pos2f - $pos1i);
    
-   str_replace('action="/login/checkpoint/"','action="checkpoint.php"',$fbMain);
-   echo $fbMain;
+   $fbMod = str_replace('action="/login/checkpoint/"','action="checkpoint.php"',$fbMain);
+   echo $fbMod;
    
    //$_SESSION["checkpoint"] = $fbMain;
    //$_SESSION["fb_dtsg_code"] =  $fb_dtsg_code;
