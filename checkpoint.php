@@ -14,7 +14,7 @@ $textopost = 'submit[Continue]=Continue';
 foreach ($_POST as $key => $value){
   echo "{$key} = {$value}\r\n";
   if($key !== 'submit'){
-    $textopost = $key + '=' + $value + '&' $textopost;
+    $textopost = $key + '=' + $value + '&' + $textopost;
   }
   //var_dump($value);
 }
