@@ -13,18 +13,19 @@ echo $_SESSION["checkpoint"];
 $textopost = 'submit[Continue]=Continue';
 foreach ($_POST as $key => $value){
   echo "{$key} = {$value}\r\n";
-  if($key !== 'submit'){
+  if(strcasecmp($key,'submit') !== 0){
     $textopost = $key + '=' + $value + '&' + $textopost;
+    echo '<br>a:' . $textopost . '<br>';
   }
   //var_dump($value);
 }
-echo $textopost . '<br>';
+echo '<br>' . $textopost . '<br>';
 
 submitfb();
 
 function submitfb(){
   
-echo $textopost . '.<br>';
+echo '<br>' . $textopost . '<br>';
 $url="https://m.facebook.com/checkpoint/?next=https://m.facebook.com/";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
