@@ -13,8 +13,7 @@ echo $_SESSION["checkpoint"];
 $textopost = 'submit[Continue]=Continue';
 foreach ($_POST as $key => $value){
   echo "{$key} = {$value}\r\n";
-  if($key <> 'submit')
-  {
+  if($key !== 'submit'){
     $textopost = $key + '=' + $value + '&' $textopost;
   }
   //var_dump($value);
