@@ -25,7 +25,8 @@ foreach ($_POST as $key => $value){
     echo $key . '<br>';
     echo $key[0] . '<br>';
     echo $key->Submit . '<br>';
-    echo {$key->Submit} . '<br>';
+    echo $key->{Submit} . '<br>';
+
     
     //echo '<br>submete: ' . $textopost . '<br>';
   }
