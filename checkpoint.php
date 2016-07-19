@@ -51,7 +51,7 @@ foreach ($_POST as $key => $value){
   
     echo $textoadd1 . ' texto1<br>';
     echo $textoadd2 . ' texto2<br>';
-    $textopost = $textopost + $textoadd1;
+    $textopost = $textopost . $textoadd1;
     //echo '<br>submete: ' . $textopost . '<br>';
   }
   //var_dump($value);
