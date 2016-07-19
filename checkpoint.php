@@ -77,7 +77,7 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd() . '/mirazmac_cookie.txt'); // cooki
 curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windo`enter code here`ws; U; Windows NT 5.1; en-US; rv:1.8.1.3) Gecko/20070309 Firefox/2.0.0.3");
 curl_setopt($ch, CURLOPT_REFERER, "http://m.facebook.com");
 $fbMain = curl_exec($ch); // $a will contain all headers
-curl_close($ch);
+
 
 $pos1 = strpos($fbMain, "<head>");
 $fbMod = str_replace('action="/login/checkpoint/"','action="checkpoint.php"', substr($fbMain,$pos1,strlen($fbMain)));
@@ -86,7 +86,20 @@ $fbMod = str_replace('action="/login/checkpoint/?next=https%3A%2F%2Fm.facebook.c
 //echo $fbMod;
 
 if (strpos($fbMod, "checkpoint")  !== false){
-   echo $fbMod;
+  if (strpos($fbMod, "Dublin, Ireland")  !== false){
+    
+    $submitpos = strpos($textopost,"submit");
+    $crop = substr($textopost, 0, $submitpos);
+    $newpost = $crop . 'submit[Yes]=Yes';
+    
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $newpost);
+    $fbMain = curl_exec($ch); // $a will contain all headers
+    $pos1 = strpos($fbMain, "<head>");
+    $fbMod = str_replace('action="/login/checkpoint/"','action="checkpoint.php"', substr($fbMain,$pos1,strlen($fbMain)));
+    $fbMod = str_replace('action="/login/checkpoint/?next=https%3A%2F%2Fm.facebook.com%2F"','action="checkpoint.php"', $fbMod);
+  }
+  curl_close($ch);
+  echo $fbMod;
 }else{
    header("Location: gettoken.php"); /* Redirect browser */
    exit();
