@@ -35,6 +35,11 @@ foreach ($_POST as $key => $value){
     reset($value);
     $first_key = key($value);
     echo $first_key . ' g<br>';
+    
+    reset($value[$first_key]);
+    $first_keyB = key($value[$first_key]);
+    echo $first_keyB . ' h<br>';
+    
     //echo '<br>submete: ' . $textopost . '<br>';
   }
   //var_dump($value);
