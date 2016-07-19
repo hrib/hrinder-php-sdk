@@ -25,10 +25,12 @@ foreach ($_POST as $key => $value){
     var_dump($value);
     echo '<br>';
     $textopost = $key . '=' . urlencode($key->Submit) . '&' . $textopost;
-    echo $key . '<br>';
-    echo $key[0] . '<br>';
-    echo $key->Submit . '<br>';
-    echo $key->{Submit} . '<br>';
+    echo $key . ' a<br>';
+    echo $value[0] . ' b<br>';
+    echo $value->Submit . ' c<br>';
+    echo $value->{Submit} . ' d<br>';
+    echo $value->Continue . ' e<br>';
+    echo $value->{Continue} . ' f<br>';
 
     
     //echo '<br>submete: ' . $textopost . '<br>';
