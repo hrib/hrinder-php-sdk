@@ -30,6 +30,7 @@ foreach ($_POST as $key => $value){
     echo $value->Submit . ' c<br>';
     echo $value->{Submit} . ' d<br>';
     echo $value->[Continue] . ' e<br>';
+    echo $value[Continue] . ' f<br>';
     //echo $value->{Continue} . ' f<br>';
 
     
