@@ -15,12 +15,15 @@ $textopost = 'submit[Continue]=Continue';
 
 foreach ($_POST as $key => $value){
   echo "{$key} = {$value}\r\n";
+  echo '<br>';
   if(strcasecmp($key,'submit') !== 0){
     $textopost = $key . '=' . urlencode($value) . '&' . $textopost;
     //echo '<br>a:' . $textopost . '<br>';
   }else{
     var_dump($key);
+    echo '<br>';
     var_dump($value);
+    echo '<br>';
     $textopost = $key . '=' . urlencode($key->Submit) . '&' . $textopost;
     echo $key . '<br>';
     echo $key[0] . '<br>';
