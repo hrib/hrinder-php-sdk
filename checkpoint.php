@@ -25,7 +25,7 @@ foreach ($_POST as $key => $value){
     echo '<br>';
     var_dump($value);
     echo '<br>';
-    $textopost = $key . '=' . urlencode($key->Submit) . '&' . $textopost;
+    //$textopost = $key . '=' . urlencode($key->Submit) . '&' . $textopost;
     echo $key . ' a<br>';
     //echo $value[0] . ' b<br>';
     //echo $value->Submit . ' c<br>';
@@ -44,13 +44,15 @@ foreach ($_POST as $key => $value){
     echo $value[$first_key][$first_keyB] . ' h2<br>';
     
     $textoadd1 = $key . '[' . $first_key . ']=' . urlencode($value[$first_key]);
+    echo $textoadd1 . ' texto1<br>';
     if($first_keyB != ''){
-          echo 'usar 2<br>';
-          $textoadd2 = $key . '[' . $first_key . '][' . $first_keyB . ']=' . urlencode($value[$first_key][$first_keyB]);
+          //echo 'usar 2<br>';
+          $textoadd1 = $key . '[' . $first_key . '][' . $first_keyB . ']=' . urlencode($value[$first_key][$first_keyB]);
+          echo $textoadd1 . ' texto2<br>';
     }
   
-    echo $textoadd1 . ' texto1<br>';
-    echo $textoadd2 . ' texto2<br>';
+    
+    echo $textoadd1 . ' escolhido<br>';
     $textopost = $textopost . $textoadd1;
     //echo '<br>submete: ' . $textopost . '<br>';
   }
