@@ -1,69 +1,60 @@
 <?php
 session_start();
 
-echo 'checkpoint<br>';
+echo 'checkpoint<br>.............<br>';
 //echo $_SESSION["user"];
 //echo $_SESSION["password"];
 //echo $_SESSION["token"];
-echo $_POST["fb_dtsg"] .'<br>';
-echo $_POST["nh"] .'<br>';
-echo '<br>..........................<br>';
-echo $_SESSION["checkpoint"];
+//echo $_POST["fb_dtsg"] .'<br>';
+//echo $_POST["nh"] .'<br>';
+//echo '<br>..........................<br>';
+//echo $_SESSION["checkpoint"];
 
 //$textopost = 'submit[Continue]=Continuar';
 $textopost = '';
 
 foreach ($_POST as $key => $value){
-  echo "{$key} = {$value}\r\n";
-  echo '<br>';
+  //echo "{$key} = {$value}\r\n";
+  //echo '<br>';
   if(strcasecmp($key,'submit') !== 0){
     $textopost = $key . '=' . urlencode($value) . '&' . $textopost;
-    //$textopost = $key . '=' . urlencode($value) . '&' . $textopost;
-    //echo '<br>a:' . $textopost . '<br>';
   }else{
-    var_dump($key);
-    echo '<br>';
-    var_dump($value);
-    echo '<br>';
-    //$textopost = $key . '=' . urlencode($key->Submit) . '&' . $textopost;
-    echo $key . ' a<br>';
-    //echo $value[0] . ' b<br>';
-    //echo $value->Submit . ' c<br>';
-    //echo $value->{Submit} . ' d<br>';
-    //echo $value->[Continue] . ' e<br>';
-    //echo $value['Continue'] . ' f<br>';
-    //echo $value->{Continue} . ' f<br>';
+    //var_dump($key);
+    //echo '<br>';
+    //var_dump($value);
+    //echo '<br>';
+    //echo $key . ' a<br>';
     reset($value);
     $first_key = key($value);
-    echo $first_key . ' g<br>';
-    echo $value[$first_key] . ' g2<br>';
+    //echo $first_key . ' g<br>';
+    //echo $value[$first_key] . ' g2<br>';
     
     reset($value[$first_key]);
     $first_keyB = key($value[$first_key]);
-    echo $first_keyB . ' h<br>';
-    echo $value[$first_key][$first_keyB] . ' h2<br>';
+    //echo $first_keyB . ' h<br>';
+    //echo $value[$first_key][$first_keyB] . ' h2<br>';
     
     $textoadd1 = $key . '[' . $first_key . ']=' . urlencode($value[$first_key]);
-    echo $textoadd1 . ' texto1<br>';
+    //echo $textoadd1 . ' texto1<br>';
     if($first_keyB != ''){
           //echo 'usar 2<br>';
           $textoadd1 = $key . '[' . $first_key . '][' . $first_keyB . ']=' . urlencode($value[$first_key][$first_keyB]);
-          echo $textoadd1 . ' texto2<br>';
+          //echo $textoadd1 . ' texto2<br>';
     }
   
     
-    echo $textoadd1 . ' escolhido<br>';
+    //echo $textoadd1 . ' escolhido<br>';
     $textopost = $textopost . $textoadd1;
     //echo '<br>submete: ' . $textopost . '<br>';
   }
   //var_dump($value);
 }
-echo '<br>' . $textopost . '<br>';
+//echo '<br>' . $textopost . '<br>';
 submitfb($textopost);
 
 function submitfb($textopost){
   
-echo '<br>' . $textopost . '<br>';
+//echo '<br>' . $textopost . '<br>';
 $url="https://m.facebook.com/checkpoint/?next=https://m.facebook.com/";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
