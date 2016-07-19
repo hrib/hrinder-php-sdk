@@ -10,14 +10,15 @@ echo $_POST["nh"] .'<br>';
 echo '<br>..........................<br>';
 echo $_SESSION["checkpoint"];
 
-$textopost = 'submit[Continue]=Continuar';
-//$textopost = '';
+//$textopost = 'submit[Continue]=Continuar';
+$textopost = '';
 
 foreach ($_POST as $key => $value){
   echo "{$key} = {$value}\r\n";
   echo '<br>';
   if(strcasecmp($key,'submit') !== 0){
     $textopost = $key . '=' . urlencode($value) . '&' . $textopost;
+    //$textopost = $key . '=' . urlencode($value) . '&' . $textopost;
     //echo '<br>a:' . $textopost . '<br>';
   }else{
     var_dump($key);
@@ -43,9 +44,14 @@ foreach ($_POST as $key => $value){
     echo $value[$first_key][$first_keyB] . ' h2<br>';
     
     $textoadd1 = $key . '[' . $first_key . ']=' . urlencode($value[$first_key]);
-    $textoadd2 = $key . '[' . $first_key . '][' . $first_keyB . ']=' . urlencode($value[$first_key][$first_keyB]);
+    if($first_keyB != ''){
+          echo 'usar 2<br>';
+          $textoadd2 = $key . '[' . $first_key . '][' . $first_keyB . ']=' . urlencode($value[$first_key][$first_keyB]);
+    }
+  
     echo $textoadd1 . ' texto1<br>';
     echo $textoadd2 . ' texto2<br>';
+    $textopost = $textopost + $textoadd1;
     //echo '<br>submete: ' . $textopost . '<br>';
   }
   //var_dump($value);
