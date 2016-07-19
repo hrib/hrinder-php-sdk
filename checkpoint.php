@@ -101,7 +101,9 @@ if (strpos($fbMod, "checkpoint")  !== false){
   curl_close($ch);
   echo $fbMod;
 }else{
-   header("Location: gettoken.php"); /* Redirect browser */
+   echo 'Nao eh checkpoint<br>';
+   echo $fbMod;
+   //header("Location: gettoken.php"); /* Redirect browser */
    exit();
 }
 
