@@ -26,10 +26,10 @@ foreach ($_POST as $key => $value){
     echo '<br>';
     $textopost = $key . '=' . urlencode($key->Submit) . '&' . $textopost;
     echo $key . ' a<br>';
-    echo $value[0] . ' b<br>';
+    echo $value[1] . ' b<br>';
     echo $value->Submit . ' c<br>';
     echo $value->{Submit} . ' d<br>';
-    echo $value->Continue . ' e<br>';
+    echo $value->[Continue] . ' e<br>';
     //echo $value->{Continue} . ' f<br>';
 
     
