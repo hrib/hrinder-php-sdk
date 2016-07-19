@@ -26,19 +26,21 @@ foreach ($_POST as $key => $value){
     echo '<br>';
     $textopost = $key . '=' . urlencode($key->Submit) . '&' . $textopost;
     echo $key . ' a<br>';
-    echo $value[0] . ' b<br>';
-    echo $value->Submit . ' c<br>';
-    echo $value->{Submit} . ' d<br>';
+    //echo $value[0] . ' b<br>';
+    //echo $value->Submit . ' c<br>';
+    //echo $value->{Submit} . ' d<br>';
     //echo $value->[Continue] . ' e<br>';
-    echo $value['Continue'] . ' f<br>';
+    //echo $value['Continue'] . ' f<br>';
     //echo $value->{Continue} . ' f<br>';
     reset($value);
     $first_key = key($value);
     echo $first_key . ' g<br>';
+    echo $value[$first_key] . ' g2<br>';
     
     reset($value[$first_key]);
     $first_keyB = key($value[$first_key]);
     echo $first_keyB . ' h<br>';
+    echo $value[$first_key][$first_keyB] . ' h2<br>';
     
     //echo '<br>submete: ' . $textopost . '<br>';
   }
