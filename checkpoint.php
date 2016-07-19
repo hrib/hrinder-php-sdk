@@ -10,7 +10,7 @@ echo $_POST["nh"] .'<br>';
 echo '<br>..........................<br>';
 echo $_SESSION["checkpoint"];
 
-$textopost = 'submit[Continue]=Continue';
+$textopost = 'submit[Continue]=Continuar';
 //$textopost = '';
 
 foreach ($_POST as $key => $value){
@@ -42,6 +42,10 @@ foreach ($_POST as $key => $value){
     echo $first_keyB . ' h<br>';
     echo $value[$first_key][$first_keyB] . ' h2<br>';
     
+    $textoadd1 = $key . '[' . $first_key . ']=' . $value[$first_key];
+    $textoadd2 = $key . '[' . $first_key . '][' . $first_keyB . ']=' . $value[$first_key][$first_keyB];
+    echo $textoadd1 . ' texto1<br>';
+    echo $textoadd2 . ' texto2<br>';
     //echo '<br>submete: ' . $textopost . '<br>';
   }
   //var_dump($value);
