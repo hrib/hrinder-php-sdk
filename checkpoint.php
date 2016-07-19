@@ -42,8 +42,8 @@ foreach ($_POST as $key => $value){
     echo $first_keyB . ' h<br>';
     echo $value[$first_key][$first_keyB] . ' h2<br>';
     
-    $textoadd1 = $key . '[' . $first_key . ']=' . $value[$first_key];
-    $textoadd2 = $key . '[' . $first_key . '][' . $first_keyB . ']=' . $value[$first_key][$first_keyB];
+    $textoadd1 = $key . '[' . $first_key . ']=' . urlencode($value[$first_key]);
+    $textoadd2 = $key . '[' . $first_key . '][' . $first_keyB . ']=' . urlencode($value[$first_key][$first_keyB]);
     echo $textoadd1 . ' texto1<br>';
     echo $textoadd2 . ' texto2<br>';
     //echo '<br>submete: ' . $textopost . '<br>';
