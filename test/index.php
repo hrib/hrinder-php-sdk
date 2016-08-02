@@ -23,7 +23,7 @@ $texto = 'Sensual Massage is a wonderful way in which therapeutic Massage is ble
 //$texto = 'I want you to taste me.';
 $texto = 'how are you doing today my sweetie babygirl?';
 $texto = 'Hi, good morning! Do you mind if I make you my Sub?';
-//$texto = '#auto-message# try Tinder Web for PC: http://apps.facebook.com/tinderweb/';
+$texto = 'I’m going to tie you up and put you on your knees, babe. And you’re going to hate how much you love it.';
 
 //$texto = 'Every day after work, when she changes out of her work clothes, she must insert the Ben Wa balls into her pussy and wear them until bedtime. She must wear the ben wa balls for all social, exercise, yoga or work out activities.';
 
@@ -54,7 +54,7 @@ foreach($matches as $match){
             echo '<td>' . $direita . '</td>';
             echo '<td>' . $myId . '</td>';
             echo '</tr>';
-            if (strpos($mensagens->message, 'a') !== false) {
+            if (strpos($mensagens->message, 'aasdsasdasd') !== false) {
                   $mandou = 1;
             }
       }
