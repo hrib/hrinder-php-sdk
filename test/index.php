@@ -18,12 +18,12 @@ $texto = 'To keep the body in good health is a duty, otherwise we shall not be a
 $texto = 'Of course it hurts, it’s a spanking. How else would it work? ― Breanna Hayse, Time Out London'; 
 $texto = 'For women who want to enjoy the firm yet the tender touch of a man without the need to perform or give back sexually. Book your sensual massage. :)'; 
 //$texto = 'Before leaving her home every day, she must be wearing an item of ownership (necklace, bracelet, anklet, choker, or ring) that reminds her constantly of Master. The item must be worn in plain sight in public for other to see.';
-$texto = 'Before leaving for work in the morning, she must text me a photo of her outfit. This is not to control her wardrobe in anyway but to be able to compliment her on how sexy and beautiful she looks at the beginning of her day.';
 $texto = 'Sensual Massage is a wonderful way in which therapeutic Massage is blended with eroticism and allows ladies to release daily stresses, emotional and physical tensions away. Book your sensual massage. :)';
 //$texto = 'I want you to taste me.';
 $texto = 'how are you doing today my sweetie babygirl?';
 $texto = 'Hi! Would you mind if I make you my Sub?';
 //$texto = 'I’m going to tie you up and put you on your knees, babe. And you’re going to hate how much you love it.';
+$texto = 'Before leaving for work in the morning, you must text me a photo of your outfit. This is not to control your wardrobe in anyway but to be able to compliment you on how sexy and beautiful you look at the beginning of your day.';
 
 //$texto = 'Every day after work, when she changes out of her work clothes, she must insert the Ben Wa balls into her pussy and wear them until bedtime. She must wear the ben wa balls for all social, exercise, yoga or work out activities.';
 
@@ -54,7 +54,7 @@ foreach($matches as $match){
             echo '<td>' . $direita . '</td>';
             echo '<td>' . $myId . '</td>';
             echo '</tr>';
-            if (strpos($mensagens->message, 'a') !== false) {
+            if (strpos($mensagens->message, 'asdfsdfgdfg') !== false) {
                   $mandou = 1;
             }
       }
