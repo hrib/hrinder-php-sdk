@@ -13,10 +13,10 @@ require __DIR__ .'/vendor/autoload.php';
 
 
 //$fb_id = getenv('FB_ID_MassTherr6');
-$token = getenv('FB_INDER_TOKEN_MassTherr6');
+//$token = getenv('FB_INDER_TOKEN_MassTherr6');
 //$token = $_GET["tk"];
 //$fb_id = $_GET["fb"];
-// --->>> $token = $_SESSION["token"];
+$token = $_SESSION["token"];
 //echo 'fb_id:'. $fb_id;
 //echo 'token:'. $token;
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
