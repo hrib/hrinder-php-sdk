@@ -24,7 +24,7 @@ $texto = 'how are you doing today my sweetie babygirl?';
 $texto = 'Hi! Would you mind if I make you my Sub?';
 //$texto = 'I’m going to tie you up and put you on your knees, babe. And you’re going to hate how much you love it.';
 $texto = 'Before leaving for work in the morning, you must text me a photo of your outfit. This is not to control your wardrobe in anyway but to be able to compliment you on how sexy and beautiful you look at the beginning of your day.';
-$texto = 'I need you to give me a massage!';
+$texto = 'Morning!!! I need a relaxing massage, can you be my masseuse!?';
 //$texto = 'Every day after work, when she changes out of her work clothes, she must insert the Ben Wa balls into her pussy and wear them until bedtime. She must wear the ben wa balls for all social, exercise, yoga or work out activities.';
 
 //var_dump($tinder->sendMessage($userId, $message));
@@ -54,7 +54,13 @@ foreach($matches as $match){
             echo '<td>' . $direita . '</td>';
             echo '<td>' . $myId . '</td>';
             echo '</tr>';
-            if (strpos($mensagens->message, 'a') !== false) {
+            if (strpos($mensagens->message, 'asdfsdfdf') !== false) {
+                  $mandou = 1;
+            }
+            if (strpos($match->person->name, 'Mariline') !== false) {
+                  $mandou = 1;
+            }
+            if (strpos($match->person->name, 'Michele') !== false) {
                   $mandou = 1;
             }
       }
