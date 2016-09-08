@@ -63,6 +63,9 @@ foreach($matches as $match){
             if (strpos($match->person->name, 'Michele') !== false) {
                   $mandou = 1;
             }
+            if (strpos($match->person->name, 'Liliane') !== false) {
+                  $mandou = 1;
+            }
       }
       if($mandou == 0){
             set_time_limit(10); 
