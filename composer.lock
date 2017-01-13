@@ -21,6 +21,9 @@
                 "reference": "4cbc75000e5995fdf423fb89c53dcc231f7a1df6",
                 "shasum": ""
             },
+            "require": {
+                "php": ">=5.4.0"
+            },
             "require-dev": {
                 "phpunit/phpunit": "4.7.7"
             },
