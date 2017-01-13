@@ -13,6 +13,7 @@
         }
 	],
 	"require": {
+		"php": ">=5.4.0",
 		"pecee/http-service": "1.*"
     },
     "require-dev": {
