@@ -12,14 +12,6 @@
            	 "email": "simon.sessingoe@gmail.com"
         }
 	],
-	"require": {
-		"php": ">=5.4.0",
-		"pecee/http-service": "1.*"
-    },
-    "require-dev": {
-	"phpunit/phpunit": ">=4.0",
-	"pecee/http-service": "1.*"
-    },
     "autoload": {
         "psr-4": {
             "Pecee\\": "src/Pecee/"
