@@ -73,7 +73,7 @@ foreach($matches as $match){
             echo '</tr>';
       }
       //if($direita == ""){echo '<table bgcolor="#00FF00">';}
-      if($direita == ""){echo '<table style="background-color:#00FF00;">';}
+      if($direita == ""){echo '<tr style="background-color:#00FF00;"><td></td><td></td></tr>';}
       echo '</table>';
       echo '</div>';
       echo '<form action="envia.php">';
