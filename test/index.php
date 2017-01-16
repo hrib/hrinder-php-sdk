@@ -13,7 +13,7 @@ $myId = $user_dados->_id;
 //$myId = '57443822d531d95a13b018df';
 //$texto = 'You should try my sensual massage: 1 hour relaxing massage with music, oil and candles... It might include sensual stimulation with you feel comfortable with. Contact me on instagram (@london_for_her) or facebook: Xmassage UK. :)';
 //$texto = 'The therapy will take you into the heart and bloom of the flower of your femininity. An orgasm is not the goal, but rather sexual healing in whatever form it is expressed. The therapy is an opportunity to receive without any expectations. It is the absolute opportunity to experience the beauty and pleasure of sensual touch from another - totally as the receiver. Orgasmic delight is often experienced and has been described as ‘riding the wave’.';
-//$texto = 'When in doubt. Do it. - Oliver Wendell Holmes';
+$texto = 'When in doubt. Do it. - Oliver Wendell Holmes';
 $texto = 'To keep the body in good health is a duty, otherwise we shall not be able to keep our mind strong and clear. ~Buddha ';
 $texto = 'Of course it hurts, it’s a spanking. How else would it work? ― Breanna Hayse, Time Out London'; 
 $texto = 'For women who want to enjoy the firm yet the tender touch of a man without the need to perform or give back sexually. Book your sensual massage. :)'; 
@@ -22,11 +22,13 @@ $texto = 'Sensual Massage is a wonderful way in which therapeutic Massage is ble
 //$texto = 'I want you to taste me.';
 $texto = 'how are you doing today my sweetie babygirl?';
 $texto = 'Hi! Would you mind if I make you my Sub?';
-//$texto = 'I’m going to tie you up and put you on your knees, babe. And you’re going to hate how much you love it.';
+$texto = 'I’m going to tie you up and put you on your knees, babe. And you’re going to hate how much you love it.';
 //$texto = 'Before leaving for work in the morning, you must text me a photo of your outfit. This is not to control your wardrobe in anyway but to be able to compliment you on how sexy and beautiful you look at the beginning of your day.';
 //$texto = 'Morning!!! I need a relaxing massage, can you be my masseuse!?';
 //$texto = 'Hello!! So.. when am I getting my massage? :)';
 //$texto = 'Every day after work, when she changes out of her work clothes, she must insert the Ben Wa balls into her pussy and wear them until bedtime. She must wear the ben wa balls for all social, exercise, yoga or work out activities.';
+$texto = 'When in doubt. Do it. - Oliver Wendell Holmes';
+
 
 //var_dump($tinder->sendMessage($userId, $message));
 echo '<br>';
@@ -65,6 +67,9 @@ foreach($matches as $match){
                   $mandou = 1;
             }
             if (strpos($match->person->name, 'Liliane') !== false) {
+                  $mandou = 1;
+            }
+            if (strpos($match->person->name, 'Valentina') !== false) {
                   $mandou = 1;
             }
       }
