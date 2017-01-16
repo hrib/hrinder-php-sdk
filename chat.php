@@ -72,6 +72,7 @@ foreach($matches as $match){
             //echo '<td>' . $myId . '</td>';
             echo '</tr>';
       }
+      if($direita == ""){echo '<table bgcolor="#00FF00">';}
       echo '</table>';
       echo '</div>';
       echo '<form action="envia.php">';
@@ -81,8 +82,7 @@ foreach($matches as $match){
       echo '</form>'; 
       echo '<br><br>';
       echo '</div>';
-      //if($direita = ""){echo '<table bgcolor="#00FF00">';}
-      if($direita = ""){echo 'AQUI!!!!!!!!!!!!';}
+      if($direita == ""){echo 'AQUI!!!!!!!!!!!!';}
       //echo '<script>';
       //echo 'var objDiv = document.getElementById("' . $match->_id . '");';
       //echo 'var objDiv = document.getElementById("table");';
