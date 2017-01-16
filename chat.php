@@ -72,6 +72,7 @@ foreach($matches as $match){
             //echo '<td>' . $myId . '</td>';
             echo '</tr>';
       }
+      if($direita = ""){echo '<table bgcolor="#00FF00">';}
       echo '</table>';
       echo '</div>';
       echo '<form action="envia.php">';
