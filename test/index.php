@@ -27,7 +27,7 @@ $texto = 'I’m going to tie you up and put you on your knees, babe. And you’r
 //$texto = 'Morning!!! I need a relaxing massage, can you be my masseuse!?';
 //$texto = 'Hello!! So.. when am I getting my massage? :)';
 //$texto = 'Every day after work, when she changes out of her work clothes, she must insert the Ben Wa balls into her pussy and wear them until bedtime. She must wear the ben wa balls for all social, exercise, yoga or work out activities.';
-$texto = 'hey.. I am around west/central London... can I have a massage now? Where is your place? (it is massage only.. nothing else)';
+$texto = 'Hi... Did you read my profile? Im looking for massage next week... can you host near west/central London? Massage only, do not expect anything else';
 
 
 //var_dump($tinder->sendMessage($userId, $message));
@@ -57,7 +57,7 @@ foreach($matches as $match){
             echo '<td>' . $direita . '</td>';
             echo '<td>' . $myId . '</td>';
             echo '</tr>';
-            if (strpos($mensagens->message, 'asdfsdfg') !== false) {
+            if (strpos($mensagens->message, 'a') !== false) {
                   $mandou = 1;
             }
             if (strpos($match->person->name, 'Mariline') !== false) {
