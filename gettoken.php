@@ -39,6 +39,36 @@ curl_setopt($ch, CURLOPT_REFERER, "http://m.facebook.com");
 $a = curl_exec($ch); // $a will contain all headers
 $url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL); // This is what you need, it will return you the last effective URL
 
+//echo "<pre>";
+//print_r($a);
+//echo"<br>";
+//echo "</pre>";
+//echo $url; // Voila
+//echo"<br>";
+curl_close($ch);
+//////////////////////////////////////////////////////////////////////////////////
+$url="https://www.facebook.com/v2.6/dialog/oauth/confirm?dpr=0.89552241563797";
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_HEADER, true);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // Must be set to true so that PHP follows any "Location:" header
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+//curl_setopt($ch, CURLOPT_POST, 1);
+//curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept-Charset: utf-8',
+    'Accept-Language: en-us,en;q=0.7,bn-bd;q=0.3',
+    'Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5'));
+curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd() . '/mirazmac_cookie.txt'); // The cookie file
+curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd() . '/mirazmac_cookie.txt'); // cookie jar
+curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windo`enter code here`ws; U; Windows NT 5.1; en-US; rv:1.8.1.3) Gecko/20070309 Firefox/2.0.0.3");
+curl_setopt($ch, CURLOPT_REFERER, "http://m.facebook.com");
+
+$a = curl_exec($ch); // $a will contain all headers
+$url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL); // This is what you need, it will return you the last effective URL 
+ 
 echo "<pre>";
 print_r($a);
 echo"<br>";
@@ -46,6 +76,11 @@ echo "</pre>";
 echo $url; // Voila
 echo"<br>";
 curl_close($ch);
+ 
+ 
+ 
+ 
+ 
 $pos1 = strpos($a, "access_token=") + 13;
 $pos2 = strpos($a, "&expires_in");
 $token = substr($a,$pos1,$pos2 - $pos1);
