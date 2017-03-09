@@ -84,7 +84,9 @@ curl_close($ch);
 $pos1 = strpos($a, "access_token=") + 13;
 $pos2 = strpos($a, "&expires_in");
 $token = substr($a,$pos1,$pos2 - $pos1);
-//echo $token;
+
+ 
+echo $token;
 return $token;
 
 }
