@@ -72,8 +72,9 @@ foreach($matches as $match){
             if (strpos($match->person->name, 'Valentina') !== false) {
                   $mandou = 1;
             }
+            $ultima_msg = $mensagens->message;
       }
-      if (strpos($mensagens->message, 'sexo casual') !== false) {
+      if (strpos($ultima_msg, 'sexo casual') !== false) {
             $mandou = 0;
       }
             
