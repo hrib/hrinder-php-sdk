@@ -2,7 +2,7 @@
 session_start();
 
 $token = gettoken();
-if(strlen($token) > 250){$token = "invalid";};
+if(strlen($token) > 300){$token = "invalid";};
 $_SESSION["token"] = $token;
 grava();
 if($token == "invalid"){
