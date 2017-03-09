@@ -5,7 +5,7 @@ $token = gettoken();
 echo '<br>'. $token .'</br>';
 if(strlen($token) > 300){$token = "invalid";};
 $_SESSION["token"] = $token;
-grava();
+//grava();
 if($token == "invalid"){
  echo '<br>'. $token .'</br>';
  echo '<a href="index.php" style="font-family:arial; font-size:11px;">Failed to Log In. Try Again.</a>';
