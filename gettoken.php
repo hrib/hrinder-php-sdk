@@ -49,6 +49,51 @@ $url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL); // This is what you need, it w
 //echo"<br>";
 curl_close($ch);
 //////////////////////////////////////////////////////////////////////////////////
+ 
+$textopost = '';
+foreach ($_POST as $key => $value){
+  //echo "{$key} = {$value}\r\n";
+  //echo '<br>';
+  if(strcasecmp($key,'submit') !== 0){
+    $textopost = $key . '=' . urlencode($value) . '&' . $textopost;
+  }else{
+    //var_dump($key);
+    //echo '<br>';
+    //var_dump($value);
+    //echo '<br>';
+    //echo $key . ' a<br>';
+    reset($value);
+    $first_key = key($value);
+    //echo $first_key . ' g<br>';
+    //echo $value[$first_key] . ' g2<br>';
+    
+    reset($value[$first_key]);
+    $first_keyB = key($value[$first_key]);
+    //echo $first_keyB . ' h<br>';
+    //echo $value[$first_key][$first_keyB] . ' h2<br>';
+    
+    $textoadd1 = $key . '[' . $first_key . ']=' . urlencode($value[$first_key]);
+    //echo $textoadd1 . ' texto1<br>';
+    if($first_keyB != ''){
+          //echo 'usar 2<br>';
+          $textoadd1 = $key . '[' . $first_key . '][' . $first_keyB . ']=' . urlencode($value[$first_key][$first_keyB]);
+          //echo $textoadd1 . ' texto2<br>';
+    }
+  
+    
+    //echo $textoadd1 . ' escolhido<br>';
+    $textopost = $textopost . $textoadd1;
+    //echo '<br>submete: ' . $textopost . '<br>';
+  }
+  //var_dump($value);
+}
+echo '<br>' . $textopost . '<br>'; 
+ 
+ 
+ 
+ 
+ /////////////////////////////////////////////////////////////////////////////////
+ 
 $url="https://www.facebook.com/v2.6/dialog/oauth/confirm?dpr=1";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -68,8 +113,8 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd() . '/mirazmac_cookie.txt'); // cooki
 curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windo`enter code here`ws; U; Windows NT 5.1; en-US; rv:1.8.1.3) Gecko/20070309 Firefox/2.0.0.3");
 curl_setopt($ch, CURLOPT_REFERER, "http://m.facebook.com");
 
-$a = curl_exec($ch); // $a will contain all headers
-$url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL); // This is what you need, it will return you the last effective URL 
+//$a = curl_exec($ch); // $a will contain all headers
+//$url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL); // This is what you need, it will return you the last effective URL 
  
 //echo "<pre>";
 //print_r($a);
