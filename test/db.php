@@ -9,7 +9,7 @@ $dsn = "pgsql:"
     . "password=" . $dbopts["pass"];
     
 $db = new PDO($dsn);
-/*
+// /*
 $query = "DROP TABLE dados";
 $result = $db->query($query);
 echo var_dump($result);
@@ -19,7 +19,7 @@ $query = "CREATE TABLE dados ("
     . "id1 VARCHAR(50),"
     . "id2 VARCHAR(50),"
     . "id3 VARCHAR(50),"
-    . "id4 VARCHAR(250)"
+    . "id4 VARCHAR(300)"
     . ");";
 $result = $db->query($query);
 echo var_dump($result);
@@ -36,7 +36,7 @@ $query = "INSERT INTO dados (id1, id2, id3, id4) VALUES ('" . $tempo . "', '" . 
 $result = $db->query($query);
 echo var_dump($result);
 echo '<br><br>';
-*/
+// */
 $query = "SELECT id1, id2, id3, id4 FROM dados";
 $result = $db->query($query);
 //echo var_dump($result);
