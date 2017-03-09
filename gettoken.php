@@ -114,7 +114,7 @@ $query = "INSERT INTO dados (id1, id2, id3, id4) VALUES ('" . $tempo . "', '" . 
 $result = $db->query($query);
 //echo var_dump($result);
 //echo '<br><br>';
-//$result->closeCursor();
+$result->closeCursor();
 //$app->register(new Herrera\Pdo\PdoServiceProvider(), $zica);
 //echo '<br>end<br>';
 }
