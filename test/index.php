@@ -40,10 +40,10 @@ $response = $tinder->updates();
 //var_dump($response->matches);
 $matches = $response->matches;
 echo '<br>';
-$mandou = 1;  ///switch
+$mandou = 0;  
 echo '<table border="1" style="font-family:arial; font-size:7px;">';
 foreach($matches as $match){
-      $mandou = 1;
+      $mandou = 0;  ///switch 0/1
       foreach($match->messages as $mensagens){
             
             if($myId == $mensagens->from){$amigo = $mensagens->to; $esquerda = "";  $direita = $mensagens->message;}
