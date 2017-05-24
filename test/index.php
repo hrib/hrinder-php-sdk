@@ -29,6 +29,7 @@ $texto = 'I’m going to tie you up and put you on your knees, babe. And you’r
 //$texto = 'Every day after work, when she changes out of her work clothes, she must insert the Ben Wa balls into her pussy and wear them until bedtime. She must wear the ben wa balls for all social, exercise, yoga or work out activities.';
 $texto = 'Oi! O que acha da ideia!? :)';
 $texto = 'Hi! How are you today? Did you read my profile... Are you looking for a massage? :)';
+$texto = 'Tinder will soon block me for advertising... so if you need to contact me, Im on facebook. facebook.com / LondonMassageForHer . ;)';
 
 //var_dump($tinder->sendMessage($userId, $message));
 echo '<br>';
@@ -57,20 +58,20 @@ foreach($matches as $match){
             echo '<td>' . $direita . '</td>';
             echo '<td>' . $myId . '</td>';
             echo '</tr>';
-            if (strpos($mensagens->message, 'a') !== false) {
+            if (strpos($mensagens->message, 'adfgdfgdfg') !== false) {
                   $mandou = 1;
             }
             if (strpos($match->person->name, 'Mariline') !== false) {
-                  $mandou = 1;
+                  //$mandou = 1;
             }
             if (strpos($match->person->name, 'Michele') !== false) {
-                  $mandou = 1;
+                  //$mandou = 1;
             }
             if (strpos($match->person->name, 'Liliane') !== false) {
-                  $mandou = 1;
+                  //$mandou = 1;
             }
             if (strpos($match->person->name, 'Valentina') !== false) {
-                  $mandou = 1;
+                  //$mandou = 1;
             }
             $ultima_msg = $mensagens->message;
       }
