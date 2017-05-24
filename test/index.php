@@ -3,7 +3,7 @@ require __DIR__ .'/../vendor/autoload.php';
 
 //$fb_id = getenv('FB_ID');
 //$token = getenv('FB_INDER_TOKEN');
-$fb_id = getenv('FB_ID_MassTherr6');
+//$fb_id = getenv('FB_ID_MassTherr6');
 $token = getenv('FB_INDER_TOKEN');
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 //.
@@ -28,7 +28,7 @@ $texto = 'I’m going to tie you up and put you on your knees, babe. And you’r
 //$texto = 'Hello!! So.. when am I getting my massage? :)';
 //$texto = 'Every day after work, when she changes out of her work clothes, she must insert the Ben Wa balls into her pussy and wear them until bedtime. She must wear the ben wa balls for all social, exercise, yoga or work out activities.';
 $texto = 'Oi! O que acha da ideia!? :)';
-$texto = 'Hi! Did you read my profile? Are you looking for a massage? :)';
+$texto = 'Hi! How are you today? Did you read my profile... Are you looking for a massage? :)';
 
 //var_dump($tinder->sendMessage($userId, $message));
 echo '<br>';
@@ -74,6 +74,7 @@ foreach($matches as $match){
             }
             $ultima_msg = $mensagens->message;
       }
+      //mandar seu minha ultima msg teve isso:
       if (strpos($ultima_msg, 'sexo casual') !== false) {
             $mandou = 0;
       }
