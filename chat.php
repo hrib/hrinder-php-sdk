@@ -106,6 +106,8 @@ function esconde($texto){
 
 
 ?>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
       var $wrapper = $('.testWrapper');
       $wrapper.find('.test').sort(function (a, b) {
@@ -116,11 +118,16 @@ function esconde($texto){
       var inputs = document.getElementsByName("table"); for(var i=0; i<inputs.length;i++) { inputs[i].scrollTop = inputs[i].scrollHeight }; 
       //console.log(inputs.length);
 
-      replaceText('£1£', 'a', 'g');
-      replaceText('£2£', 'e', 'g');
-      replaceText('£3£', 'i', 'g');
-      replaceText('£4£', 'o', 'g');
-      replaceText('£5£', 'u', 'g');
+      
+      $( document ).ready(function() {
+            replaceText('£1£', 'a', 'g');
+            replaceText('£2£', 'e', 'g');
+            replaceText('£3£', 'i', 'g');
+            replaceText('£4£', 'o', 'g');
+            replaceText('£5£', 'u', 'g');
+
+      });
+
       function replaceText(text, newText, flags) {
         var matcher = new RegExp(text, flags);
         console.log(matcher);
