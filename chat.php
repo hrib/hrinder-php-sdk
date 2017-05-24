@@ -110,14 +110,6 @@ function esconde($texto){
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
-      var $wrapper = $('.testWrapper');
-      $wrapper.find('.test').sort(function (a, b) {
-          return +a.dataset.percentage - +b.dataset.percentage;
-      })
-      .appendTo( $wrapper );
-      
-      var inputs = document.getElementsByName("table"); for(var i=0; i<inputs.length;i++) { inputs[i].scrollTop = inputs[i].scrollHeight }; 
-      //console.log(inputs.length);
 
       
       $( document ).ready(function() {
@@ -126,6 +118,15 @@ function esconde($texto){
             replaceText('£3£', 'i', 'g');
             replaceText('£4£', 'o', 'g');
             replaceText('£5£', 'u', 'g');
+            
+            var $wrapper = $('.testWrapper');
+            $wrapper.find('.test').sort(function (a, b) {
+                return +a.dataset.percentage - +b.dataset.percentage;
+            })
+            .appendTo( $wrapper );
+
+            var inputs = document.getElementsByName("table"); for(var i=0; i<inputs.length;i++) { inputs[i].scrollTop = inputs[i].scrollHeight }; 
+            //console.log(inputs.length);
 
       });
 
