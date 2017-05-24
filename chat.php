@@ -67,6 +67,8 @@ foreach($matches as $match){
             //echo '<td>' . $match->_id . '</td>';
             echo '<td>' . $mensagens->sent_date . '</td>';
             //echo '<td>' . $amigo . '</td>';
+            $esquerda = esconde($esquerda);
+            $direita = esconde($direita);
             echo '<td>' . $esquerda . '</td>';
             echo '<td>' . $direita . '</td>';
             //echo '<td>' . $myId . '</td>';
@@ -90,13 +92,17 @@ foreach($matches as $match){
       //echo '</script>';
 }
 echo '</div>';       
-//echo '</table>';
 
-//echo '<br>Fim<br>';
+function esconde($texto){
 
-
-
-// var_dump($tinder->sendMessage($match->_id, $texto));
+      $texto = str_replace('a','£$a$£',$texto);
+      $texto = str_replace('e','£$e$£',$texto);
+      $texto = str_replace('i','£$i$£',$texto);
+      $texto = str_replace('o','£$o$£',$texto);
+      $texto = str_replace('u','£$u$£',$texto);
+      
+      return $retorno
+}
 
 
 ?>
