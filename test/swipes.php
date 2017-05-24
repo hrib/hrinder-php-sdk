@@ -2,12 +2,12 @@
 require __DIR__ .'/../vendor/autoload.php';
 //require '../src/Pecee/Http/Service/Tinder.php';
 
-$token_instagram = getenv('INS_APP_TOKEN'); //token burp para acesso ao instagram
+//$token_instagram = getenv('INS_APP_TOKEN'); //token burp para acesso ao instagram
 
-$fb_id = getenv('FB_ID');
+//$fb_id = getenv('FB_ID');
 $token = getenv('FB_INDER_TOKEN');
-$fb_id = getenv('FB_ID_MassTherr');
-$token = getenv('FB_INDER_TOKEN_MassTherr');
+//$fb_id = getenv('FB_ID_MassTherr');
+//$token = getenv('FB_INDER_TOKEN_MassTherr');
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 //$tinder = new Tinder($fb_id, $token);
 
@@ -21,22 +21,22 @@ echo '<table border="1" style="font-family:arial; font-size:7px;">';
       foreach($candidatos as $candidato){
                   
                   $tinder->like($candidato->_id);
-                  $instagram_id = 'nao achou';
-                  if(!empty($candidato->instagram->username)){
-                        $instagram_id = PegaUserID($candidato->instagram->username, $token_instagram);
-                  }
-                  $relacao = 'nao achou';
-                  if($instagram_id !== 'nao achou'){
-                        $relacao = modificaRelacao($instagram_id, $token_instagram, 'follow');
-                  }
+                  //$instagram_id = 'nao achou';
+                  //if(!empty($candidato->instagram->username)){
+                  //      $instagram_id = PegaUserID($candidato->instagram->username, $token_instagram);
+                  //}
+                  //$relacao = 'nao achou';
+                  //if($instagram_id !== 'nao achou'){
+                  //      $relacao = modificaRelacao($instagram_id, $token_instagram, 'follow');
+                  //}
                   set_time_limit(10);
                   sleep(1);
                   echo '<tr>';
                   echo '<td>' . $candidato->_id . '</td>';
                   echo '<td>' . $candidato->name . '</td>';
-                  echo '<td>' . $candidato->instagram->username . '</td>';
-                  echo '<td>' . $instagram_id . '</td>';
-                  echo '<td>' . $relacao . '</td>';
+                  //echo '<td>' . $candidato->instagram->username . '</td>';
+                  //echo '<td>' . $instagram_id . '</td>';
+                  //echo '<td>' . $relacao . '</td>';
                   echo '</tr>';
       }
 echo '</table>';
