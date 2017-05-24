@@ -14,8 +14,8 @@ require __DIR__ .'/vendor/autoload.php';
 
 //$fb_id = getenv('FB_ID_MassTherr6');
 
-$token = $_SESSION["token"];
-//$token = getenv('FB_INDER_TOKEN');
+//$token = $_SESSION["token"];
+$token = getenv('FB_INDER_TOKEN');
 //$_SESSION["token"] = $token;
 
 //$token = $_GET["tk"];
