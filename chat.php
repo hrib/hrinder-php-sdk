@@ -95,11 +95,11 @@ echo '</div>';
 
 function esconde($texto){
 
-      $texto = str_replace('a','£$a$£',$texto);
-      $texto = str_replace('e','£$e$£',$texto);
-      $texto = str_replace('i','£$i$£',$texto);
-      $texto = str_replace('o','£$o$£',$texto);
-      $texto = str_replace('u','£$u$£',$texto);
+      $texto = str_replace('a','£1£',$texto);
+      $texto = str_replace('e','£2£',$texto);
+      $texto = str_replace('i','£3£',$texto);
+      $texto = str_replace('o','£4£',$texto);
+      $texto = str_replace('u','£5£',$texto);
       
       return $texto;
 }
