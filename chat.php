@@ -101,7 +101,7 @@ function esconde($texto){
       $texto = str_replace('o','£$o$£',$texto);
       $texto = str_replace('u','£$u$£',$texto);
       
-      return $retorno;
+      return $texto;
 }
 
 
