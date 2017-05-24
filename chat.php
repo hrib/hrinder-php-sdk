@@ -116,5 +116,21 @@ function esconde($texto){
       var inputs = document.getElementsByName("table"); for(var i=0; i<inputs.length;i++) { inputs[i].scrollTop = inputs[i].scrollHeight }; 
       //console.log(inputs.length);
 
+      replaceText('£1£', 'a', 'g');
+      replaceText('£2£', 'e', 'g');
+      replaceText('£3£', 'i', 'g');
+      replaceText('£4£', 'o', 'g');
+      replaceText('£5£', 'u', 'g');
+      function replaceText(text, newText, flags) {
+        var matcher = new RegExp(text, flags);
+        console.log(matcher);
+        var elems = document.getElementsByClassName('test'), i;
+        console.log(elems.length);
+        for (i = 0; i < elems.length; i++){
+            elems[i].innerHTML = elems[i].innerHTML.replace(matcher, newText);
+        }
+      }
+      
+      
 </script>
 
