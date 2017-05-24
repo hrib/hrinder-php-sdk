@@ -21,7 +21,7 @@ echo '<table border="1" style="font-family:arial; font-size:7px;">';
       foreach($candidatos as $candidato){
                   
                   $swiperight = $tinder->like($candidato->_id);
-                  console.log($swiperight);
+                  print_r($swiperight);
                   //$instagram_id = 'nao achou';
                   //if(!empty($candidato->instagram->username)){
                   //      $instagram_id = PegaUserID($candidato->instagram->username, $token_instagram);
