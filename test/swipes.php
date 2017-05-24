@@ -13,14 +13,15 @@ $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 
 
 $response = $tinder->recommendations();
-var_dump($response);
+//var_dump($response);
 $candidatos = $response->results;
 echo '<br>';
 
 echo '<table border="1" style="font-family:arial; font-size:7px;">';
       foreach($candidatos as $candidato){
                   
-                  $tinder->like($candidato->_id);
+                  $swiperight = $tinder->like($candidato->_id);
+                  console.log(print_r($swiperight));
                   //$instagram_id = 'nao achou';
                   //if(!empty($candidato->instagram->username)){
                   //      $instagram_id = PegaUserID($candidato->instagram->username, $token_instagram);
