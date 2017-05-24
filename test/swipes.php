@@ -30,8 +30,8 @@ echo '<table border="1" style="font-family:arial; font-size:7px;">';
                   //if($instagram_id !== 'nao achou'){
                   //      $relacao = modificaRelacao($instagram_id, $token_instagram, 'follow');
                   //}
-                  set_time_limit(10);
-                  sleep(1);
+                  //set_time_limit(10);
+                  //sleep(1);
                   echo '<tr>';
                   echo '<td>' . $candidato->_id . '</td>';
                   echo '<td>' . $candidato->name . '</td>';
