@@ -78,10 +78,10 @@ foreach($matches as $match){
       if($direita == ""){echo '<tr style="background-color:#00FF00;"><td>...</td><td></td><td></td></tr>';}
       echo '</table>';
       echo '</div>';
-      echo '<form action="envia.php">';
+      echo '<form name="myform" action="envia.php" onsubmit="DoSubmit();">';
       echo '<input type="hidden" name="userid" value=' . $match->_id . '>';
       echo '<input type="text" name="message" style="font-family:arial; font-size:7px; width: 600px; margin-left: 10px; margin-top: 10px;">';
-      echo '<input type="submit" value="Send" style="font-family:arial; font-size:7px; margin-left: 10px; margin-top: 10px;">';
+      echo '<input type="submit" value="Send" name="botaoenvia" style="font-family:arial; font-size:7px; margin-left: 10px; margin-top: 10px;">';
       echo '</form>'; 
       echo '<br><br>';
       echo '</div>';
@@ -138,6 +138,23 @@ function esconde($texto){
         }
       }
       
+      function DoSubmit(){
+        encodeText('a', '£1£', 'g');
+        encodeText('e', '£2£', 'g');
+        encodeText('i', '£3£', 'g');
+        encodeText('o', '£4£', 'g');
+        encodeText('u', '£5£', 'g');
+        return true;
+      }
+      
+      function encodeText(text, newText, flags) {
+        var matcher = new RegExp(text, flags);
+        var elems = document.getElementsByName('message'), i;
+        for (i = 0; i < elems.length; i++){
+            elems[i].value = elems[i].value.replace(matcher, newText);
+        }
+      }
+
       
 </script>
 
