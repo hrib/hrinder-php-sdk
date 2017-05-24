@@ -35,6 +35,7 @@ echo '<table border="1" style="font-family:arial; font-size:7px;">';
                   echo '<tr>';
                   echo '<td>' . $candidato->_id . '</td>';
                   echo '<td>' . $candidato->name . '</td>';
+                  echo '<td>' . $swiperight->match->_id . '</td>';
                   //echo '<td>' . $candidato->instagram->username . '</td>';
                   //echo '<td>' . $instagram_id . '</td>';
                   //echo '<td>' . $relacao . '</td>';
