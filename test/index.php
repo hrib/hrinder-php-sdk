@@ -30,6 +30,8 @@ $texto = 'I’m going to tie you up and put you on your knees, babe. And you’r
 $texto = 'Oi! O que acha da ideia!? :)';
 $texto = 'Hi! How are you today? Did you read my profile... Are you looking for a massage? :)';
 $texto = 'Tinder will soon block me for advertising... so if you need to contact me, Im on facebook. facebook.com / LondonMassageForHer . ;)';
+$texto = 'Hello! I would like to invite you to check my services on my business page: facebook.com / LondonMassageForHer . ;)';
+
 
 //var_dump($tinder->sendMessage($userId, $message));
 echo '<br>';
