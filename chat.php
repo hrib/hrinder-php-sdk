@@ -12,7 +12,7 @@ session_start();
 require __DIR__ .'/vendor/autoload.php';
 
 
-//$fb_id = getenv('FB_ID_MassTherr6');
+$fb_id = getenv('FB_ID');
 
 //$token = $_SESSION["token"];
 
