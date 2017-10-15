@@ -33,7 +33,7 @@ $myId = $user_dados->_id;
 //echo '<br>Inicio<br>';
 
 $response = $tinder->updates();
-//var_dump($response->matches);
+var_dump($response->matches);
 $matches = $response->matches;
 echo '<br>';
 echo '<div class="testWrapper">';
