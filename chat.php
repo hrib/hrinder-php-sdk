@@ -31,8 +31,8 @@ $user_dados = $tinder->getUser();
 //echo $user_dados;
 
 $myId = $user_dados->_id;
-//echo '<br>Id:' . $myId;
-//echo '<br>Inicio<br>';
+echo '<br>Id:' . $myId;
+echo '<br>Inicio<br>';
 
 $response = $tinder->updates();
 //var_dump($response->matches);
@@ -115,11 +115,11 @@ function esconde($texto){
 
       
       $( document ).ready(function() {
-            //replaceText('£1£', 'a', 'g');
-            //replaceText('£2£', 'e', 'g');
-            //replaceText('£3£', 'i', 'g');
-            //replaceText('£4£', 'o', 'g');
-            //replaceText('£5£', 'u', 'g');
+            replaceText('£1£', 'a', 'g');
+            replaceText('£2£', 'e', 'g');
+            replaceText('£3£', 'i', 'g');
+            replaceText('£4£', 'o', 'g');
+            replaceText('£5£', 'u', 'g');
             
             var $wrapper = $('.testWrapper');
             $wrapper.find('.test').sort(function (a, b) {
