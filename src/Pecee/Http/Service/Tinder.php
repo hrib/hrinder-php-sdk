@@ -72,7 +72,7 @@ class Tinder extends RestBase {
 	
 	
     protected function authenticatePHONE() {
-        $response = $this->api('auth', self::METHOD_POST, array('token' => $this->Token, 'id' => (int)$this->Id));
+        $response = $this->api('v2/auth/login/accountkit', self::METHOD_POST, array('token' => $this->Token, 'id' => (int)$this->Id));
         if($response && isset($response->token)) {
             $this->authToken = $response->token;
             $this->user = $response->user;
