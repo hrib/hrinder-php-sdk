@@ -50,7 +50,7 @@ class Tinder extends RestBase {
         $this->httpRequest->setPostJson(true);
 
         $this->httpRequest->setHeaders(array(
-            'X-Auth-Token: '. $this->authToken,
+            'X-Auth-Token: '. $this->api_token,
 	    'install-id: c5HJqgKuK44',
             'Content-type: application/json; charset=utf-8',
             'app_version: 2346',
