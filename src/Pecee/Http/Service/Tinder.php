@@ -51,11 +51,12 @@ class Tinder extends RestBase {
 
         $this->httpRequest->setHeaders(array(
             'X-Auth-Token: '. $this->authToken,
+	    'install-id: c5HJqgKuK44',
             'Content-type: application/json; charset=utf-8',
-            'app_version: 3',
-            'platform: ios',
-            'User-Agent: Tinder/2.2.2 (iPhone; iOS 7.0.2; Scale/2.00)',
-            'os_version: 700001'
+            'app_version: 2346',
+            'platform: android',
+            'User-Agent: Tinder Android Version 8.0.1',
+            'os_version: 19'
         ));
 
         return json_decode(parent::api($url, $method, $data)->getResponse());
@@ -72,7 +73,7 @@ class Tinder extends RestBase {
 	
 	
     protected function authenticatePHONE() {
-        $response = $this->api('v2/auth/login/accountkit', self::METHOD_POST, array('token' => $this->Token, 'id' => (int)$this->Id));
+        $response = $this->api('v2/auth/login/accountkit', self::METHOD_POST, array('token' => $this->Token, 'id' => (int)$this->Id), 'client_version' => '8.0.1');
         if($response && isset($response->token)) {
             $this->authToken = $response->token;
             $this->user = $response->user;
