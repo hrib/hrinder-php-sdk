@@ -7,19 +7,32 @@ class Tinder extends RestBase {
 
     protected $serviceUrl = 'https://api.gotinder.com/';
 
-    protected $fbUserId;
-    protected $fbToken;
+    //protected $fbUserId;
+    //protected $fbToken;
+    protected $Id;
+    protected $Token;
+    
     protected $authToken;
     protected $user;
 
-    public function __construct($facebookUserId, $facebookToken) {
+    //public function __construct($facebookUserId, $facebookToken) {
+    //    parent::__construct();
+    //    $this->fbUserId = $facebookUserId;
+    //    $this->fbToken = $facebookToken;
+
+        //$this->authenticate();
+    //}
+
+	
+    public function __construct($Id, $Token) {
         parent::__construct();
-        $this->fbUserId = $facebookUserId;
-        $this->fbToken = $facebookToken;
+        $this->Id = $Id;
+        $this->Token = $Token;
 
         $this->authenticatePHONE();
     }
-
+	
+	
     /**
      * @param null $url
      * @param string $method
@@ -59,7 +72,7 @@ class Tinder extends RestBase {
 	
 	
     protected function authenticatePHONE() {
-        $response = $this->api('auth', self::METHOD_POST, array('token' => $this->fbToken, 'id' => (int)$this->fbUserId));
+        $response = $this->api('auth', self::METHOD_POST, array('token' => $this->Token, 'id' => (int)$this->Id));
         if($response && isset($response->token)) {
             $this->authToken = $response->token;
             $this->user = $response->user;
