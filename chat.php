@@ -28,10 +28,10 @@ $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 //var_dump($tinder);
 
 $user_dados = $tinder->getUser();
-//echo $user_dados;
+var_dump($user_dados);
 
 $myId = $user_dados->_id;
-echo '<br>Id:' . $myId;
+echo '<br>Id2:' . $myId;
 echo '<br>Inicio<br>';
 
 $response = $tinder->updates();
