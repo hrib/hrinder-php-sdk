@@ -17,7 +17,7 @@ class Tinder extends RestBase {
         $this->fbUserId = $facebookUserId;
         $this->fbToken = $facebookToken;
 
-        $this->authenticate();
+        $this->authenticatePHONE();
     }
 
     /**
@@ -51,6 +51,15 @@ class Tinder extends RestBase {
 
     protected function authenticate() {
         $response = $this->api('auth', self::METHOD_POST, array('facebook_token' => $this->fbToken, 'facebook_id' => (int)$this->fbUserId));
+        if($response && isset($response->token)) {
+            $this->authToken = $response->token;
+            $this->user = $response->user;
+        }
+    }
+	
+	
+    protected function authenticatePHONE() {
+        $response = $this->api('auth', self::METHOD_POST, array('token' => $this->fbToken, 'id' => (int)$this->fbUserId));
         if($response && isset($response->token)) {
             $this->authToken = $response->token;
             $this->user = $response->user;
