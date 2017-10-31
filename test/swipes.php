@@ -4,7 +4,7 @@ require __DIR__ .'/../vendor/autoload.php';
 
 //$token_instagram = getenv('INS_APP_TOKEN'); //token burp para acesso ao instagram
 
-//$fb_id = getenv('FB_ID');
+$fb_id = getenv('FB_ID');
 $token = getenv('FB_INDER_TOKEN');
 //$fb_id = getenv('FB_ID_MassTherr');
 //$token = getenv('FB_INDER_TOKEN_MassTherr');
