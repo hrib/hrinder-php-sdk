@@ -31,7 +31,7 @@ $user_dados = $tinder->getUser();
 var_dump($user_dados);
 
 $myId = $user_dados->_id;
-echo '<br>Id2:' . $myId;
+echo '<br>Id3:' . $myId;
 echo '<br>Inicio<br>';
 
 $response = $tinder->updates();
