@@ -28,11 +28,11 @@ $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 //var_dump($tinder);
 
 //$user_dados = $tinder->getUser();
-$user_dados = $tinder->meuprofile();
-var_dump($user_dados);
+//$user_dados = $tinder->meuprofile();
+//var_dump($user_dados);
 
 $user_dados = $tinder->meta();
-var_dump($user_dados);
+//var_dump($user_dados);
 
 
 $myId = $user_dados->data->user->_id;
