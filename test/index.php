@@ -1,16 +1,13 @@
 <?php
 require __DIR__ .'/../vendor/autoload.php';
 
-//$fb_id = getenv('FB_ID');
-//$token = getenv('FB_INDER_TOKEN');
-//$fb_id = getenv('FB_ID_MassTherr6');
+
+$fb_id = getenv('FB_ID');
 $token = getenv('FB_INDER_TOKEN');
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
-//.
-//var_dump($tinder->getUser());
-$user_dados = $tinder->getUser();
-$myId = $user_dados->_id;
-//$myId = '57443822d531d95a13b018df';
+$user_dados = $tinder->meta();
+$myId = $user_dados->user->_id;
+
 //$texto = 'You should try my sensual massage: 1 hour relaxing massage with music, oil and candles... It might include sensual stimulation with you feel comfortable with. Contact me on instagram (@london_for_her) or facebook: Xmassage UK. :)';
 //$texto = 'The therapy will take you into the heart and bloom of the flower of your femininity. An orgasm is not the goal, but rather sexual healing in whatever form it is expressed. The therapy is an opportunity to receive without any expectations. It is the absolute opportunity to experience the beauty and pleasure of sensual touch from another - totally as the receiver. Orgasmic delight is often experienced and has been described as ‘riding the wave’.';
 $texto = 'When in doubt. Do it. - Oliver Wendell Holmes';
@@ -31,7 +28,7 @@ $texto = 'Oi! O que acha da ideia!? :)';
 $texto = 'Hi! How are you today? Did you read my profile... Are you looking for a massage? :)';
 $texto = 'Tinder will soon block me for advertising... so if you need to contact me, Im on facebook. facebook.com / LondonMassageForHer . ;)';
 $texto = 'Hello! I would like to invite you to check my services on my business page: facebook.com / LondonMassageForHer . ;)';
-$texto = 'Happy Friday!!!';
+$texto = 'Hey... There will be a group meeting for first timers bi-curious girls. I`m on WhatsApp if you want to know more: +44 7537 192513';
 
 
 //var_dump($tinder->sendMessage($userId, $message));
@@ -61,7 +58,7 @@ foreach($matches as $match){
             echo '<td>' . $direita . '</td>';
             echo '<td>' . $myId . '</td>';
             echo '</tr>';
-            if (strpos($mensagens->message, 'adfgdfgdfg') !== false) {
+            if (strpos($mensagens->message, 'a') !== false) {
                   $mandou = 1;
             }
             if (strpos($match->person->name, 'Mariline') !== false) {
