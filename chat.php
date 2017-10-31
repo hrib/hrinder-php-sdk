@@ -25,14 +25,14 @@ $_SESSION["token"] = $token;
 //echo 'fb_id:'. $fb_id;
 //echo 'token:'. $token;
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
-var_dump($tinder);
+//var_dump($tinder);
 
 //$user_dados = $tinder->getUser();
 $user_dados = $tinder->meuprofile();
 var_dump($user_dados);
 
 $myId = $user_dados->data->user->_id;
-echo '<br>Id3:' . $myId;
+echo '<br>Id4:' . $myId;
 echo '<br>Inicio<br>';
 
 $response = $tinder->updates();
