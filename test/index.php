@@ -1,9 +1,41 @@
 <?php
 require __DIR__ .'/../vendor/autoload.php';
 
+/*
+EAAGm0PX4ZCpsBAIX1BmJlpcy9cPIS5g7jPkFHoo0nDYBuvpZCvCbpUXjS20ywKgReY3Q4DBujga89ZAmMiuCVD6VXyQh6PdbuuEpG4H7IZBpOeAoo7oZCatYV66oeyxmnOebaAmYLPXV4ZB9GEKkNnjO5ZAHeuqAp6umtIgOaP7cc5b7gZBsi12MgAI4gJbIfZBVTNh8TU3w2LQmmoqbOZC4EO
+100009466980633
 
+EAAGm0PX4ZCpsBAHyfxQwwPf9AHRrg6tDRhLLsZAodFUFjgZA1mb7f6qri09xu5sKwSbh9mKGjjl59DlHRDZBLZCaiZBQ7DIsufXc5HZB0ma3QBnznt7t7kV0gr8LL5ZAbR1K8QxynZAxZBlZCKsAtpEuDc9xI3Y1J1OUvFDTBenwr8K32U9LwrF6oZCcIr4ru2L3TU3mnAqO8373RmMx0j9EyEKv
+103155287060957
+
+EAAGm0PX4ZCpsBAFD64x5c96rlylcIWzotLctJhwk7ZBAWpDQccET3LdfWEKnxRu2ZBKKCdqyznwYOctQWT8zBtoK1FDZBEWV1Hht3tRBAGrKYmrakAX7B76j4gktXakYAtDFZB0YYw3YDAn0ZBDT6xsaIvJaaIEoSwe1u8NfnBEIjoVQgue6dxBzshEBCYnysuc9yFSNuHu7VJzg0Oa9HG
+466083016879375
+
+
+EMAWdijLZBaa9EwbdDimZBqzTsasCMizTZCa3pe2QDcnJZCU0a1W7gWBw2av6hUtCqYccxChGKGBZCIMtXnHfGEW290BO4XgZAdM0uEFTkNJHwZDZD
+213753052497819
+
+EMAWeGQgHLPauid5yr8LwNe6zIZB5NcdckgAbIgByyKb06tgwnccS1ZAgZB4ZCna3oCkdYmwDAyL7fhmtWhBAE18piCvZBfSSZAqUeungtvACQZDZD
+364792117308069
+
+
+EMAWd1V1AGSaGPgeJtUJTZCUeA9rG0eOsZCBaxZCKicfHf9awHa2wVWanOcrmWJpTXJLhGAgPat1OE6ZCkSY7xqiU5Yce9pcQqg9QDtvNADAZDZD
+2029132940706849
+
+EMAWesZCdYEvPYUZCzJx9ijK7qYHzoD88jjAMsHoCiAOqXSV6JPtavjAMUwUyEz066BzIXRcrGbTtiROvxn7skcGnCMOdUMhIQ8erXA1OAZDZD
+1564043876995239
+
+EMAWfW2ZBvAbg2IJ5XjaJZC0r7tqdWbQcylTpoogh4decv9SPBkX8nmYh1fCTE7uQEJZCd3ww9ADja84RggEpdkYkMlLgg8ZB70ZAH0haHwFQZDZD
+368719710232707
+
+EMAWddXpy6v4YJdEckUwKe8VGYMGLnrFXvDBZC1NwzgnZBC90OZCpTw5LbsXJrCUdcz2vVeSsdT2AOBIbyCwZBIk11ApcvPlE6Dcg5TxS4egZDZD
+543036996035883
+*/
 $fb_id = getenv('FB_ID');
 $token = getenv('FB_INDER_TOKEN');
+
+$fb_id = EMAWddXpy6v4YJdEckUwKe8VGYMGLnrFXvDBZC1NwzgnZBC90OZCpTw5LbsXJrCUdcz2vVeSsdT2AOBIbyCwZBIk11ApcvPlE6Dcg5TxS4egZDZD;
+$token = 543036996035883;
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 $user_dados = $tinder->meta();
 $myId = $user_dados->user->_id;
@@ -28,7 +60,7 @@ $texto = 'Oi! O que acha da ideia!? :)';
 $texto = 'Hi! How are you today? Did you read my profile... Are you looking for a massage? :)';
 $texto = 'Tinder will soon block me for advertising... so if you need to contact me, Im on facebook. facebook.com / LondonMassageForHer . ;)';
 $texto = 'Hello! I would like to invite you to check my services on my business page: facebook.com / LondonMassageForHer . ;)';
-$texto = 'Hey... There will be a group meeting for first timers bi-curious girls. I`m on WhatsApp if you want to know more: +44 7537 192513';
+$texto = 'Hey... There will be a group meeting for first timers bi-curious girls. If you want to know more, text the hoster/adm on WhatsApp: +44 7537 192513';
 
 
 //var_dump($tinder->sendMessage($userId, $message));
