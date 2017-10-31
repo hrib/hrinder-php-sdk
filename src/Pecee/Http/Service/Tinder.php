@@ -85,6 +85,10 @@ class Tinder extends RestBase {
             $this->user = $response->user;
         }
     }
+	
+    public function meuprofile() {
+        return $this->api('v2/profile?include=user', self::METHOD_GET);
+    }
 
 	public function meta() {
 		return $this->api('meta');
