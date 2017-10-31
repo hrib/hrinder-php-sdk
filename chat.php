@@ -72,7 +72,7 @@ foreach($matches as $match){
       echo '<td width="300"></td>';
       echo '</tr>';
       foreach($match->messages as $mensagens){
-            var_dump($mensagens);
+            //var_dump($mensagens);
             if($myId == $mensagens->from){$amigo = $mensagens->to; $esquerda = "";  $direita = $mensagens->message;}
             if($myId == $mensagens->to){$amigo = $mensagens->from; $esquerda = $mensagens->message; $direita = "";}
             
