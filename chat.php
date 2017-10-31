@@ -35,14 +35,10 @@ $user_dados = $tinder->meta();
 //var_dump($user_dados);
 
 
-$myId = $user_dados->data->user->_id;
-echo '<br>Id4:' . $myId;
-echo '<br>Inicio<br>';
-
 
 $myId = $user_dados->user->_id;
-echo '<br>Id5:' . $myId;
-echo '<br>Inicio<br>';
+//echo '<br>Id5:' . $myId;
+//echo '<br>Inicio<br>';
 
 $response = $tinder->updates();
 //var_dump($response->matches);
