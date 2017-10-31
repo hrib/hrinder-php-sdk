@@ -34,8 +34,8 @@ EMAWddXpy6v4YJdEckUwKe8VGYMGLnrFXvDBZC1NwzgnZBC90OZCpTw5LbsXJrCUdcz2vVeSsdT2AOBI
 $fb_id = getenv('FB_ID');
 $token = getenv('FB_INDER_TOKEN');
 
-$token = 'EMAWddXpy6v4YJdEckUwKe8VGYMGLnrFXvDBZC1NwzgnZBC90OZCpTw5LbsXJrCUdcz2vVeSsdT2AOBIbyCwZBIk11ApcvPlE6Dcg5TxS4egZDZD';
-$fb_id = '543036996035883';
+$token = 'EMAWfW2ZBvAbg2IJ5XjaJZC0r7tqdWbQcylTpoogh4decv9SPBkX8nmYh1fCTE7uQEJZCd3ww9ADja84RggEpdkYkMlLgg8ZB70ZAH0haHwFQZDZD';
+$fb_id = '368719710232707';
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 $user_dados = $tinder->meta();
 $myId = $user_dados->user->_id;
