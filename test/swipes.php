@@ -13,7 +13,7 @@ $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 
 
 $response = $tinder->recommendations();
-var_dump($response);
+//var_dump($response);
 $candidatos = $response->results;
 echo '<br>';
 
