@@ -12,8 +12,8 @@ class Tinder extends RestBase {
     protected $Id;
     protected $Token;
     
-    protected $authToken;
-    //protected $api_token;
+    //protected $authToken;
+    protected $api_token;
     protected $user;
 
     //public function __construct($facebookUserId, $facebookToken) {
@@ -51,7 +51,8 @@ class Tinder extends RestBase {
         $this->httpRequest->setPostJson(true);
 
         $this->httpRequest->setHeaders(array(
-            'X-Auth-Token: '. $this->authToken,
+            //'X-Auth-Token: '. $this->authToken,
+	    'X-Auth-Token: '. $this->api_token,
 	    //'X-Auth-Token: efcc94c3-daf4-45da-a83f-3e87650db60a',
 	    'install-id: c5HJqgKuK44',
             'Content-type: application/json; charset=utf-8',
@@ -77,7 +78,7 @@ class Tinder extends RestBase {
     protected function authenticatePHONE() {
         $response = $this->api('v2/auth/login/accountkit', self::METHOD_POST, array('token' => $this->Token, 'id' => (int)$this->Id, 'client_version' => '8.0.1'));
 	var_dump($response);
-	echo $response->token;
+	echo $response->api_token;
 	echo $response->user;
 	if($response && isset($response->token)) {
             $this->api_token = $response->token;
