@@ -26,7 +26,7 @@ $aleatorio = mt_rand(4,9);
 $token = $acc[$aleatorio];
 $fb_id = $accid[$aleatorio];
 
-
+echo $aleatorio . '<br>';
 
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 $user_dados = $tinder->meta();
