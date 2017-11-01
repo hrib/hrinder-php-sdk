@@ -22,7 +22,7 @@ $acc[8] = 'EMAWfW2ZBvAbg2IJ5XjaJZC0r7tqdWbQcylTpoogh4decv9SPBkX8nmYh1fCTE7uQEJZC
 $accid[8] = '368719710232707';
 $acc[9] = 'EMAWddXpy6v4YJdEckUwKe8VGYMGLnrFXvDBZC1NwzgnZBC90OZCpTw5LbsXJrCUdcz2vVeSsdT2AOBIbyCwZBIk11ApcvPlE6Dcg5TxS4egZDZD';
 $accid[9] = '543036996035883';
-$aleatorio = mt_rand(1,9);
+$aleatorio = mt_rand(4,9);
 $token = $acc[$aleatorio];
 $fb_id = $accid[$aleatorio];
 
