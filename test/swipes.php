@@ -26,8 +26,8 @@ $accid[8] = '368719710232707';
 $acc[9] = 'EMAWddXpy6v4YJdEckUwKe8VGYMGLnrFXvDBZC1NwzgnZBC90OZCpTw5LbsXJrCUdcz2vVeSsdT2AOBIbyCwZBIk11ApcvPlE6Dcg5TxS4egZDZD';
 $accid[9] = '543036996035883';
 $aleatorio = mt_rand(1,9);
-$token = $acc[aleatorio];
-$fb_id = $accid[aleatorio];
+$token = $acc[$aleatorio];
+$fb_id = $accid[$aleatorio];
 echo $token. '<br>';
 echo $fb_id . '<br>';
 
