@@ -28,7 +28,8 @@ $accid[9] = '543036996035883';
 $aleatorio = mt_rand(1,9);
 $token = $acc[aleatorio];
 $fb_id = $accid[aleatorio];
-
+echo $token. '<br>';
+echo $fb_id . '<br>';
 
 
 //$fb_id = getenv('FB_ID_MassTherr');
