@@ -38,37 +38,42 @@ echo $aleatorio . '<br>';
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 //$tinder = new Tinder($fb_id, $token);
 
+for ($x = 0; $x <= 2; $x++) {
 
-$response = $tinder->recommendations();
-var_dump($response);
-$candidatos = $response->results;
-echo '<br>';
+      $response = $tinder->recommendations();
+      var_dump($response);
+      $candidatos = $response->results;
+      echo '<br>';
 
-echo '<table border="1" style="font-family:arial; font-size:7px;">';
-      foreach($candidatos as $candidato){
-                  
-                  $swiperight = $tinder->like($candidato->_id);
-                  print_r($swiperight);
-                  //$instagram_id = 'nao achou';
-                  //if(!empty($candidato->instagram->username)){
-                  //      $instagram_id = PegaUserID($candidato->instagram->username, $token_instagram);
-                  //}
-                  //$relacao = 'nao achou';
-                  //if($instagram_id !== 'nao achou'){
-                  //      $relacao = modificaRelacao($instagram_id, $token_instagram, 'follow');
-                  //}
-                  //set_time_limit(10);
-                  //sleep(1);
-                  echo '<tr>';
-                  echo '<td>' . $candidato->_id . '</td>';
-                  echo '<td>' . $candidato->name . '</td>';
-                  echo '<td>' . $swiperight->match->_id . '</td>';
-                  //echo '<td>' . $candidato->instagram->username . '</td>';
-                  //echo '<td>' . $instagram_id . '</td>';
-                  //echo '<td>' . $relacao . '</td>';
-                  echo '</tr>';
-      }
-echo '</table>';
+      echo '<table border="1" style="font-family:arial; font-size:7px;">';
+            foreach($candidatos as $candidato){
+
+                        $swiperight = $tinder->like($candidato->_id);
+                        print_r($swiperight);
+                        //$instagram_id = 'nao achou';
+                        //if(!empty($candidato->instagram->username)){
+                        //      $instagram_id = PegaUserID($candidato->instagram->username, $token_instagram);
+                        //}
+                        //$relacao = 'nao achou';
+                        //if($instagram_id !== 'nao achou'){
+                        //      $relacao = modificaRelacao($instagram_id, $token_instagram, 'follow');
+                        //}
+                        //set_time_limit(10);
+                        //sleep(1);
+                        echo '<tr>';
+                        echo '<td>' . $candidato->_id . '</td>';
+                        echo '<td>' . $candidato->name . '</td>';
+                        echo '<td>' . $swiperight->match->_id . '</td>';
+                        //echo '<td>' . $candidato->instagram->username . '</td>';
+                        //echo '<td>' . $instagram_id . '</td>';
+                        //echo '<td>' . $relacao . '</td>';
+                        echo '</tr>';
+            }
+      echo '</table>';
+      
+      
+} 
+
 
 function PegaUserID($username, $token){
     $url = 'https://api.instagram.com/v1/users/search?q='.$username.'&access_token='.$token;
