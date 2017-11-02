@@ -27,7 +27,7 @@ $accid[9] = '368719710232707';
 $acc[10] = 'EMAWddXpy6v4YJdEckUwKe8VGYMGLnrFXvDBZC1NwzgnZBC90OZCpTw5LbsXJrCUdcz2vVeSsdT2AOBIbyCwZBIk11ApcvPlE6Dcg5TxS4egZDZD';
 $accid[10] = '543036996035883';
 $aleatorio = mt_rand(4,10);
-$aleatorio = 4;
+//$aleatorio = 4;
 $token = $acc[$aleatorio];
 $fb_id = $accid[$aleatorio];
 
@@ -59,7 +59,7 @@ $texto = 'Tinder will soon block me for advertising... so if you need to contact
 $texto = 'Hello! I would like to invite you to check my services on my business page: facebook.com / LondonMassageForHer . ;)';
 $texto = 'Hey... There will be a group meeting for first timers bi-curious girls. If you want to know more, text the hoster/adm on WhatsApp: +44 7537 192513';
 $texto = 'Hi! How are you? Did you read me profile? :)';
-$texto = 'Hi! How are you?';
+//$texto = 'Hi! How are you?';
 
 //var_dump($tinder->sendMessage($userId, $message));
 echo '<br>';
@@ -88,7 +88,7 @@ foreach($matches as $match){
             echo '<td>' . $direita . '</td>';
             echo '<td>' . $myId . '</td>';
             echo '</tr>';
-            if (strpos($mensagens->message, 'profile') !== false) {
+            if (strpos($mensagens->message, 'a') !== false) {
                   $mandou = 1;
             }
             if (strpos($match->person->name, 'Mariline') !== false) {
@@ -105,7 +105,7 @@ foreach($matches as $match){
             }
             $ultima_msg = $mensagens->message;
       }
-      //mandar seu minha ultima msg teve isso:
+      //mandar se ultima msg teve isso:
       if (strpos($ultima_msg, 'sexo casual') !== false) {
             $mandou = 0;
       }
