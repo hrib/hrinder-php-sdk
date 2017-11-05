@@ -33,8 +33,8 @@ $acc[11] = 'EMAWfZAxBho0g1ZALncgaXXWt5ilof9IOX4w9ceeumyZC0ZBHOyp6g1BGLqI6nheM3Ng
 $accid[11] = '155925088481450';
 
 
-$acc[12] = 'EMAWddnjY3lZBCAZCFEFvR8VZCAPGjZBQkS936D1AIv9aJZAkAzSBBFK1SogoagQLh5dHyD1xQsqP8cskfQMxKUZCkSlVbD692MJjyFEDUJ6b2QoUXk0ESUGheq9k7Iyaq1S40xDGbrMJw2jVhoxCUopa2winEZAYiPwZD';
-$accid[12] = '1761749080786369';
+$acc[12] = 'EMAWeebVJzOWXOEZAHVYCjwaPL6WqONONesDDJvVgPZBf2ZAog2Ob4E7erUQY8Kk3KAq2mUyfnICZAwnERTVsc5FOBx7EMZAs1DuW9yp4Oh2IGZBp7tIQXu7X6vRrDErTeRxmGauVbmUOkVNycpwrBlCF1WXYNZBOhh4ZD';
+$accid[12] = '140168433293926';
 
 $aleatorio = mt_rand(4,11);
 $aleatorio = 12;
@@ -48,15 +48,15 @@ echo $aleatorio . '<br>';
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 //var_dump($tinder);
 echo '<br><br>meu profile<br>';      
-$response = $tinder->meuprofile();
+//$response = $tinder->meuprofile();
 //var_dump($response);
 echo '<br><br>meta<br>';      
-$response = $tinder->meta();
+//$response = $tinder->meta();
 //var_dump($response);
 
 echo '<br><br>meta<br>';      
-$response = $tinder->updateLocation(51.509865, -0.118092);
-var_dump($response); 
+//$response = $tinder->updateLocation(51.509865, -0.118092);
+//var_dump($response); 
 echo '<br><br><br><br>';      
 
 
