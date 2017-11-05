@@ -34,7 +34,7 @@ $accid[11] = '155925088481450';
 
 
 $aleatorio = mt_rand(4,11);
-$aleatorio = 11;
+//$aleatorio = 11;
 $token = $acc[$aleatorio];
 $fb_id = $accid[$aleatorio];
 echo $token. '<br>';
