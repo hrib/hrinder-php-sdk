@@ -37,7 +37,7 @@ $acc[12] = 'EMAWeebVJzOWXOEZAHVYCjwaPL6WqONONesDDJvVgPZBf2ZAog2Ob4E7erUQY8Kk3KAq
 $accid[12] = '140168433293926';
 
 $aleatorio = mt_rand(4,11);
-$aleatorio = 12;
+//$aleatorio = 12;
 $token = $acc[$aleatorio];
 $fb_id = $accid[$aleatorio];
 echo $token. '<br>';
