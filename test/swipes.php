@@ -45,10 +45,16 @@ echo $fb_id . '<br>';
 echo $aleatorio . '<br>';
 
 
-//$fb_id = getenv('FB_ID_MassTherr');
-//$token = getenv('FB_INDER_TOKEN_MassTherr');
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
-//$tinder = new Tinder($fb_id, $token);
+var_dump($tinder)
+echo '<br><br>meu profile<br>';      
+$response = $tinder->meuprofile();
+var_dump($response);
+echo '<br><br>meta<br>';      
+$response = $tinder->meta();
+var_dump($response);
+echo '<br><br><br><br>';      
+
 
 for ($x = 0; $x <= 2; $x++) {
 
