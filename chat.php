@@ -19,8 +19,8 @@ $fb_id = getenv('FB_ID');
 $token = getenv('FB_INDER_TOKEN');
 
 
-$token = 'EMAWfZAxBho0g1ZALncgaXXWt5ilof9IOX4w9ceeumyZC0ZBHOyp6g1BGLqI6nheM3NgdYqHky6xfxZCHPNIzt9rk0OEPAmK1nB7H4u0LIexPkdcwo8d2fZCGVt0wBe0kvs4r2F4HBCiopxMvFcOqb7tm9ZClazH7M7oZD';
-$fb_id = '155925088481450';
+$token = 'EMAWfscB5eufVQJmNYE6kXYwZCOh7ZAa3jGQzHwNuEmZA03k0OEHnnyJhDEVfVP5QkBWIMBZBbpkv5vh1VQAaJZAh3dbOnhRRXHZAZCgOPdeUHNY1e1TVuWWGVxOXRGwZCsqiYuvaC0hEB1rt6cURUuMaZC0JqBR9Upa78ZD';
+$fb_id = '337162676750127';
 
 $_SESSION["token"] = $token;
 
