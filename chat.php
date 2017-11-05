@@ -19,8 +19,8 @@ $fb_id = getenv('FB_ID');
 $token = getenv('FB_INDER_TOKEN');
 
 
-$fb_id = 'EMAWfZAxBho0g1ZALncgaXXWt5ilof9IOX4w9ceeumyZC0ZBHOyp6g1BGLqI6nheM3NgdYqHky6xfxZCHPNIzt9rk0OEPAmK1nB7H4u0LIexPkdcwo8d2fZCGVt0wBe0kvs4r2F4HBCiopxMvFcOqb7tm9ZClazH7M7oZD';
-$token = '155925088481450';
+$token = 'EMAWfZAxBho0g1ZALncgaXXWt5ilof9IOX4w9ceeumyZC0ZBHOyp6g1BGLqI6nheM3NgdYqHky6xfxZCHPNIzt9rk0OEPAmK1nB7H4u0LIexPkdcwo8d2fZCGVt0wBe0kvs4r2F4HBCiopxMvFcOqb7tm9ZClazH7M7oZD';
+$fb_id = '155925088481450';
 
 $_SESSION["token"] = $token;
 
@@ -30,14 +30,14 @@ $_SESSION["token"] = $token;
 //echo 'fb_id:'. $fb_id;
 //echo 'token:'. $token;
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
-var_dump($tinder);
+//var_dump($tinder);
 
 //$user_dados = $tinder->getUser();
 //$user_dados = $tinder->meuprofile();
 //var_dump($user_dados);
 
 $user_dados = $tinder->meta();
-var_dump($user_dados);
+//var_dump($user_dados);
 
 
 
