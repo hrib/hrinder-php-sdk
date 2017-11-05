@@ -37,7 +37,7 @@ $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 //var_dump($user_dados);
 
 $user_dados = $tinder->meta();
-//var_dump($user_dados);
+var_dump($user_dados);
 
 
 
