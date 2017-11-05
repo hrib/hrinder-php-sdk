@@ -46,7 +46,7 @@ echo $aleatorio . '<br>';
 
 
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
-var_dump($tinder)
+var_dump($tinder);
 echo '<br><br>meu profile<br>';      
 $response = $tinder->meuprofile();
 var_dump($response);
