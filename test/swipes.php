@@ -46,13 +46,17 @@ echo $aleatorio . '<br>';
 
 
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
-var_dump($tinder);
+//var_dump($tinder);
 echo '<br><br>meu profile<br>';      
 $response = $tinder->meuprofile();
-var_dump($response);
+//var_dump($response);
 echo '<br><br>meta<br>';      
 $response = $tinder->meta();
-var_dump($response);
+//var_dump($response);
+
+echo '<br><br>meta<br>';      
+$response = $tinder->updateLocation(51.509865, -0.118092);
+var_dump($response); 
 echo '<br><br><br><br>';      
 
 
