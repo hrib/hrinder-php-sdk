@@ -11,10 +11,10 @@ $query2 = $_POST['sql2'];
 DELETE FROM tl_cadastro WHERE id = 1; 
 CREATE TABLE perfis (id SERIAL, tempo TIMESTAMP, id VARCHAR(50), token VARCHAR(200)); 
 DROP TABLE tl_cadastro; 
-SELECT * FROM tl_cadastro ORDER BY id; 
+SELECT * FROM perfis ORDER BY id; 
 CREATE TABLE tl_cliques (id SERIAL, tempo TIMESTAMP, dono_id VARCHAR(30), dono_page VARCHAR(80), dono_post VARCHAR(100), clicker_id VARCHAR(30), clicker_check VARCHAR(15)); 
-INSERT INTO tl_cliques (tempo , dono_id , dono_page , dono_post , clicker_id , clicker_check, tempo_update) VALUES (now(), 'debitocredito', 'pageqq', 'postqq', '822725224548484', 'clicado', now());  
-    </textarea></div>
+INSERT INTO perfis (tempo, id, token) VALUES (now(), '1234', 'tk2134');
+  </textarea></div>
   <div><textarea name="sql" rows="5" cols="200"><?php echo $query; ?></textarea></div>
   <div><input type="submit" value="Input"></div>
 </form>
