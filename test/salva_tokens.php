@@ -1,9 +1,21 @@
-<?php
-session_start();
-
+<?php 
 $token = $_POST['token'];
 $id = $_POST['id'];
-grava($token, $id);
+?>
+
+<h2>Input</h2>
+<form action="gerencia.php" method="post" enctype="multipart/form-data" >
+<div><textarea name="token" rows="1" cols="200"><?php echo $token; ?></textarea></div>
+<div><textarea name="id" rows="1" cols="200"><?php echo $id; ?></textarea></div>
+<div><input type="submit" value="Input"></div>
+</form>
+
+
+
+<?php
+if (isset($token)) { 
+    grava($token, $id);
+}
 
 function grava(token, id){
 $dbopts = parse_url(getenv('DATABASE_URL'));
