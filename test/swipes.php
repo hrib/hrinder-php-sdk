@@ -12,9 +12,12 @@ $dsn = "pgsql:"
 $db = new PDO($dsn);
 $query = "SELECT t_id, t_token FROM tl_usuarios;";
 $result = $db->query($query);
-echo var_dump($result);
+//echo var_dump($result);
 $res_fetch = $result->fetchAll();
 echo var_dump($res_fetch);
+echo '<br><br>';
+echo $res_fetch[1]['t_id'];
+echo $res_fetch[1]['t_token'];
 $result->closeCursor();
 
 
