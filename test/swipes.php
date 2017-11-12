@@ -54,10 +54,19 @@ echo '<br><br>meta<br>';
 //$response = $tinder->meta();
 //var_dump($response);
 
-echo '<br><br>meta<br>';      
-//$response = $tinder->updateLocation(51.509865, -0.118092);
-//var_dump($response); 
+echo '<br><br>Ping Location<br>';      
+$response = $tinder->updateLocation(51.475840999999996, -0.2123598);
+var_dump($response); 
 echo '<br><br><br><br>';      
+
+
+echo '<br><br>Ping Time<br>';      
+$lastActivityTime = date('Z');
+echo 'Date=' . $lastActivityTime;
+$response = $tinder->updates($lastActivityTime);
+var_dump($response); 
+echo '<br><br><br><br>';      
+
 
 
 for ($x = 0; $x <= 2; $x++) {
