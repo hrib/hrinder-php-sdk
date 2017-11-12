@@ -22,7 +22,7 @@ $res_fetch = $result->fetchAll();
 $result->closeCursor();
 
 $max = sizeof($res_fetch);
-echo '<br>'. $max;
+//echo '<br>'. $max;
 $aleatorio = mt_rand(0, $max - 1);
 //$aleatorio = 12;
 $token = $res_fetch[$aleatorio]['t_token'];
