@@ -122,7 +122,7 @@ class Tinder extends RestBase {
         return $this->api('pass/' . $userId);
     }
 
-    public function updates($lastActivityTime = '') {
+    public function updates($lastActivityTime) {
         return $this->api('updates', self::METHOD_POST, array('last_activity_date' => $lastActivityTime));
     }
 
