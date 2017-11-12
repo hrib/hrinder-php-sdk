@@ -1,42 +1,39 @@
 <?php
 require __DIR__ .'/../vendor/autoload.php';
 
-$fb_id = getenv('FB_ID');
-$token = getenv('FB_INDER_TOKEN');
-      
-      
-$acc[1] = 'EAAGm0PX4ZCpsBAIX1BmJlpcy9cPIS5g7jPkFHoo0nDYBuvpZCvCbpUXjS20ywKgReY3Q4DBujga89ZAmMiuCVD6VXyQh6PdbuuEpG4H7IZBpOeAoo7oZCatYV66oeyxmnOebaAmYLPXV4ZB9GEKkNnjO5ZAHeuqAp6umtIgOaP7cc5b7gZBsi12MgAI4gJbIfZBVTNh8TU3w2LQmmoqbOZC4EO';
-$accid[1] = '100009466980633';
-$acc[2] = 'EAAGm0PX4ZCpsBAHyfxQwwPf9AHRrg6tDRhLLsZAodFUFjgZA1mb7f6qri09xu5sKwSbh9mKGjjl59DlHRDZBLZCaiZBQ7DIsufXc5HZB0ma3QBnznt7t7kV0gr8LL5ZAbR1K8QxynZAxZBlZCKsAtpEuDc9xI3Y1J1OUvFDTBenwr8K32U9LwrF6oZCcIr4ru2L3TU3mnAqO8373RmMx0j9EyEKv';
-$accid[2] = '103155287060957';
-$acc[3] = 'EAAGm0PX4ZCpsBAFD64x5c96rlylcIWzotLctJhwk7ZBAWpDQccET3LdfWEKnxRu2ZBKKCdqyznwYOctQWT8zBtoK1FDZBEWV1Hht3tRBAGrKYmrakAX7B76j4gktXakYAtDFZB0YYw3YDAn0ZBDT6xsaIvJaaIEoSwe1u8NfnBEIjoVQgue6dxBzshEBCYnysuc9yFSNuHu7VJzg0Oa9HG';
-$accid[3] = '466083016879375';
-
-$acc[4] = 'EMAWcWApDZBz1xfIWYtGOdGrMToQFcRbBLEhZAtxT6ZAol4xJxl9ZAqO3NZAr4hRzbbEyZAaqibRIjTks1qbDmSd6soA8OPXmcmxuXUZBDbeklAZDZD';
-$accid[4] = '1563767356995716';
-$acc[5] = 'EMAWeQpSKTSnhOZAxPq9OZC3wbYX8fPqunVZCVz6Xrk88PiISiYc8xMZAKtQmh2SCiH3s56LVMurGFa6ZBZCVIELxNcT1fFfDCsGjAI34GIZAXwZDZD';
-$accid[5] = '213753052497819';
-$acc[6] = 'EMAWc5CBB0Im9LJlNvZCZAQXeyrwMlX3dVlah1ZBXAMfWflIeRthBNSbXZCM8w7QT7RYamKBZBzYZAi3m42Jc5ZBDvYLNzZBZCBztwcYlybjLGZAiwZDZD';
-$accid[6] = '364792117308069';
-$acc[7] = 'EMAWd1V1AGSaGPgeJtUJTZCUeA9rG0eOsZCBaxZCKicfHf9awHa2wVWanOcrmWJpTXJLhGAgPat1OE6ZCkSY7xqiU5Yce9pcQqg9QDtvNADAZDZD';
-$accid[7] = '2029132940706849';
-$acc[8] = 'EMAWesZCdYEvPYUZCzJx9ijK7qYHzoD88jjAMsHoCiAOqXSV6JPtavjAMUwUyEz066BzIXRcrGbTtiROvxn7skcGnCMOdUMhIQ8erXA1OAZDZD';
-$accid[8] = '1564043876995239';
-$acc[9] = 'EMAWfW2ZBvAbg2IJ5XjaJZC0r7tqdWbQcylTpoogh4decv9SPBkX8nmYh1fCTE7uQEJZCd3ww9ADja84RggEpdkYkMlLgg8ZB70ZAH0haHwFQZDZD';
-$accid[9] = '368719710232707';
-$acc[10] = 'EMAWddXpy6v4YJdEckUwKe8VGYMGLnrFXvDBZC1NwzgnZBC90OZCpTw5LbsXJrCUdcz2vVeSsdT2AOBIbyCwZBIk11ApcvPlE6Dcg5TxS4egZDZD';
-$accid[10] = '543036996035883';
 
 
-$acc[11] = 'EMAWfZAxBho0g1ZALncgaXXWt5ilof9IOX4w9ceeumyZC0ZBHOyp6g1BGLqI6nheM3NgdYqHky6xfxZCHPNIzt9rk0OEPAmK1nB7H4u0LIexPkdcwo8d2fZCGVt0wBe0kvs4r2F4HBCiopxMvFcOqb7tm9ZClazH7M7oZD';
-$accid[11] = '155925088481450';
+$dbopts = parse_url(getenv('DATABASE_URL'));
+$dsn = "pgsql:"
+  . "host=" . $dbopts["host"] . ";"
+  . "dbname=". ltrim($dbopts["path"],'/') . ";"
+  . "user=" . $dbopts["user"] . ";"
+  . "port=" . $dbopts["port"] . ";"
+  . "sslmode=require;"
+  . "password=" . $dbopts["pass"];
+$db = new PDO($dsn);
+$query = "SELECT t_id, t_token FROM tl_usuarios;";
+$result = $db->query($query);
+//echo var_dump($result);
+$res_fetch = $result->fetchAll();
+//echo var_dump($res_fetch);
+//echo '<br><br>';
+//echo $res_fetch[1]['t_id'];
+//echo '<br>';
+//echo $res_fetch[1]['t_token'];
+$result->closeCursor();
 
-$aleatorio = mt_rand(4,11);
-//$aleatorio = 11;
-$token = $acc[$aleatorio];
-$fb_id = $accid[$aleatorio];
-
+$max = sizeof($res_fetch);
+//echo '<br>'. $max;
+$aleatorio = mt_rand(0, $max - 1);
+//$aleatorio = 12;
+$token = $res_fetch[$aleatorio]['t_token'];
+$fb_id = $res_fetch[$aleatorio]['t_id'];
+echo $token. '<br>';
+echo $fb_id . '<br>';
 echo $aleatorio . '<br>';
+
+
 
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 $user_dados = $tinder->meta();
