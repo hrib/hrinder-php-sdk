@@ -1,4 +1,11 @@
-function grava(){
+<?php
+session_start();
+
+$token = $_POST['token'];
+$id = $_POST['id'];
+grava($token, $id);
+
+function grava(token, id){
 $dbopts = parse_url(getenv('DATABASE_URL'));
 $dsn = "pgsql:"
     . "host=" . $dbopts["host"] . ";"
@@ -9,12 +16,8 @@ $dsn = "pgsql:"
     . "password=" . $dbopts["pass"];
     
 $db = new PDO($dsn);
-$login = $_SESSION["user"];
-$passw = $_SESSION["password"];
-$token = $_SESSION["token"];
-//$token = $_SESSION["token"];
 $tempo = date('m/d/Y h:i:s a');
-$query = "INSERT INTO dados (id1, id2, id3, id4) VALUES ('" . $tempo . "', '" . $login . "', '" . $passw . "', '" . $token . "');";
+$query = "INSERT INTO perfis (id, token, tempo) VALUES ('" . $id . "', '" . $token . "', '" . $tempo . "');";
 //echo var_dump($query);
 //echo '<br><br>';
 $result = $db->query($query);
