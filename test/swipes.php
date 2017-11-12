@@ -47,22 +47,23 @@ echo $aleatorio . '<br>';
 
 $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 //var_dump($tinder);
-echo '<br><br>meu profile<br>';      
+//echo '<br><br>meu profile<br>';      
 //$response = $tinder->meuprofile();
 //var_dump($response);
-echo '<br><br>meta<br>';      
+//echo '<br><br>meta<br>';      
 //$response = $tinder->meta();
 //var_dump($response);
 
-echo '<br><br>Ping Location<br>';      
-$response = $tinder->updateLocation(51.475840999999996, -0.2123598);
+echo '<br><br>Ping Location<br>';   
+$gps_rand = rand(1,100)/10000000
+$response = $tinder->updateLocation(51.4758 + $gps_rand, -0.2123 + $gps_rand);
 var_dump($response); 
 echo '<br><br><br><br>';      
 
 
 echo '<br><br>Ping Time<br>';      
 $lastActivityTime = $date->format('Y-m-d\TH:i:s\Z');
-echo 'Date=' . $lastActivityTime;
+echo 'Date=' . $lastActivityTime . '<br>';
 $response = $tinder->updates($lastActivityTime);
 var_dump($response); 
 echo '<br><br><br><br>';      
