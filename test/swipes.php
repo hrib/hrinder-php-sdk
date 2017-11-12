@@ -42,22 +42,22 @@ $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 //var_dump($response);
 
 echo '<br><br>Ping Location<br>';   
-$gps_rand = rand(1,100)/10000000;
-$response = $tinder->updateLocation(51.4758 + $gps_rand, -0.2123 + $gps_rand);
-var_dump($response); 
+//$gps_rand = rand(1,100)/10000000;
+//$response = $tinder->updateLocation(51.4758 + $gps_rand, -0.2123 + $gps_rand);
+//var_dump($response); 
 echo '<br><br><br><br>';      
 
 
 echo '<br><br>Ping Time<br>';      
-$lastActivityTime = date('Y-m-d\TH:i:s\Z');
-echo 'Date=' . $lastActivityTime . '<br>';
-$response = $tinder->updates($lastActivityTime);
-var_dump($response); 
+//$lastActivityTime = date('Y-m-d\TH:i:s\Z');
+//echo 'Date=' . $lastActivityTime . '<br>';
+//$response = $tinder->updates($lastActivityTime);
+//var_dump($response); 
 echo '<br><br><br><br>';      
 
 
 
-for ($x = 0; $x <= 2; $x++) {
+for ($x = 0; $x <= 1; $x++) {
 
       $response = $tinder->recommendations();
       var_dump($response);
@@ -77,8 +77,8 @@ for ($x = 0; $x <= 2; $x++) {
                         //if($instagram_id !== 'nao achou'){
                         //      $relacao = modificaRelacao($instagram_id, $token_instagram, 'follow');
                         //}
-                        //set_time_limit(10);
-                        //sleep(1);
+                        set_time_limit(10);
+                        sleep(2);
                         echo '<tr>';
                         echo '<td>' . $candidato->_id . '</td>';
                         echo '<td>' . $candidato->name . '</td>';
