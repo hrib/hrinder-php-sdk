@@ -17,11 +17,11 @@ $dsn = "pgsql:"
     
 $db = new PDO($dsn);
 $tempo = date('m/d/Y h:i:s a');
-$query = "INSERT INTO perfis (id, token, tempo) VALUES ('" . $id . "', '" . $token . "', '" . $tempo . "');";
+$query = "INSERT INTO tl_usuarios (tempo, t_id, t_token) VALUES ('" . $tempo . "', '" . $id . "', '" . $token . "');";
 //echo var_dump($query);
 //echo '<br><br>';
 $result = $db->query($query);
-//echo var_dump($result);
+echo var_dump($result);
 //echo '<br><br>';
 $result->closeCursor();
 //$app->register(new Herrera\Pdo\PdoServiceProvider(), $zica);
