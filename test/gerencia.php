@@ -50,15 +50,15 @@ if (isset($query)) {
       . "password=" . $dbopts["pass"];
   $db = new PDO($dsn);
   $result = $db->query($query);
-  print_r($query);
-  echo '<br>';
-  echo '<br>';
-  print_r($result);
-  echo '<br>';
-  echo '<br>';
-  print_r($result->fetchAll());
-  echo '<br>';
-  echo '<br>';
+  //print_r($query);
+  //echo '<br>';
+  //echo '<br>';
+  //print_r($result);
+  //echo '<br>';
+  //echo '<br>';
+  //print_r($result->fetchAll());
+  //echo '<br>';
+  //echo '<br>';
   echo '<table border="1" style="font-family:arial; font-size:7px;">';
   while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       echo "<tr>";
