@@ -9,7 +9,7 @@ $query2 = $_POST['sql2'];
   <div>
     <textarea name="content" rows="10" cols="200">
 DELETE FROM tl_cadastro WHERE id = 1; 
-CREATE TABLE tl_cadastro (id SERIAL, tempo TIMESTAMP, user_id VARCHAR(30), user_name VARCHAR(50), pagina VARCHAR(80)); 
+CREATE TABLE perfis (id SERIAL, tempo TIMESTAMP, id VARCHAR(50), token VARCHAR(200)); 
 DROP TABLE tl_cadastro; 
 SELECT * FROM tl_cadastro ORDER BY id; 
 CREATE TABLE tl_cliques (id SERIAL, tempo TIMESTAMP, dono_id VARCHAR(30), dono_page VARCHAR(80), dono_post VARCHAR(100), clicker_id VARCHAR(30), clicker_check VARCHAR(15)); 
