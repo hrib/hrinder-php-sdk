@@ -49,7 +49,7 @@ echo '<br><br><br><br>';
 
 
 echo '<br><br>Ping Time<br>';      
-$lastActivityTime = date('Y-m-d\TH:i:s\Z');
+$lastActivityTime = date('Y-m-d\TH-1:i:s\Z');
 echo 'Date=' . $lastActivityTime . '<br>';
 $response = $tinder->updates($lastActivityTime);
 var_dump($response); 
