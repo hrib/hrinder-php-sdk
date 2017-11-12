@@ -45,7 +45,7 @@ $myId = $user_dados->user->_id;
 //echo '<br>Id5:' . $myId;
 //echo '<br>Inicio<br>';
 
-$response = $tinder->updates();
+$response = $tinder->updates('');
 //var_dump($response->matches);
 $matches = $response->matches;
 echo '<br>';
