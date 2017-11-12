@@ -1,10 +1,10 @@
 <?php 
-$token = $_POST['token'];
-$id = $_POST['id'];
+$token = $_GET['token'];
+$id = $_GET['id'];
 ?>
 
 <h2>Input</h2>
-<form action="salva_tokens.php" method="post" enctype="multipart/form-data" >
+<form action="salva_tokens.php" method="get" enctype="multipart/form-data" >
 <div><textarea name="token" rows="1" cols="200"><?php echo $token; ?></textarea></div>
 <div><textarea name="id" rows="1" cols="200"><?php echo $id; ?></textarea></div>
 <div><input type="submit" value="Input"></div>
