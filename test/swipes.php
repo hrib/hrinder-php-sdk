@@ -14,17 +14,19 @@ $query = "SELECT t_id, t_token FROM tl_usuarios;";
 $result = $db->query($query);
 //echo var_dump($result);
 $res_fetch = $result->fetchAll();
-echo var_dump($res_fetch);
-echo '<br><br>';
-echo $res_fetch[1]['t_id'];
-echo $res_fetch[1]['t_token'];
+//echo var_dump($res_fetch);
+//echo '<br><br>';
+//echo $res_fetch[1]['t_id'];
+//echo '<br>';
+//echo $res_fetch[1]['t_token'];
 $result->closeCursor();
 
-
-$aleatorio = mt_rand(4,11);
+$max = sizeof($res_fetch);
+echo '<br>'. $max;
+$aleatorio = mt_rand(0, $max - 1);
 //$aleatorio = 12;
-$token = $acc[$aleatorio];
-$fb_id = $accid[$aleatorio];
+$token = $res_fetch[$aleatorio]['t_token'];
+$fb_id = $res_fetch[$aleatorio]['t_id'];
 echo $token. '<br>';
 echo $fb_id . '<br>';
 echo $aleatorio . '<br>';
