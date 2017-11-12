@@ -42,17 +42,17 @@ $tinder = new \Pecee\Http\Service\Tinder($fb_id, $token);
 //var_dump($response);
 
 echo '<br><br>Ping Location<br>';   
-//$gps_rand = rand(1,100)/10000000;
-//$response = $tinder->updateLocation(51.4758 + $gps_rand, -0.2123 + $gps_rand);
-//var_dump($response); 
+$gps_rand = rand(1,100)/10000000;
+$response = $tinder->updateLocation(51.4758 + $gps_rand, -0.2123 + $gps_rand);
+var_dump($response); 
 echo '<br><br><br><br>';      
 
 
 echo '<br><br>Ping Time<br>';      
-//$lastActivityTime = date('Y-m-d\TH:i:s\Z');
-//echo 'Date=' . $lastActivityTime . '<br>';
-//$response = $tinder->updates($lastActivityTime);
-//var_dump($response); 
+$lastActivityTime = date('Y-m-d\TH:i:s\Z');
+echo 'Date=' . $lastActivityTime . '<br>';
+$response = $tinder->updates($lastActivityTime);
+var_dump($response); 
 echo '<br><br><br><br>';      
 
 
