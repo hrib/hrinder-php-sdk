@@ -7,20 +7,36 @@
 <?php
 session_start();
 
-//require __DIR__ .'/../vendor/autoload.php';
-
 require __DIR__ .'/vendor/autoload.php';
 
-
-$fb_id = getenv('FB_ID');
-
-//$token = $_SESSION["token"];
-
-$token = getenv('FB_INDER_TOKEN');
-
-
-$token = 'EMAWccZAt6YRl7U9z60By6ELVvnDQI4TnTx7HJaXa0YbsghW2Hq1okbyxJZBjjjNklGhYSathVH6VQkfuGcwCfsX0CFkSnFPHhLQSYdO6SPEWyECeMjlOlee957J0xGyPTPLHg0iLfsZCT89JeEkLvgkeDJ5nbGAZD';
-$fb_id = '885148244973684';
+$dbopts = parse_url(getenv('DATABASE_URL'));
+$dsn = "pgsql:"
+  . "host=" . $dbopts["host"] . ";"
+  . "dbname=". ltrim($dbopts["path"],'/') . ";"
+  . "user=" . $dbopts["user"] . ";"
+  . "port=" . $dbopts["port"] . ";"
+  . "sslmode=require;"
+  . "password=" . $dbopts["pass"];
+$db = new PDO($dsn);
+$query = "SELECT t_id, t_token FROM tl_usuarios;";
+$result = $db->query($query);
+//echo var_dump($result);
+$res_fetch = $result->fetchAll();
+//echo var_dump($res_fetch);
+//echo '<br><br>';
+//echo $res_fetch[1]['t_id'];
+//echo '<br>';
+//echo $res_fetch[1]['t_token'];
+$result->closeCursor();
+$max = sizeof($res_fetch);
+//echo '<br>'. $max;
+$aleatorio = mt_rand(0, $max - 1);
+//$aleatorio = 12;
+$token = $res_fetch[$aleatorio]['t_token'];
+$fb_id = $res_fetch[$aleatorio]['t_id'];
+echo $token. '<br>';
+echo $fb_id . '<br>';
+echo $aleatorio . '<br>';
 
 $_SESSION["token"] = $token;
 
