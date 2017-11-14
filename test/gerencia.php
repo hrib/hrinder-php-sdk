@@ -8,26 +8,19 @@ $query2 = $_POST['sql2'];
 <form action="gerencia.php" method="post" enctype="multipart/form-data" >
   <div>
     <textarea name="content" rows="10" cols="200">
-DELETE FROM tl_cadastro WHERE id = 1; 
-CREATE TABLE perfis (id SERIAL, tempo TIMESTAMP, id VARCHAR(50), token VARCHAR(200)); 
-DROP TABLE tl_cadastro; 
-SELECT * FROM perfis ORDER BY id; 
-CREATE TABLE tl_cliques (id SERIAL, tempo TIMESTAMP, dono_id VARCHAR(30), dono_page VARCHAR(80), dono_post VARCHAR(100), clicker_id VARCHAR(30), clicker_check VARCHAR(15)); 
-INSERT INTO perfis (tempo, id, token) VALUES (now(), '1234', 'tk2134');
+DELETE FROM tl_usuarios WHERE id = 1; 
+CREATE TABLE tl_usuarios (id SERIAL, tempo TIMESTAMP, t_id VARCHAR(50), t_token VARCHAR(200)); 
+DROP TABLE tl_usuarios; 
+SELECT * FROM tl_usuarios ORDER BY id; 
+INSERT INTO tl_usuarios (tempo, t_id, t_token) VALUES (now(), '1234', 'tk2134');
   </textarea></div>
   <div><textarea name="sql" rows="5" cols="200"><?php echo $query; ?></textarea></div>
   <div><input type="submit" value="Input"></div>
 </form>
 
 <form action="gerencia.php" method="post" enctype="multipart/form-data" >
-  <div><textarea name="sql2" rows="5" cols="200">SELECT * FROM tl_cadastro ORDER BY id</textarea></div>
+  <div><textarea name="sql2" rows="5" cols="200">SELECT * FROM tl_usuarios</textarea></div>
   <div><input type="submit" value="Lista Cadastro"></div>
-</form>
-
-
-<form action="gerencia.php" method="post" enctype="multipart/form-data" >
-  <div><textarea name="sql2" rows="5" cols="200">SELECT * FROM ((SELECT coalesce(T1.clicker_id,  T2.dono_id) as usuario, (COALESCE(T1.n_creditos,0)) as Creditos, (COALESCE(T2.n_usados,0)) as Usados, (COALESCE(T1.n_creditos,0) + COALESCE(T2.n_usados, 0)) as Sobra FROM (SELECT clicker_id, COUNT(*) as n_creditos FROM tl_cliques WHERE clicker_check = 'clicado' GROUP BY clicker_id) AS T1 FULL OUTER JOIN (SELECT dono_id, -COUNT(*) as n_usados FROM tl_cliques  WHERE clicker_check = 'clicado' GROUP BY dono_id) AS T2 ON T1.clicker_id = T2.dono_id) AS TA FULL OUTER JOIN (SELECT user_id, user_name, pagina FROM tl_cadastro) AS TB ON TA.usuario = TB.user_id)</textarea></div>
-  <div><input type="submit" value="Creditos"></div>
 </form>
 
 
