@@ -27,7 +27,7 @@ $max = sizeof($res_fetch);
 //echo '<br>'. $max;
 $aleatorio = mt_rand(0, $max - 1);
 
-$aleatorio = mt_rand(0, 10);
+//$aleatorio = mt_rand(0, 10);
 //$aleatorio = 12;
 $token = $res_fetch[$aleatorio]['t_token'];
 $fb_id = $res_fetch[$aleatorio]['t_id'];
