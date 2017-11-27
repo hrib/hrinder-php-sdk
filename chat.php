@@ -33,7 +33,8 @@ $max = sizeof($res_fetch);
 $aleatorio = mt_rand(0, $max - 1);
 $aleatorio = $_GET["aleatorio"];
 //echo '<a href=chat.php?aleatorio=' . $aleatorio + 1 . '>next</a><br><br>';
-echo '<a href="chat.php?aleatorio=2">next</a><br><br>';
+//echo '<a href="chat.php?aleatorio=2">next</a><br><br>';
+echo '<a href="chat.php?aleatorio=' . $aleatorio . '">next</a><br><br>';
 
 //$aleatorio = 12;
 $token = $res_fetch[$aleatorio]['t_token'];
