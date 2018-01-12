@@ -62,7 +62,7 @@ $texto = 'Hi! How are you today? Did you read my profile... Are you looking for 
 $texto = 'Tinder will soon block me for advertising... so if you need to contact me, Im on facebook. facebook.com / LondonMassageForHer . ;)';
 $texto = 'Hello! I would like to invite you to check my services on my business page: facebook.com / LondonMassageForHer . ;)';
 $texto = 'Hey... There will be a group meeting for first timers bi-curious girls. If you want to know more, text the hoster/adm on WhatsApp: +44 7537 192513';
-$texto = 'Hi! How are you? Did you read me profile? :)';
+$texto = 'Hi! How are you? Did you read me profile? So you know where to contact me! :)';
 //$texto = 'Hi! How are you?';
 
 //var_dump($tinder->sendMessage($userId, $message));
