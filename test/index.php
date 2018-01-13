@@ -79,10 +79,11 @@ $mandou = 0;
 echo '<table border="1" style="font-family:arial; font-size:7px;">';
 foreach($matches as $match){
       $mandou = 0;  ///switch 0/1
+      $replica = 0;
       foreach($match->messages as $mensagens){
             
-            if($myId == $mensagens->from){$amigo = $mensagens->to; $esquerda = "";  $direita = $mensagens->message;}
-            if($myId == $mensagens->to){$amigo = $mensagens->from; $esquerda = $mensagens->message; $direita = "";}
+            if($myId == $mensagens->from){$amigo = $mensagens->to; $esquerda = "";  $direita = $mensagens->message; $replica = 0;}
+            if($myId == $mensagens->to){$amigo = $mensagens->from; $esquerda = $mensagens->message; $direita = ""; $replica = 1;}
             
             echo '<tr>';
             echo '<td>' . $match->_id . '</td>';
@@ -108,17 +109,24 @@ foreach($matches as $match){
                   //$mandou = 1;
             }
             $ultima_msg = $mensagens->message;
+            $contador = $contador + 1; 
       }
       //mandar se ultima msg teve isso:
       if (strpos($ultima_msg, 'sexo casual') !== false) {
             $mandou = 0;
       }
-            
-      
+           
       if($mandou == 0){
             set_time_limit(10); 
             sleep(1);
             var_dump($tinder->sendMessage($match->_id, $texto));
+      }
+      
+      if($replica = 1){
+            set_time_limit(10); 
+            sleep(1);
+            $texto2 = 'I cannnot reply here. Please read my profile to get my direct contact. Thank you.';
+            var_dump($tinder->sendMessage($match->_id, $texto2));
       }
 } 
 echo '</table>'
