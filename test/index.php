@@ -122,7 +122,7 @@ foreach($matches as $match){
             var_dump($tinder->sendMessage($match->_id, $texto));
       }
       
-      if($replica = 1){
+      if($replica == 1){
             set_time_limit(10); 
             sleep(1);
             $texto2 = 'I cannnot reply here. Please read my profile to get my direct contact. Thank you.';
