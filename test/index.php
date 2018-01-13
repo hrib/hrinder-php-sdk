@@ -96,25 +96,27 @@ foreach($matches as $match){
             if (strpos($mensagens->message, 'a') !== false) {
                   $mandou = 1;
             }
-            if (strpos($match->person->name, 'Mariline') !== false) {
-                  //$mandou = 1;
+            if (strpos($mensagens->message, 'e') !== false) {
+                  $mandou = 1;
             }
-            if (strpos($match->person->name, 'Michele') !== false) {
-                  //$mandou = 1;
+            if (strpos($mensagens->message, 'i') !== false) {
+                  $mandou = 1;
             }
-            if (strpos($match->person->name, 'Liliane') !== false) {
-                  //$mandou = 1;
+            if (strpos($mensagens->message, 'o') !== false) {
+                  $mandou = 1;
             }
-            if (strpos($match->person->name, 'Valentina') !== false) {
+            if (strpos($mensagens->message, 'u') !== false) {
+                  $mandou = 1;
+            }
+            if (strpos($match->person->name, 'nomeqq') !== false) {
                   //$mandou = 1;
             }
             $ultima_msg = $mensagens->message;
-            $contador = $contador + 1; 
       }
       //mandar se ultima msg teve isso:
-      if (strpos($ultima_msg, 'sexo casual') !== false) {
-            $mandou = 0;
-      }
+      //if (strpos($ultima_msg, 'sexo casual') !== false) {
+      //      $mandou = 0;
+      //}
            
       if($mandou == 0){
             set_time_limit(10); 
